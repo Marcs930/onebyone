@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "hookyqr.beautify",
+    "brapifra.phpserver",
+    "kokororin.vscode-phpfmt",
+    "rifi2k.format-html-in-php",
+    "junstyle.php-cs-fixer",
+  ],
+  "unwantedRecommendations": []
+}

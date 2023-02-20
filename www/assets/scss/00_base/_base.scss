@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/*==================================================================
+// root
+//================================================================*/
+
+:root {
+  // Light Mode
+  @each $key, $color in $theme-colors {
+    --color-#{$key}: #{$color};
+  }
+
+  // Dark Mode
+  @if $dark-theme-colors {
+    &[data-theme="dark"] {
+      @each $key, $color in $dark-theme-colors {
+        --color-#{$key}: #{$color};
+      }
+    }
+  }
+}
+
+::selection {
+  background: var(--color-ScrollBg);
+  color: var(--color-ScrollColor);
+}
+
+//Firefox
+::-moz-selection {
+  background: var(--color-scrollBg);
+  color: var(--color-ScrollColor);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/*==================================================================
+// base
+//================================================================*/
+
+html {
+  font-size: $font-size-base;
+  @include tab() {
+    font-size: $font-size-tab;
+  }
+  @include sp() {
+    font-size: $font-size-sp;
+  }
+  @include sp320() {
+    font-size: $font-size-sp320;
+  }
+}
+
+body {
+  position: relative;
+  font-size: 1.4rem;
+  height: auto;
+  font-family: $font-family-base;
+  font-weight: 400;
+  line-height: 1.35;
+  font-feature-settings: "palt";
+  -webkit-overflow-scrolling: touch;
+  letter-spacing: 0.3rem;
+  overflow: auto;
+
+  background-color: var(--color-Black);
+
+  &.fixed {
+    overflow: hidden;
+  }
+}
+
+p {
+  font-size: 1.7rem;
+  line-height: 1.2em;
+  & + p {
+    margin-top: 1.6rem;
+  }
+  @include sp() {
+    font-size: 1.4rem;
+    line-height: 1.4em;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: $anime-normal;
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &[href^="tel:"] {
+    pointer-events: none;
+    @include sp() {
+      pointer-events: auto;
+    }
+  }
+}
+
+th,
+td {
+  vertical-align: top;
+  font-weight: normal;
+  text-align: left;
+  word-break: break-all;
+  @include sp() {
+    display: block;
+    width: 100%;
+  }
+}

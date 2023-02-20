@@ -1,0 +1,99 @@
+{
+  //liveServer
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.host": "127.0.0.1",
+  "liveServer.settings.root": "/www", // ドキュメントルートを指定
+  // Proxy
+  "liveServer.settings.proxy": {
+    "enable": false, //true or false ※phpServer使用時はtrue
+    "baseUri": "/",
+    "proxyUri": "http://localhost:3000"
+  },
+  "liveServer.settings.useWebExt": true,
+
+  //phpServer
+  "phpserver.port": 3000,
+  "phpserver.ip": "127.0.0.1",
+  "phpserver.relativePath": "./www",
+
+  //editor
+  "editor.defaultFormatter": "HookyQR.beautify",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[php]": {
+    "editor.defaultFormatter": "kokororin.vscode-phpfmt",
+  },
+  "phpfmt.passes": [
+    "PSR2KeywordsLowerCase",
+    "PSR2LnAfterNamespace",
+    //"PSR2CurlyOpenNextLine",
+    "PSR2ModifierVisibilityStaticOrder",
+    "PSR2SingleEmptyLineAndStripClosingTag",
+    "ReindentSwitchBlocks"
+  ],
+  "phpfmt.exclude": [
+    "ReindentComments",
+    "StripNewlineWithinClassBody"
+  ],
+  "phpfmt.psr2": false,
+  "phpfmt.indent_with_space": 2,
+  /*
+
+  "php-cs-fixer.onsave": true,
+  "php-cs-fixer.executablePath": "~/.vscode/php-cs-fixer-v3.phar",
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+  }, */
+  "html.format.wrapLineLength": 0,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "html.format.preserveNewLines": true,
+  "html.validate.scripts": false,
+  "beautify.config": {
+    "indent_size": 2,
+    "selector-separator-newline": false,
+    "max_preserve_newlines": 2,
+    "js": {
+      "e4x": true,
+    },
+    "json": {
+      "preserve_newlines": true,
+    },
+  },
+  "beautify.language": {
+    "html": ["ejs", "html" /* , "php" */ ],
+  },
+  "emmet.includeLanguages": {
+    "ejs": "html"
+  },
+  "htmlhint.options": {
+    "spec-char-escape": false,
+    "doctype-first": false
+  },
+
+  //sass
+  "liveSassCompile.settings.formats": [{
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css/"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "~/../css/"
+    },
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.autoprefix": [
+    "last 2 versions",
+    "ie >= 11",
+    "Android >= 4",
+    "ios_saf >= 8"
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "/**/node_modules/**",
+    "/.vscode/**"
+  ],
+}

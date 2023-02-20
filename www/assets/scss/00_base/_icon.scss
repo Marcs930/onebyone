@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*==================================================================
+// icon
+//================================================================*/
+
+i.blank {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/external-link.svg?size=24&color=0B3D8C") center center no-repeat;
+  background-size: contain;
+  margin-left: 3px;
+}
+i.blank-s {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/external-link.svg?size=24&color=0B3D8C") center center no-repeat;
+  background-size: contain;
+  margin-left: 3px;
+  vertical-align: top;
+}
+
+i.lock {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/lock.svg?size=24&color=0B3D8C") center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: calc(50% - 0.5em);
+  left: 1rem;
+}
+
+i.lock-wt {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/lock.svg?size=24&color=ffffff") center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: calc(50% - 0.5em);
+  left: 1rem;
+}
+
+i.arrow-blue {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/chevron-right.svg?size=24&color=0B3D8C") center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 1rem;
+}
+
+i.arrow-wt {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/chevron-right.svg?size=24&color=ffffff") center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 1rem;
+}
+
+i.sns-twi {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/twitter.svg?size=24&color=ffffff") center center no-repeat;
+  background-size: contain;
+}
+i.sns-ig {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/instagram.svg?size=24&color=ffffff") center center no-repeat;
+  background-size: contain;
+}
+i.sns-fb {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background: url("https://icongr.am/fontawesome/facebook-square.svg?size=24&color=ffffff") center center no-repeat;
+  background-size: contain;
+}
+
+i.icon {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@each $iconName in $icon-list {
+  @include iconPath($iconName);
+}

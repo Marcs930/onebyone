@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/*==================================================================
+// Fonts
+//================================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+// Font Family
+$font-family-base: "Noto Sans CJK JP", "Noto Sans CJK JP Subset", "Noto Sans",
+  sans-serif;
+
+@mixin en_font {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+@mixin title_font {
+  font-weight: 700;
+}
+
+.title_font {
+  font-weight: 700;
+}
+
+.title_font,
+h1,
+h2,
+h3,
+h4 {
+  //@include title_font();
+}

@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+//==================================================================
+// Variables - Common
+//==================================================================
+
+// Main Theme Colors
+$theme-colors: (
+  "White": #ffffff,
+  "White01": #f8f8f8,
+  "White02": #f0f0f0,
+  "White03": #e0e0e0,
+  "Gray": #d0d0d0,
+  "Gray01": #c0c0c0,
+  "Gray02": #b0b0b0,
+  "Gray03": #a0a0a0,
+  "Black": #000000,
+  "Black01": #303030,
+  "Black02": #484848,
+  "Black03": #606060,
+  "Primary": #d70a19,
+  "PrimaryLight": #d7414b,
+  "PrimaryDark": #960019,
+  //"PrimaryGrad1": linear-gradient(90deg, #c8328c, #be3291),
+  //"PrimaryGrad2": linear-gradient(90deg, #d2268f, #bf3392),
+  //"Secondary": #ffb955,
+  //"SecondaryLight": #fff582,
+  //"SecondaryGrad": linear-gradient(90deg, #ffb955, #fff582),
+  //"SectionA_Border": #e4ca59,
+  //"SectionB_Border": #2aa6a8,
+  // Text
+  "TextDefault": var(--color-Black),
+  "TextTitle": #393939,
+  // Link
+  "Link": #006699,
+  "LinkVisited": #006699,
+  "LinkHover": #993300,
+  "LinkActive": #993300,
+  // Background
+  "Bg": #f5f5f5,
+  // Scrollbar
+  "ScrollBg": #1f54a8,
+  "ScrollColor": #fff,
+  "btnPraGrad": linear-gradient(44deg, #d2268f, #b722a4),
+  // Button
+  "btnOcherBg": #e4ca59,
+  "btnOcherBorder": #c1a221,
+  "btnOcherText": #8d4411,
+  "btnTwitterBg": #38b1e7,
+  "btnTwitterBorder": #fff,
+  "btnTwitterText": #ffffff,
+  "btnTurquoiseBg": #2aa6a8,
+  "btnTurquoiseBorder": #147d7f,
+  "btnTurquoiseText": #ffffff,
+  "btnOrangeBg": #ef5324,
+  "btnOrangeBorder": #db481c,
+  "btnOrangeText": #ffffff,
+  // Sidebar
+  "SidebarText": #ffffff,
+  "SidebarHr": #9e0f70,
+  // SNS
+  "Facebook": #3b5998,
+  "Twitter": #55acee,
+  "Line": #00b900,
+  // Other
+  "LoadingBg": #554848,
+);
+
+// Dark Theme Colors
+$dark-theme-colors: $theme-colors;
+
+// Breakpoints
+$pc_large: 1650px;
+$pc_medium: 1440px;
+$pc: 1280px;
+$tab: 1024px;
+$sp: 768px;
+$sp_small: 480px;
+$sp320: 320px;
+
+// Font Size
+$font-size-base: 16px;
+$font-size-tab: 1.15vw;
+$font-size-sp: 3.75vw;
+$font-size-sp320: 3.75vw;
+
+// Style
+$main-height: 100vh;
+$width-pc: 1760px;
+$width-sp: 90%;
+$hover_opacity: 0.7;
+$anime-normal: all 0.2s ease-in-out;
+
+// z-index
+$zi-base: 1;
+$zi-bg: 0;
+$zi-container: 100;
+$zi-header: 200;
+$zi-footer: 100;
+$zi-backdrop: 300;
+$zi-gNav: 400;
+$zi-gNav-sp: 500;
+$zi-loading: 999;
+
+//icon-list
+$icon-color-default: map-get($theme-colors, "white");
+$icon-dir: "../ico/";
+$icon-list: "arrow-up", "arrow-down", "arrow-left", "arrow-right", "mail",
+  "arrow", "download";

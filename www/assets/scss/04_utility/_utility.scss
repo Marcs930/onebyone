@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+/*==================================================================
+// Utility
+//================================================================*/
+
+.pc {
+  display: block;
+  @include pc() {
+    display: none;
+  }
+}
+.is-pc {
+  display: none;
+  @include pc() {
+    display: block;
+  }
+}
+.tab {
+  display: block;
+  @include tab() {
+    display: none;
+  }
+}
+.is-tab {
+  display: none;
+  @include tab() {
+    display: block;
+  }
+}
+.sp {
+  display: block;
+  @include sp() {
+    display: none;
+  }
+}
+.is-sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.u-line {
+  text-decoration: underline;
+}
+
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.f {
+  &--jcc {
+    justify-content: center;
+  }
+  &--jic {
+    justify-items: center;
+  }
+  &--acc {
+    align-content: center;
+  }
+  &--acsa {
+    align-content: space-around;
+  }
+  &--acsb {
+    align-content: space-between;
+  }
+  &--aic {
+    align-items: center;
+  }
+  &--wrap {
+    flex-wrap: wrap;
+  }
+  &--column {
+    flex-direction: column;
+  }
+}
+.w {
+  &--50p {
+    width: 50%;
+  }
+  &--100p {
+    width: 100%;
+  }
+  &--100v {
+    width: 100vw;
+  }
+}
+
+.h {
+  &--50p {
+    height: 50%;
+  }
+  &--100p {
+    height: 100%;
+  }
+  &--100v {
+    height: 100vh;
+  }
+}
+
+.p {
+  &--1r {
+    padding: 1rem;
+  }
+  &--2r {
+    padding: 2rem;
+  }
+  &--3r {
+    padding: 3rem;
+  }
+  &--t1r {
+    padding-top: 1rem;
+  }
+  &--t3r {
+    padding-top: 3rem;
+  }
+  &--t5r {
+    padding-top: 5rem;
+  }
+  &--b1r {
+    padding-bottom: 1rem;
+  }
+  &--b3r {
+    padding-bottom: 3rem;
+  }
+  &--b5r {
+    padding-bottom: 5rem;
+  }
+  &--lr1r {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  &--lr2r {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  &--tb5r {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+.m {
+  &--1r {
+    margin: 1rem;
+  }
+  &--2r {
+    margin: 2rem;
+  }
+  &--t1r {
+    margin-top: 1rem;
+  }
+  &--t3r {
+    margin-top: 3rem;
+  }
+  &--t5r {
+    margin-top: 5rem;
+  }
+  &--b1r {
+    margin-bottom: 1rem;
+  }
+  &--b3r {
+    margin-bottom: 3rem;
+  }
+  &--b5r {
+    margin-bottom: 5rem;
+  }
+  &--lra {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.pos {
+  &--abs {
+    position: absolute;
+  }
+  &--rel {
+    position: relative;
+  }
+  &--fix {
+    position: fixed;
+  }
+}
+
+.auto {
+  margin: auto;
+}
+.tac {
+  text-align: center;
+}
+.tal {
+  text-align: left;
+}
+.tar {
+  text-align: right;
+}
+.bold {
+  font-weight: bold;
+}
+
+@each $key, $color in $theme-colors {
+  .c-#{$key} {
+    color: var(--color-#{$key});
+  }
+}
+
+.l {
+  &--1e {
+    line-height: 1em;
+  }
+  &--1-5e {
+    line-height: 1.5em;
+  }
+  &--2e {
+    line-height: 2em;
+  }
+  &--2-5e {
+    line-height: 2.5em;
+  }
+  &--3e {
+    line-height: 3em;
+  }
+}
+
+.highlight {
+  background: linear-gradient(transparent 50%, #ffff66 0%);
+  line-height: 1.3em;
+}
