@@ -107,3 +107,11 @@ $icon-color-default: map-get($theme-colors, "white");
 $icon-dir: "../ico/";
 $icon-list: "arrow-up", "arrow-down", "arrow-left", "arrow-right", "mail",
   "arrow", "download";
+
+// font-weight
+$fw-thin: 100;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-black: 900;

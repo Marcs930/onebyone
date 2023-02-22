@@ -4,19 +4,19 @@
 // Fonts
 //================================================================*/
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 // Font Family
-$font-family-base: "Noto Sans CJK JP", "Noto Sans CJK JP Subset", "Noto Sans",
-  sans-serif;
 
-@mixin en_font {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
+$font-family-base: 'Noto Sans JP', sans-serif;
+
+// @mixin en_font {
+//   font-family: "Montserrat", sans-serif;
+//   font-weight: 700;
+// }
 
 @mixin title_font {
-  font-weight: 700;
+  font-weight: $fw-bold;
 }
 
 .title_font {
