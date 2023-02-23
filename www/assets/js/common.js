@@ -55,3 +55,13 @@ $('.js-hamburgerBtn').on('click', function() {
   $(this).toggleClass('is-open');
   $('.headNav').toggleClass('is-open');
 })
+
+const hamburgerBtn = document.querySelector(".js-hamburgerBtn")
+const header = document.querySelector(".header");
+
+const clickHandler = () => {
+  hamburgerBtn.classList.toggle("is-open");
+  header.classList.toggle("is-open");
+  console.log("ok");
+}
+hamburgerBtn.addEventListener('click',clickHandler);

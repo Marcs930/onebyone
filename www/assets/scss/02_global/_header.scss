@@ -101,6 +101,61 @@
   }
 }
 
+.hamburger {
+    position: relative;
+    width: 46px;
+    height: 32px;
+    margin-left: 32px;
+    flex-shrink: 0;
+    z-index: 3;
+    cursor: pointer;
+
+    @include sp() {
+      margin-left: 1rem;
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      background: var(--color-White);
+
+      transition: top 0.24s, transform 0.24s, opacity 0.24s;
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        top: 100%;
+        transform: translateY(-100%);
+      }
+    }
+
+    &.is-open {
+      span {
+        &:nth-child(1) {
+          top: 50%;
+          transform: translateY(-50%) rotate(135deg);
+        }
+
+        &:nth-child(2) {
+          transform: translate(50%, -50%);
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          top: 50%;
+          transform: translateY(-50%) rotate(-135deg);
+        }
+      }
+    }
+  }
 // .header {
 //   position: fixed;
 //   top: 0;
