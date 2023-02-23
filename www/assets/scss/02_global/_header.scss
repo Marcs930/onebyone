@@ -25,6 +25,80 @@
     }
   }
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $zi-header;
+  transition: $anime-normal;
+  background-color: transparent;
+  // テスト用
+  background-color: var(--color-Black);
+
+  &__inner {
+    position: relative;
+    height: 80px;
+    @include sectionInner;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    width: 180px;
+    z-index: 3;
+
+    @include pc() {
+      width: 100%;
+      flex-grow: 1;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 180px;
+    }
+  }
+
+  .headerNav {
+    &--pc {
+
+      .headerNav {
+        &__list {
+          display: flex;
+        }
+        &__item {
+          a {
+            font-size: rem(19);
+            color: var(--color-White);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 34px;
+            padding-right: 34px;
+            span {
+              @include en_font;
+              font-weight: $fw-light;
+              font-size: rem(15);
+              letter-spacing: 0;
+            }
+          }
+          &.tel {
+            a {
+              font-size: rem(13);
+              letter-spacing: 0;
+              span {
+                @include ja_font;
+                font-size: rem(22);
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // .header {

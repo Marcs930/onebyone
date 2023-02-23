@@ -10,7 +10,7 @@ $theme-colors: (
   "White01": #f8f8f8,
   "White02": #f0f0f0,
   "White03": #e0e0e0,
-  "Gray": #d0d0d0,
+  "Gray": #F8F8F8,
   "Gray01": #c0c0c0,
   "Gray02": #b0b0b0,
   "Gray03": #a0a0a0,
@@ -52,7 +52,7 @@ $theme-colors: (
   "btnTurquoiseBg": #2aa6a8,
   "btnTurquoiseBorder": #147d7f,
   "btnTurquoiseText": #ffffff,
-  "btnOrangeBg": #ef5324,
+  "btnOrangeBg": #E69500,
   "btnOrangeBorder": #db481c,
   "btnOrangeText": #ffffff,
   // Sidebar
@@ -86,7 +86,7 @@ $font-size-sp320: 3.75vw;
 
 // Style
 $main-height: 100vh;
-$width-pc: 1760px;
+$width-pc: 1200px;
 $width-sp: 90%;
 $hover_opacity: 0.7;
 $anime-normal: all 0.2s ease-in-out;
