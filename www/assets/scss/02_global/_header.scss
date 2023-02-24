@@ -49,19 +49,21 @@
     display: flex;
     width: 180px;
     z-index: 3;
-
-    @include pc() {
-      width: 100%;
-      flex-grow: 1;
-    }
-
     .logo {
       width: 100%;
       max-width: 180px;
     }
+    @include pc {
+      width: 13vw;
+      min-width: 130px;
+    }
   }
 }
-.headerNav {
+.pcNav {
+  display: block;
+  @include tab-large {
+    display: none;
+  }
   &__list {
     display: flex;
     align-items: center;
@@ -76,22 +78,73 @@
       justify-content: center;
       padding-left: 34px;
       padding-right: 34px;
+      line-height: 1;
       span {
         @include en_font;
         display: inline-block;
         font-weight: $fw-light;
         font-size: rem(15);
         letter-spacing: 0;
+        line-height: 1;
+        margin-top: 6px;
       }
     }
     &.tel {
       a {
         font-size: rem(13);
         letter-spacing: 0;
+        line-height: 1;
         span {
           @include ja_font;
+          @include l_spacing(35);
           font-size: rem(22);
+          line-height: 1;
+          @include icon(
+            $width: 20px,
+            $height: 20px,
+            $path: url(../../../assets/img/common/icon_phone.svg)
+          );
+          &::before {
+            margin-right: 0.4em;
+            margin-top: 4px;
+          }
         }
+      }
+    }
+  }
+}
+
+.spNav {
+  display: none;
+  @include tab-large {
+    display: block;
+  }
+
+  width: 100%;
+  &__list {
+    width: 100%;
+    @include wrapper;
+  }
+  &__item {
+    width: 100%;
+    border-top: 1px solid var(--color-Primary);
+    &:last-of-type {
+      border-bottom: 1px solid var(--color-Primary);
+    }
+
+    a {
+      width: 100%;
+      display: inline-block;
+      font-weight: $fw-bold;
+      color: var(--color-Primary);
+      @include font(18, 0, 26);
+      padding-top: rem(15);
+      padding-bottom: rem(15);
+      span {
+        @include en_font;
+        font-size: rem(12);
+        font-weight: $fw-medium;
+        margin-left: 10px;
       }
     }
   }

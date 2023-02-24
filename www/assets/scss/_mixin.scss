@@ -19,6 +19,11 @@
     @content;
   }
 }
+@mixin tab-large {
+  @media (max-width: ($tab-large)) {
+    @content;
+  }
+}
 @mixin tab {
   @media (max-width: ($tab)) {
     @content;
@@ -96,6 +101,25 @@
 // icon
 //-----------------------------------------------------
 
+//icon 疑似要素
+@mixin icon($width, $height, $path) {
+  display: flex;
+  flex-direction: row !important;
+  position: relative;
+  align-items: center;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-image: $path;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @content;
+}
+
 //icon-list
 @mixin iconPath($iconName) {
   .icon-#{$iconName} {
@@ -149,9 +173,20 @@
   width: 100%;
   max-width: $innerWidth;
   margin: 0 auto;
+  padding: 0 20px;
+  @media (max-width: ($tab-large)) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@mixin wrapper ($innerWidth: $width_pc) {
+  width: 100%;
+  max-width: $innerWidth;
+  margin: 0 auto;
   padding: 0 1.6rem;
   @media (max-width: ($innerWidth)) {
-    width: $width_sp;
+    width: 100%;
   }
 }
 

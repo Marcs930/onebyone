@@ -7,32 +7,50 @@
 .btn {
   display: inline-block;
   @include anime-normal();
+  border-radius: 5px;
   &:hover {
     opacity: .8;
   }
+  @include tab-large {
+    width: 100%;
+  }
 }
 
-.headerNav__contactBtn {
+.spPrimaryBtn {
+  color: var(--color-White);
+
+  @include font(15, 60, 15);
+  font-weight: $fw-medium;
+  padding-top: rem(15);
+  padding-bottom: rem(15);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  &.--contact {
+    background-color: var(--color-btnOrangeBg);
+  }
+  &.--line {
+    background-color: var(--color-Line);
+
+  }
+}
+
+.pcNav__contactBtn {
+  display: inline-block;
+  @include anime-normal();
+  &:hover {
+    opacity: .8;
+  }
   background-color: var(--color-btnOrangeBg);
   color: var(--color-White);
   height: 80px;
+  font-weight: $fw-medium;
   padding-right: rem(24) !important;
   padding-left: rem(24) !important;
-  display: flex;
-  flex-direction: row !important;
-  position: relative;
   font-size: rem(15) !important;
   @include l_spacing(60);
-  font-weight: $fw-medium;
+  @include icon($width: 20px, $height: 16px, $path:url(../../../assets/img/common/icon_mail.png));
   &::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 16px;
-    background-image: url(../../../assets/img/common/icon_mail.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
     margin-right: .55rem;
   }
 }

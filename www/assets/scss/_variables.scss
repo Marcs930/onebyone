@@ -18,7 +18,7 @@ $theme-colors: (
   "Black01": #303030,
   "Black02": #484848,
   "Black03": #606060,
-  "Primary": #d70a19,
+  "Primary": #001D58,
   "PrimaryLight": #d7414b,
   "PrimaryDark": #960019,
   //"PrimaryGrad1": linear-gradient(90deg, #c8328c, #be3291),
@@ -61,7 +61,7 @@ $theme-colors: (
   // SNS
   "Facebook": #3b5998,
   "Twitter": #55acee,
-  "Line": #00b900,
+  "Line": #06C756,
   // Other
   "LoadingBg": #554848,
 );
@@ -73,6 +73,7 @@ $dark-theme-colors: $theme-colors;
 $pc_large: 1650px;
 $pc_medium: 1440px;
 $pc: 1280px;
+$tab_large: 1080px;
 $tab: 1024px;
 $sp: 768px;
 $sp_small: 480px;

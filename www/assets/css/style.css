@@ -465,7 +465,7 @@ table {
   --color-Black01: #303030;
   --color-Black02: #484848;
   --color-Black03: #606060;
-  --color-Primary: #d70a19;
+  --color-Primary: #001D58;
   --color-PrimaryLight: #d7414b;
   --color-PrimaryDark: #960019;
   --color-TextDefault: var(--color-Black);
@@ -494,7 +494,7 @@ table {
   --color-SidebarHr: #9e0f70;
   --color-Facebook: #3b5998;
   --color-Twitter: #55acee;
-  --color-Line: #00b900;
+  --color-Line: #06C756;
   --color-LoadingBg: #554848;
 }
 :root[data-theme=dark] {
@@ -510,7 +510,7 @@ table {
   --color-Black01: #303030;
   --color-Black02: #484848;
   --color-Black03: #606060;
-  --color-Primary: #d70a19;
+  --color-Primary: #001D58;
   --color-PrimaryLight: #d7414b;
   --color-PrimaryDark: #960019;
   --color-TextDefault: var(--color-Black);
@@ -539,7 +539,7 @@ table {
   --color-SidebarHr: #9e0f70;
   --color-Facebook: #3b5998;
   --color-Twitter: #55acee;
-  --color-Line: #00b900;
+  --color-Line: #06C756;
   --color-LoadingBg: #554848;
 }
 
@@ -844,11 +844,12 @@ i.icon {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.6rem;
+  padding: 0 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
   .sectionInner {
-    width: 90%;
+    width: 100%;
+    padding: 0 15px;
   }
 }
 .sectionBg {
@@ -916,17 +917,65 @@ i.icon {
   backface-visibility: hidden;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  border-radius: 5px;
 }
 .btn:hover {
   opacity: 0.8;
 }
+@media (max-width: 1080px) {
+  .btn {
+    width: 100%;
+  }
+}
 
-.headerNav__contactBtn {
+.spPrimaryBtn {
+  color: var(--color-White);
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.spPrimaryBtn.--contact {
+  background-color: var(--color-btnOrangeBg);
+}
+.spPrimaryBtn.--line {
+  background-color: var(--color-Line);
+}
+
+.pcNav__contactBtn {
+  display: inline-block;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-color: var(--color-btnOrangeBg);
   color: var(--color-White);
   height: 80px;
+  font-weight: 500;
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important;
+  font-size: 0.9375rem !important;
+  letter-spacing: 0.06em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -937,11 +986,15 @@ i.icon {
       -ms-flex-direction: row !important;
           flex-direction: row !important;
   position: relative;
-  font-size: 0.9375rem !important;
-  letter-spacing: 0.06em;
-  font-weight: 500;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.headerNav__contactBtn::before {
+.pcNav__contactBtn:hover {
+  opacity: 0.8;
+}
+.pcNav__contactBtn::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -950,6 +1003,8 @@ i.icon {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.pcNav__contactBtn::before {
   margin-right: 0.55rem;
 }
 
@@ -1199,7 +1254,7 @@ i.icon {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.6rem;
+  padding: 0 20px;
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1214,9 +1269,10 @@ i.icon {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
   .header__inner {
-    width: 90%;
+    width: 100%;
+    padding: 0 15px;
   }
 }
 .header__logo {
@@ -1227,21 +1283,26 @@ i.icon {
   width: 180px;
   z-index: 3;
 }
-@media (max-width: 1280px) {
-  .header__logo {
-    width: 100%;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
 .header__logo .logo {
   width: 100%;
   max-width: 180px;
 }
+@media (max-width: 1280px) {
+  .header__logo {
+    width: 13vw;
+    min-width: 130px;
+  }
+}
 
-.headerNav__list {
+.pcNav {
+  display: block;
+}
+@media (max-width: 1080px) {
+  .pcNav {
+    display: none;
+  }
+}
+.pcNav__list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1251,7 +1312,7 @@ i.icon {
       -ms-flex-align: center;
           align-items: center;
 }
-.headerNav__item a {
+.pcNav__item a {
   font-size: 1.1875rem;
   color: var(--color-White);
   display: -webkit-box;
@@ -1273,23 +1334,105 @@ i.icon {
           justify-content: center;
   padding-left: 34px;
   padding-right: 34px;
+  line-height: 1;
 }
-.headerNav__item a span {
+.pcNav__item a span {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   display: inline-block;
   font-weight: 300;
   font-size: 0.9375rem;
   letter-spacing: 0;
+  line-height: 1;
+  margin-top: 6px;
 }
-.headerNav__item.tel a {
+.pcNav__item.tel a {
   font-size: 0.8125rem;
   letter-spacing: 0;
+  line-height: 1;
 }
-.headerNav__item.tel a span {
+.pcNav__item.tel a span {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
+  letter-spacing: 0.035em;
   font-size: 1.375rem;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: row !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pcNav__item.tel a span::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../../assets/img/common/icon_phone.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.pcNav__item.tel a span::before {
+  margin-right: 0.4em;
+  margin-top: 4px;
+}
+
+.spNav {
+  display: none;
+  width: 100%;
+}
+@media (max-width: 1080px) {
+  .spNav {
+    display: block;
+  }
+}
+.spNav__list {
+  width: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+@media (max-width: 1200px) {
+  .spNav__list {
+    width: 100%;
+  }
+}
+.spNav__item {
+  width: 100%;
+  border-top: 1px solid var(--color-Primary);
+}
+.spNav__item:last-of-type {
+  border-bottom: 1px solid var(--color-Primary);
+}
+.spNav__item a {
+  width: 100%;
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-Primary);
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.4444444444;
+  letter-spacing: 0em;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+.spNav__item a span {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 10px;
 }
 
 .hamburger {
@@ -3780,7 +3923,7 @@ i.icon {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.6rem;
+  padding: 0 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3809,9 +3952,10 @@ i.icon {
           align-items: center;
   gap: 24px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
   .forgetIdModal__inner {
-    width: 90%;
+    width: 100%;
+    padding: 0 15px;
   }
 }
 .forgetIdModal__inner .title {
@@ -4112,7 +4256,7 @@ i.icon {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.6rem;
+  padding: 0 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4141,9 +4285,10 @@ i.icon {
           align-items: center;
   gap: 24px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
   .playGameModal__inner {
-    width: 90%;
+    width: 100%;
+    padding: 0 15px;
   }
 }
 @media (max-width: 768px) {
