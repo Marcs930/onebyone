@@ -905,6 +905,54 @@ i.icon {
 /*==================================================================
 // btn
 //================================================================*/
+.btn {
+  display: inline-block;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.headerNav__contactBtn {
+  background-color: var(--color-btnOrangeBg);
+  color: var(--color-White);
+  height: 80px;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: row !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  position: relative;
+  font-size: 0.9375rem !important;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+.headerNav__contactBtn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background-image: url(../../../assets/img/common/icon_mail.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 0.55rem;
+}
+
 .c-btn {
   display: inline-block;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1192,13 +1240,18 @@ i.icon {
   width: 100%;
   max-width: 180px;
 }
-.header .headerNav--pc .headerNav__list {
+
+.headerNav__list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.header .headerNav--pc .headerNav__item a {
+.headerNav__item a {
   font-size: 1.1875rem;
   color: var(--color-White);
   display: -webkit-box;
@@ -1214,21 +1267,26 @@ i.icon {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left: 34px;
   padding-right: 34px;
 }
-.header .headerNav--pc .headerNav__item a span {
+.headerNav__item a span {
   font-family: "Lato", sans-serif;
   font-weight: 400;
+  display: inline-block;
   font-weight: 300;
   font-size: 0.9375rem;
   letter-spacing: 0;
 }
-.header .headerNav--pc .headerNav__item.tel a {
+.headerNav__item.tel a {
   font-size: 0.8125rem;
   letter-spacing: 0;
 }
-.header .headerNav--pc .headerNav__item.tel a span {
+.headerNav__item.tel a span {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   font-size: 1.375rem;
@@ -4617,4 +4675,4 @@ i.icon {
   background: -webkit-linear-gradient(transparent 50%, #ffff66 0%);
   background: linear-gradient(transparent 50%, #ffff66 0%);
   line-height: 1.3em;
-}
+}/*# sourceMappingURL=style.css.map */

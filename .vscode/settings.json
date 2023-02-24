@@ -85,7 +85,7 @@
       "savePath": "~/../css/"
     },
   ],
-  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.autoprefix": [
     "last 2 versions",
     "ie >= 11",

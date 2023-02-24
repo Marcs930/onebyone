@@ -4,6 +4,39 @@
 // btn
 //================================================================*/
 
+.btn {
+  display: inline-block;
+  @include anime-normal();
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.headerNav__contactBtn {
+  background-color: var(--color-btnOrangeBg);
+  color: var(--color-White);
+  height: 80px;
+  padding-right: rem(24) !important;
+  padding-left: rem(24) !important;
+  display: flex;
+  flex-direction: row !important;
+  position: relative;
+  font-size: rem(15) !important;
+  @include l_spacing(60);
+  font-weight: $fw-medium;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    background-image: url(../../../assets/img/common/icon_mail.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: .55rem;
+  }
+}
+
 .c-btn {
   display: inline-block;
   @include anime-normal();
