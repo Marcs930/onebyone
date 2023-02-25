@@ -57,11 +57,19 @@ $('.js-hamburgerBtn').on('click', function() {
 })
 
 const hamburgerBtn = document.querySelector(".js-hamburgerBtn")
-const header = document.querySelector(".header");
+const container = document.querySelector(".container");
 
 const clickHandler = () => {
   hamburgerBtn.classList.toggle("is-open");
-  header.classList.toggle("is-open");
+  container.classList.toggle("is-open");
   console.log("ok");
 }
 hamburgerBtn.addEventListener('click',clickHandler);
+
+
+/**
+ * ある程度スクロール→ヘッダー背景白
+ *  header,hamburgerに.bgWhite付与
+ *
+ * spメニューopen時→スクロール不可
+ */

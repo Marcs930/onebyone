@@ -3,8 +3,50 @@
 /*==================================================================
 // Header
 //================================================================*/
-
+.is-open {
+  .header__logo {
+    &--white {
+      display: none;
+    }
+    &--black {
+      display: block;
+    }
+  }
+  .hamburger {
+    span {
+      background-color: var(--color-Black);
+    }
+  }
+  .header {
+    // background-color: var(--color-White01);
+  }
+}
 .header {
+  &.bgWhite {
+    background-color: var(--color-White01);
+    .header__logo {
+      &--white {
+        display: none;
+      }
+      &--black {
+        display: block;
+      }
+    }
+    .pcNav__item {
+      a {
+        color: var(--color-Black);
+      }
+      &.tel {
+        span {
+          &::before {
+            background-image: url(../../../assets/img/common/icon_phone-black.svg);
+          }
+        }
+      }
+    }
+
+  }
+
   &__logo {
     &--white {
       display: block;
@@ -33,7 +75,7 @@
   transition: $anime-normal;
   background-color: transparent;
   // テスト用
-  background-color: var(--color-Black);
+  // background-color: var(--color-Black);
 
   &__inner {
     position: relative;
@@ -102,7 +144,7 @@
           @include icon(
             $width: 20px,
             $height: 20px,
-            $path: url(../../../assets/img/common/icon_phone.svg)
+            $path: url(../../../assets/img/common/icon_phone-white.svg)
           );
           &::before {
             margin-right: 0.4em;
@@ -114,8 +156,21 @@
   }
 }
 
+.is-open {
+  .spNav {
+    right: 0;
+  }
+}
 .spNav {
+  transition:  $anime-normal;
+  position: fixed;
+  top: 0;
+  right: -110vw;
+  padding-top: 80px;
+  z-index: 100;
   display: none;
+  height: 100%;
+  background-color: var(--color-White01);
   @include tab-large {
     display: block;
   }
@@ -140,33 +195,139 @@
       @include font(18, 0, 26);
       padding-top: rem(15);
       padding-bottom: rem(15);
+      position: relative;
       span {
         @include en_font;
         font-size: rem(12);
         font-weight: $fw-medium;
         margin-left: 10px;
       }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 34px;
+        height: 8px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url(../../../assets/img/common/arrow-right.png);
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 0;
+      }
+    }
+  }
+  &__tel {
+    width: 100%;
+    font-size: rem(14);
+    color: var(--color-Black01);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 2px solid var(--color-Blue01);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      display: inline-block;
+      &.tel {
+        color: var(--color-Primary);
+        font-weight: $fw-medium;
+        margin-top: 0.5em;
+        @include font(23, 50, 34);
+        @include icon(
+          18px,
+          18px,
+          url(../../../assets/img/common/icon_phone-blue.svg)
+        );
+        &::before {
+          margin-top: 4px;
+          margin-right: 0.25em;
+        }
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 40px;
+          height: 1px;
+          background-color: var(--color-Black01);
+          position: absolute;
+          transform: translateX(-50%);
+          top: -5px;
+          left: 50%;
+        }
+      }
+      &.time {
+        font-size: rem(14);
+        margin-top: 0.3em;
+      }
+    }
+  }
+  &__btnContainer {
+    @include wrapper;
+    margin-top: 35px;
+    & > a {
+      margin-bottom: 15px;
     }
   }
 
-  &__btnContainer {
+  &__snsContainer {
     @include wrapper;
+    & > span {
+      font-size: rem(14);
+      @include l_spacing(60);
+      color: var(--color-Primary);
+
+      &::before,&::after {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background-color: var(--color-Primary);
+      }
+      &::before {
+        transform: rotate(-15deg);
+        margin-right: 5px;
+      }
+      &::after {
+        transform: rotate(15deg);
+        margin-left: 5px;
+      }
+    }
+  }
+  &__snsList {
+    display: flex;
+    margin-top: 20px;
+    li {
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
   }
 }
 
 .hamburger {
   position: relative;
   width: 46px;
-  height: 32px;
+  height: 20px;
   margin-left: 32px;
   flex-shrink: 0;
   z-index: 3;
   cursor: pointer;
+  display: none;
+
+  @include tab-large {
+    display: block;
+  }
 
   @include sp() {
     margin-left: 1rem;
   }
-
+  &.bgWhite {
+    span {
+      background-color: var(--color-Primary);
+    }
+  }
   span {
     position: absolute;
     width: 100%;
@@ -179,12 +340,8 @@
       top: 0;
     }
 
-    &:nth-child(2) {
-      top: 50%;
-      transform: translateY(-50%);
-    }
 
-    &:nth-child(3) {
+    &:nth-child(2) {
       top: 100%;
       transform: translateY(-100%);
     }
