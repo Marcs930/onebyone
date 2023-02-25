@@ -952,9 +952,71 @@ i.icon {
 }
 .spPrimaryBtn.--contact {
   background-color: var(--color-btnOrangeBg);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: row !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.spPrimaryBtn.--contact::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 15px;
+  background-image: url(../../../assets/img/common/icon_mail.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.spPrimaryBtn.--contact::before {
+  position: absolute;
+  top: calc(50% + 2px);
+  left: calc(50% - 70px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .spPrimaryBtn.--line {
   background-color: var(--color-Line);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: row !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.spPrimaryBtn.--line::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url(../../../assets/img/common/icon_line.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.spPrimaryBtn.--line::before {
+  position: absolute;
+  top: calc(50% + 2px);
+  left: calc(50% - 70px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .pcNav__contactBtn {
@@ -1433,6 +1495,17 @@ i.icon {
   font-size: 0.75rem;
   font-weight: 500;
   margin-left: 10px;
+}
+.spNav__btnContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+@media (max-width: 1200px) {
+  .spNav__btnContainer {
+    width: 100%;
+  }
 }
 
 .hamburger {

@@ -148,6 +148,10 @@
       }
     }
   }
+
+  &__btnContainer {
+    @include wrapper;
+  }
 }
 
 .hamburger {

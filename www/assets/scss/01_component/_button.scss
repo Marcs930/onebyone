@@ -9,7 +9,7 @@
   @include anime-normal();
   border-radius: 5px;
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
   @include tab-large {
     width: 100%;
@@ -25,13 +25,35 @@
   padding-bottom: rem(15);
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   &.--contact {
     background-color: var(--color-btnOrangeBg);
+
+    @include icon(
+      $width: 18px,
+      $height: 15px,
+      $path: url(../../../assets/img/common/icon_mail.png)
+    );
+    &::before {
+      position: absolute;
+      top: calc(50% + 2px);
+      left: calc(50% - 70px);
+      transform: translate(-50%, -50%);
+    }
   }
   &.--line {
     background-color: var(--color-Line);
-
+    @include icon(
+      $width: 28px,
+      $height: 28px,
+      $path: url(../../../assets/img/common/icon_line.png)
+    );
+    &::before {
+      position: absolute;
+      top: calc(50% + 2px);
+      left: calc(50% - 70px);
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -39,7 +61,7 @@
   display: inline-block;
   @include anime-normal();
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
   background-color: var(--color-btnOrangeBg);
   color: var(--color-White);
@@ -49,9 +71,13 @@
   padding-left: rem(24) !important;
   font-size: rem(15) !important;
   @include l_spacing(60);
-  @include icon($width: 20px, $height: 16px, $path:url(../../../assets/img/common/icon_mail.png));
+  @include icon(
+    $width: 20px,
+    $height: 16px,
+    $path: url(../../../assets/img/common/icon_mail.png)
+  );
   &::before {
-    margin-right: .55rem;
+    margin-right: 0.55rem;
   }
 }
 
