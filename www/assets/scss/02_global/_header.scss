@@ -44,7 +44,6 @@
         }
       }
     }
-
   }
 
   &__logo {
@@ -162,7 +161,7 @@
   }
 }
 .spNav {
-  transition:  $anime-normal;
+  transition: $anime-normal;
   position: fixed;
   top: 0;
   right: -110vw;
@@ -278,8 +277,9 @@
       @include l_spacing(60);
       color: var(--color-Primary);
 
-      &::before,&::after {
-        content: '';
+      &::before,
+      &::after {
+        content: "";
         display: inline-block;
         width: 1px;
         height: 14px;
@@ -340,14 +340,14 @@
       top: 0;
     }
 
-
     &:nth-child(2) {
       top: 100%;
       transform: translateY(-100%);
     }
   }
-
-  &.is-open {
+}
+.is-open {
+  .hamburger {
     span {
       &:nth-child(1) {
         top: 50%;
@@ -355,11 +355,6 @@
       }
 
       &:nth-child(2) {
-        transform: translate(50%, -50%);
-        opacity: 0;
-      }
-
-      &:nth-child(3) {
         top: 50%;
         transform: translateY(-50%) rotate(-135deg);
       }
