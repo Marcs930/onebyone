@@ -17,12 +17,10 @@
       background-color: var(--color-Black);
     }
   }
-  .header {
-    // background-color: var(--color-White01);
-  }
 }
-.header {
-  &.bgWhite {
+
+.js-bgWhite {
+  .header {
     background-color: var(--color-White01);
     .header__logo {
       &--white {
@@ -45,6 +43,18 @@
       }
     }
   }
+}
+.header {
+  &.bgWhite {
+    .header__logo {
+      &--white {
+        display: none;
+      }
+      &--black {
+        display: block;
+      }
+    }
+  }
 
   &__logo {
     &--white {
@@ -55,16 +65,6 @@
     }
   }
 
-  &.js-bg-white {
-    .header__logo {
-      &--white {
-        display: none;
-      }
-      &--black {
-        display: block;
-      }
-    }
-  }
 
   position: fixed;
   top: 0;
@@ -306,6 +306,14 @@
   }
 }
 
+.js-bgWhite {
+  .hamburger {
+    span {
+      background-color: var(--color-Primary);
+    }
+  }
+}
+
 .hamburger {
   position: relative;
   width: 46px;
@@ -323,11 +331,7 @@
   @include sp() {
     margin-left: 1rem;
   }
-  &.bgWhite {
-    span {
-      background-color: var(--color-Primary);
-    }
-  }
+
   span {
     position: absolute;
     width: 100%;
@@ -361,6 +365,8 @@
     }
   }
 }
+
+
 // .header {
 //   position: fixed;
 //   top: 0;

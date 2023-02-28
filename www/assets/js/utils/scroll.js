@@ -1,4 +1,4 @@
-export class ScrollObserver {
+class ScrollObserver {
     constructor(els, cb, options) {
         this.els = document.querySelectorAll(els);
         const defaultOptions = {

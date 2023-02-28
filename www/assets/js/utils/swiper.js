@@ -1,13 +1,10 @@
-import Swiper from "swiper/bundle";
-
 const swiper = new Swiper(".swiper", {
     // Optional parameters
     direction: "horizontal",
     loop: true,
-    slidesPerView: 2,
-    spaceBetween: 20,
+    slidesPerView: 1,
     autoplay: {
-        delay:4000,
+        delay:30000,
         loop: true,
     },
     // If we need pagination
@@ -16,16 +13,4 @@ const swiper = new Swiper(".swiper", {
         clickable: true,
     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        // when window width is >= 640px
-        960: {
-            slidesPerView: "auto",
-            spaceBetween: 60
-        },
-    },
 });

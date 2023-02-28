@@ -20,9 +20,10 @@ class Main {
     this.header = document.querySelector(".header");
     this.main = document.querySelector(".main");
     this.side = document.querySelector(".side");
+    this.container = document.querySelector(".container");
     this._observers = [];
     this._clickHandlerInit();
-    // this._scrollInit();
+    this._scrollInit();
     // this._scrollToggleClassInit();
     // this._headerFixedInit();
   }
@@ -34,21 +35,24 @@ class Main {
   //         this.side.classList.remove("inview");
   //     }
   // }
-  // _inviewAnimation(el, inview) {
-  //     if (inview) {
-  //         el.classList.add("inview");
-  //     } else {
-  //         el.classList.remove("inview");
-  //     }
-  // }
-  // _scrollInit() {
-  //     this._observers.push(
-  //         new ScrollObserver(".appear", this._inviewAnimation, {
-  //             rootMargin: "0px 0px -100px 0px",
-  //             once: true,
-  //         })
-  //     );
-  // }
+  _inviewAnimation(el, inview) {
+      if (inview) {
+          // el.classList.add("inview");
+          this.container.classList.remove("js-bgWhite");
+        } else {
+          // el.classList.remove("inview");
+          this.container.classList.add("js-bgWhite");
+      }
+  }
+  _scrollInit() {
+      this._observers.push(
+          new ScrollObserver(".js-scrollTransTarget", this._inviewAnimation.bind(this), {
+              rootMargin: "0px 0px 0px 0px",
+              once: false,
+          })
+          // _inviewAnimationでthis.containerを使いたいので、bind(this)
+      );
+  }
   // _scrollToggleClassInit() {
   //     new ScrollToggleClass(".side", 350);
   // }
@@ -62,7 +66,23 @@ class Main {
 
 new Main();
 
+// const options = {
+//   root: null,
+//   rootMargin: "0px",
+//   threshold: [1, 1]
+// }
 
+// const callback = (entries, observer) => {
+//   entries.forEach(entry => {
+//     console.log("first")
+//   })
+// };
+
+// const observer = new IntersectionObserver(callback, options);
+
+// const target = document.querySelector(".main");
+
+// observer.observe(target);
 // export class ClickHandler {
 //     constructor(observe, target, className) {
 //         this.observe = document.querySelector(observe);
