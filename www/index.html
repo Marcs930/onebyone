@@ -94,71 +94,63 @@
 
     <main class="main ">
       <div class="mv js-scrollTransTarget">
-      </div>
+        <div class="mv__inner wrapper">
 
-      <!-- Slider main container -->
-      <div class="swiper js-scrollTransTarget mv">
-        <div class="mv__container">
           <p class="mv__title">
             都心高級マンションの賃貸・売買なら<br>
             <span>TERASS</span>
           </p>
           <div class="search-tab">
             <ul class="search-tab__tab">
-              <li class="current">買う</li>
+              <li class="current">借りる</li>
               <li>売る</li>
             </ul>
             <ul class="search-tab__content">
               <li>
-                <p class="search-tab__title">物件を探す</p>
-                <p class="search-tab__new">
-                  一週以内の新着物件
-                  <span>123</span>
-                  件
-                </p>
-                <div class="flex">
+                <div class="search-tab__txtContainer">
+                  <p class="search-tab__title">物件を探す</p>
+                  <p class="search-tab__new">
+                    一週以内の新着物件
+                    <span>123</span>
+                    件
+                  </p>
+                </div>
+                <div class="search-tab__btnContainer">
                   <a href="" class="btn searchByBtn">駅・路線<br><span>から探す</span></a>
-                  <a href="" class="btn">エリア<br><span>から探す</span></a>
-                  <input type="text" name="s" id="s" placeholder="建物名から検索">
-                  <button type="submit"><img src="" alt=""></button>
+                  <a href="" class="btn searchByBtn">エリア<br><span>から探す</span></a>
+                  <div class="keyword-search">
+                    <input class="text-input" type="search" name="" id="" placeholder="建物名から検索">
+                    <button class="submit-btn" type="submit"><img src="" alt=""></button>
+                  </div>
               </li>
-              <li>
-                <p class="search-tab__title">物件を探す</p>
-                <p class="search-tab__new">
-                  一週以内の新着物件
-                  <span>123</span>
-                  件
-                </p>
-                <div class="flex">
-                  <a href="" class="btn">駅・路線<br><span>から探す</span></a>
-                  <a href="" class="btn">エリア<br><span>から探す</span></a>
-                  <input type="search" name="" id="" placeholder="建物名から検索">
-                  <input type="submit" name="submit" value="検索">
-              </li>
+
             </ul>
-            <div class="flex">
-              <a href="" class="btn">賃貸物件一覧へ</a>
-              <a href="" class="btn">売買物件一覧へ</a>
+            <div class="search-tab__btnToListContainer">
+              <a href="" class="btn btnToList">賃貸物件一覧へ</a>
+              <a href="" class="btn btnToList">売買物件一覧へ</a>
             </div>
           </div>
         </div>
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <img src="./assets/img/common/slider01.jpg" alt="">
+        <!-- Slider main container -->
+        <div class="swiper ">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./assets/img/common/slider01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/common/slider02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/common/slider03.jpg" alt="">
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="./assets/img/common/slider02.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/img/common/slider03.jpg" alt="">
-          </div>
-          ...
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
       </div>
+
     </main>
 
 

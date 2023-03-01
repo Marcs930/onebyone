@@ -102,12 +102,30 @@
 //-----------------------------------------------------
 
 //icon 疑似要素
-@mixin icon($width, $height, $path) {
+@mixin icon-before($width, $height, $path) {
   display: flex;
   flex-direction: row !important;
   position: relative;
   align-items: center;
   &::before {
+    content: "";
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-image: $path;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @content;
+}
+
+@mixin icon-after($width, $height, $path) {
+  display: flex;
+  flex-direction: row !important;
+  position: relative;
+  align-items: center;
+  &::after {
     content: "";
     display: inline-block;
     width: $width;
@@ -184,7 +202,8 @@
   width: 100%;
   max-width: $innerWidth;
   margin: 0 auto;
-  padding: 0 1.6rem;
+  padding: 0 20px;
+  position: relative;
   @media (max-width: ($innerWidth)) {
     width: 100%;
   }

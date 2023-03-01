@@ -76,9 +76,9 @@ body {
 p {
   font-size: 1.7rem;
   line-height: 1.2em;
-  & + p {
-    margin-top: 1.6rem;
-  }
+  // & + p {
+  //   margin-top: 1.6rem;
+  // }
   @include sp() {
     font-size: 1.4rem;
     line-height: 1.4em;

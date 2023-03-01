@@ -139,7 +139,7 @@
           @include l_spacing(35);
           font-size: rem(22);
           line-height: 1;
-          @include icon(
+          @include icon-before(
             $width: 20px,
             $height: 20px,
             $path: url(../../../assets/img/common/icon_phone-white.svg)
@@ -234,7 +234,7 @@
         font-weight: $fw-medium;
         margin-top: 0.5em;
         @include font(23, 50, 34);
-        @include icon(
+        @include icon-before(
           18px,
           18px,
           url(../../../assets/img/common/icon_phone-blue.svg)
