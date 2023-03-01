@@ -1460,6 +1460,7 @@ i.icon {
           align-items: center;
   padding-top: 6px;
   padding-bottom: 6px;
+  cursor: pointer;
 }
 .search-tab__tab li:first-of-type {
   border-radius: 5px 0 0 0;
@@ -1475,9 +1476,14 @@ i.icon {
   color: var(--color-Black01);
   background-color: rgba(243, 243, 243, 0.93);
   padding: 20px 20px 27px;
+  border-radius: 0 0 5px 5px;
 }
 .search-tab__content li {
   width: 100%;
+  display: none;
+}
+.search-tab__content li.current {
+  display: block;
 }
 .search-tab__content .flex {
   -webkit-flex-wrap: wrap;

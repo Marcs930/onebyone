@@ -66,6 +66,33 @@ class Main {
 
 new Main();
 
+
+//変数宣言
+const menuItems = document.querySelectorAll('.search-tab__tab > li');
+const contents = document.querySelectorAll('.search-tab__content > li');
+
+console.log(contents)
+//タブメニュークリック時
+menuItems.forEach(clickeditem =>{
+  clickeditem.addEventListener('click',e =>{
+
+    //デフォルト動作キャンセル
+    e.preventDefault();
+
+    //タブメニューのclass付け替え
+    menuItems.forEach(item =>{
+      item.classList.remove('current');
+    });
+    clickeditem.classList.add('current');
+
+    //コンテンツのclass付け替え
+    contents.forEach(content =>{
+      content.classList.remove('current');
+    });
+    document.getElementById(clickeditem.dataset.id).classList.add('current');
+
+  });
+});
 // const options = {
 //   root: null,
 //   rootMargin: "0px",
