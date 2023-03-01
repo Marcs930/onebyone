@@ -44,49 +44,74 @@
 //================================================================*/
 
 .section {
-  &Inner {
-    @include sectionInner();
-  }
+  // &Inner {
+  //   @include sectionInner();
+  // }
 
-  &Bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    @include sp() {
-      display: none;
-    }
-  }
+  // &Bg {
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 1;
+  //   @include sp() {
+  //     display: none;
+  //   }
+  // }
 
   &Title {
-    margin-bottom: 4rem;
-    border-left: solid 2rem var(--color-Primary);
-    padding: 1rem 2rem;
-    @include sp() {
-      border-width: 1rem;
-    }
-
+    font-size: rem(25);
+    font-weight: $fw-bold;
+    color: var(--color-Primary);
+    position: relative;
+    border-bottom: 2px solid var(--color-Gray03);
+    padding-top: rem(37);
+    padding-bottom: rem(18);
+    margin-bottom: 33px;
     span {
-      display: block;
+      font-size: rem(74);
+      font-weight: $fw-bold;
+      @include l_spacing(60);
+      color: var(--color-Gray04);
+      position: absolute;
+      left: 0;
+      bottom: 5px;
     }
-    .ja {
-      font-size: 5rem;
-      line-height: 1em;
-      font-weight: 900;
-      @include sp() {
-        font-size: min(8vw, 5rem);
-      }
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 30%;
+      height: 2px;
+      background-color: var(--color-Blue03);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
     }
-    .en {
-      font-size: 2.5rem;
-      line-height: 1.5em;
-      color: var(--color-Primary);
-      padding-top: 1rem;
-      @include sp() {
-        font-size: min(4vw, 2.5rem);
-      }
-    }
+    // @include sp() {
+    //   border-width: 1rem;
+    // }
+
+    // span {
+    //   display: block;
+    // }
+    // .ja {
+    //   font-size: 5rem;
+    //   line-height: 1em;
+    //   font-weight: 900;
+    //   @include sp() {
+    //     font-size: min(8vw, 5rem);
+    //   }
+    // }
+    // .en {
+    //   font-size: 2.5rem;
+    //   line-height: 1.5em;
+    //   color: var(--color-Primary);
+    //   padding-top: 1rem;
+    //   @include sp() {
+    //     font-size: min(4vw, 2.5rem);
+    //   }
+    // }
   }
 }
