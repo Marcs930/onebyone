@@ -105,7 +105,7 @@
           </p>
           <div class="search-tab">
             <ul class="search-tab__tab">
-              <li>買う</li>
+              <li class="current">買う</li>
               <li>売る</li>
             </ul>
             <ul class="search-tab__content">
@@ -117,10 +117,10 @@
                   件
                 </p>
                 <div class="flex">
-                  <a href="" class="btn">駅・路線<br><span>から探す</span></a>
+                  <a href="" class="btn searchByBtn">駅・路線<br><span>から探す</span></a>
                   <a href="" class="btn">エリア<br><span>から探す</span></a>
-                  <input type="search" name="" id="" placeholder="建物名から検索">
-                  <input type="submit" name="submit" value="検索">
+                  <input type="text" name="s" id="s" placeholder="建物名から検索">
+                  <button type="submit"><img src="" alt=""></button>
               </li>
               <li>
                 <p class="search-tab__title">物件を探す</p>
@@ -142,31 +142,30 @@
             </div>
           </div>
         </div>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./assets/img/common/slider01.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/img/common/slider02.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/img/common/slider03.jpg" alt="">
+          </div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
       </div>
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img src="./assets/img/common/slider01.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/common/slider02.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/common/slider03.jpg" alt="">
-        </div>
-        ...
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-  </div>
-  </main>
+    </main>
 
 
-  <!-- CONTENTS: END -->
+    <!-- CONTENTS: END -->
 
-  <!-- global footer: start -->
-  <!-- <footer class="footer">
+    <!-- global footer: start -->
+    <!-- <footer class="footer">
       <ul class="footNav">
         <li><a href="">お問い合わせ</a></li>
         <li><a href="">利用規約</a></li>
@@ -176,34 +175,34 @@
       </ul>
       <div class="copyright">&copy; anko.in</div>
     </footer> -->
-  <!-- global footer: end -->
-  <nav class="spNav">
-    <ul class="spNav__list">
-      <li class="spNav__item"><a href="/rent/">借りる<span>RENT</span></a></li>
-      <li class="spNav__item"><a href="/buy/">買う<span>BUY</span></a></li>
-      <li class="spNav__item"><a href="/sell/">売る<span>SELL</span></a></li>
-    </ul>
-    <div class="spNav__btnContainer">
-      <a href="/contact" class="btn spPrimaryBtn --contact">
-        <img src="./assets/img/common/icon_mail.png" alt="">
-        お問い合わせ</a>
-      <a href="" class="btn spPrimaryBtn --line">
-        <img src="./assets/img/common/icon_line.png" alt="">
-        LINEで相談</a>
-      <a href="tel:012-345-6789" class="spNav__tel btn">
-        お電話でのお問い合わせはこちら
-        <span class="tel">012-345-6789</span>
-        <span class="time">10:00~17:00（水曜定休）</span>
-      </a>
-    </div>
-    <div class="spNav__snsContainer">
-      <span>SNSでも内見動画配信中!!</span>
-      <ul class="spNav__snsList">
-        <li><a href="" class="snsBtn"><img src="./assets/img/common/icon_youtube.png" alt=""></a></li>
-        <li><a href="" class="snsBtn"><img src="./assets/img/common/icon_tiktok.png" alt=""></a></li>
+    <!-- global footer: end -->
+    <nav class="spNav">
+      <ul class="spNav__list">
+        <li class="spNav__item"><a href="/rent/">借りる<span>RENT</span></a></li>
+        <li class="spNav__item"><a href="/buy/">買う<span>BUY</span></a></li>
+        <li class="spNav__item"><a href="/sell/">売る<span>SELL</span></a></li>
       </ul>
-    </div>
-  </nav>
+      <div class="spNav__btnContainer">
+        <a href="/contact" class="btn spPrimaryBtn --contact">
+          <img src="./assets/img/common/icon_mail.png" alt="">
+          お問い合わせ</a>
+        <a href="" class="btn spPrimaryBtn --line">
+          <img src="./assets/img/common/icon_line.png" alt="">
+          LINEで相談</a>
+        <a href="tel:012-345-6789" class="spNav__tel btn">
+          お電話でのお問い合わせはこちら
+          <span class="tel">012-345-6789</span>
+          <span class="time">10:00~17:00（水曜定休）</span>
+        </a>
+      </div>
+      <div class="spNav__snsContainer">
+        <span>SNSでも内見動画配信中!!</span>
+        <ul class="spNav__snsList">
+          <li><a href="" class="snsBtn"><img src="./assets/img/common/icon_youtube.png" alt=""></a></li>
+          <li><a href="" class="snsBtn"><img src="./assets/img/common/icon_tiktok.png" alt=""></a></li>
+        </ul>
+      </div>
+    </nav>
   </div><!-- /.container -->
 
   <!-- <div class="bg"></div> -->

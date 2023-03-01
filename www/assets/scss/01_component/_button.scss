@@ -97,6 +97,16 @@
   align-items: center;
 }
 
+.searchByBtn {
+  background-color: var(--color-Primary);
+  color: var(--color-White);
+  display: inline-block;
+  @include icon(21px, 16px, url(../../../assets/img/common/icon_train.png));
+  width: 195px;
+  height: 50px;
+  font-size: rem(15);
+}
+
 .c-btn {
   display: inline-block;
   @include anime-normal();

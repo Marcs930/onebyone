@@ -456,7 +456,7 @@ table {
 :root {
   --color-White: #ffffff;
   --color-White01: #f8f8f8;
-  --color-White02: #f0f0f0;
+  --color-White02: #F3F3F3;
   --color-White03: #e0e0e0;
   --color-Gray: #F8F8F8;
   --color-Gray01: #c0c0c0;
@@ -467,6 +467,7 @@ table {
   --color-Black02: #484848;
   --color-Black03: #606060;
   --color-Blue01: #A8B2C7;
+  --color-Orange01: #DB4314;
   --color-Primary: #001D58;
   --color-PrimaryLight: #d7414b;
   --color-PrimaryDark: #960019;
@@ -502,7 +503,7 @@ table {
 :root[data-theme=dark] {
   --color-White: #ffffff;
   --color-White01: #f8f8f8;
-  --color-White02: #f0f0f0;
+  --color-White02: #F3F3F3;
   --color-White03: #e0e0e0;
   --color-Gray: #F8F8F8;
   --color-Gray01: #c0c0c0;
@@ -513,6 +514,7 @@ table {
   --color-Black02: #484848;
   --color-Black03: #606060;
   --color-Blue01: #A8B2C7;
+  --color-Orange01: #DB4314;
   --color-Primary: #001D58;
   --color-PrimaryLight: #d7414b;
   --color-PrimaryDark: #960019;
@@ -601,6 +603,7 @@ body {
   -webkit-overflow-scrolling: touch;
   letter-spacing: 0.3rem;
   overflow: auto;
+  color: var(--color-Black01);
   background-color: var(--color-Gray);
 }
 body.fixed {
@@ -1039,6 +1042,39 @@ i.icon {
           align-items: center;
 }
 
+.searchByBtn {
+  background-color: var(--color-Primary);
+  color: var(--color-White);
+  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: row !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 195px;
+  height: 50px;
+  font-size: 0.9375rem;
+}
+.searchByBtn::before {
+  content: "";
+  display: inline-block;
+  width: 21px;
+  height: 16px;
+  background-image: url(../../../assets/img/common/icon_train.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .c-btn {
   display: inline-block;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1248,6 +1284,50 @@ i.icon {
 .c-btn-octagon::after {
   top: 100%;
   border-top-color: inherit;
+}
+
+/*==================================================================
+// search-tab
+//================================================================*/
+.search-tab {
+  width: 450px;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  border-radius: 5px;
+}
+.search-tab__tab li {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-White);
+  background-color: rgba(114, 113, 113, 0.93);
+}
+.search-tab__tab li.current {
+  color: var(--color-Black01);
+  background-color: rgba(243, 243, 243, 0.93);
+}
+.search-tab__content {
+  color: var(--color-Black01);
+  background-color: rgba(243, 243, 243, 0.93);
+}
+.search-tab__content .flex {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.search-tab__title {
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+.search-tab__new {
+  font-size: 0.875rem;
+  vertical-align: bottom;
+}
+.search-tab__new span {
+  color: var(--color-Orange01);
+  font-size: 1.5rem;
 }
 
 /* ==========================================================================
@@ -2380,6 +2460,10 @@ i.icon {
 
 .c-Blue01 {
   color: var(--color-Blue01);
+}
+
+.c-Orange01 {
+  color: var(--color-Orange01);
 }
 
 .c-Primary {

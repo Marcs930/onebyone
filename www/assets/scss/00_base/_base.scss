@@ -65,7 +65,7 @@ body {
   -webkit-overflow-scrolling: touch;
   letter-spacing: 0.3rem;
   overflow: auto;
-
+  color: var(--color-Black01);
   background-color: var(--color-Gray);
 
   &.fixed {

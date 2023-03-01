@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*==================================================================
+// search-tab
+//================================================================*/
+
+.search-tab {
+  width: 450px;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  border-radius: 5px;
+  &__tab {
+    li {
+      font-size: rem(16);
+      font-weight: $fw-bold;
+      color: var(--color-White);
+      background-color: rgba(114, 113, 113, .93);
+      &.current {
+        color: var(--color-Black01);
+        background-color: rgba(243, 243, 243, .93);
+      }
+    }
+  }
+  &__content {
+    color: var(--color-Black01);
+    background-color: rgba(243, 243, 243, .93);
+    .flex {
+      flex-wrap: wrap;
+    }
+  }
+  &__title {
+    font-size: rem(22);
+    font-weight: $fw-medium;
+  }
+  &__new {
+    font-size: rem(14);
+    vertical-align: bottom;
+    span {
+      color: var(--color-Orange01);
+      font-size: rem(24);
+    }
+  }
+}
