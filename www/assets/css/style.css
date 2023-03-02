@@ -469,6 +469,7 @@ table {
   --color-Black01: #333333;
   --color-Black02: #484848;
   --color-Black03: #606060;
+  --color-Black04: #5E5E5E;
   --color-Blue01: #A8B2C7;
   --color-Blue02: #0070DF;
   --color-Blue03: #00297B;
@@ -522,6 +523,7 @@ table {
   --color-Black01: #333333;
   --color-Black02: #484848;
   --color-Black03: #606060;
+  --color-Black04: #5E5E5E;
   --color-Blue01: #A8B2C7;
   --color-Blue02: #0070DF;
   --color-Blue03: #00297B;
@@ -1620,6 +1622,94 @@ i.icon {
   border: none;
   background-color: var(--color-Blue03);
   color: var(--color-White);
+}
+
+/*==================================================================
+// building-list
+//================================================================*/
+.buildingList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.buildingList::before {
+  content: "";
+  display: inline-block;
+  width: 25%;
+  max-width: 251px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.buildingList::after {
+  content: "";
+  display: inline-block;
+  width: 25%;
+  max-width: 251px;
+}
+.buildingList__item {
+  width: 25%;
+  max-width: 251px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.16);
+}
+.buildingList__item a {
+  width: 100%;
+  display: inline-block;
+  color: var(--color-Black01);
+}
+.buildingList__item img {
+  width: 100%;
+  aspect-ratio: 251/151;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.buildingList__content {
+  width: 100%;
+  letter-spacing: 0em;
+  background-color: var(--color-White);
+  padding-top: 0.5rem;
+  padding-bottom: 1.125rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.buildingList__name {
+  font-size: 1rem;
+  color: var(--color-Black01);
+  font-weight: 500;
+}
+.buildingList__address {
+  color: var(--color-Black04);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.buildingList__price span {
+  color: var(--color-Black04);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.buildingList__price span.red {
+  color: var(--color-Orange01);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.buildingList__info {
+  color: var(--color-Black04);
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 /* ==========================================================================
@@ -2794,6 +2884,10 @@ i.icon {
 
 .c-Black03 {
   color: var(--color-Black03);
+}
+
+.c-Black04 {
+  color: var(--color-Black04);
 }
 
 .c-Blue01 {
