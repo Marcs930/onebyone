@@ -72,6 +72,104 @@
 
 .pickup {
   background-color: var(--color-bgBlue01);
-  padding-top: 100px;
   padding-bottom: 100px;
+  &__buildingList {
+    margin-top: 35px;
+    margin-bottom: 50px;
+  }
+  &__btnWhite {
+    margin: 0 auto;
+  }
+}
+
+.idx-review {
+  padding-bottom: 86px;
+  .review {
+    &__list {
+      margin-bottom: 30px;
+    }
+    &__flex {
+      justify-content: center;
+    }
+    &__btnUnderLine {
+      margin-top: 50px;
+    }
+  }
+}
+
+.idx-philosophy {
+  padding-top: 140px;
+  padding-bottom: 170px;
+  &__img {
+    width: 45%;
+    max-width: 450px;
+    img {
+      display: inline-block;
+      width: 100%;
+      aspect-ratio: 450 / 300;
+      object-fit: cover;
+
+    }
+  }
+  &__inner {
+    @include wrapper(1080px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__container {
+    width: 50%;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 18px;
+
+    padding-top: 0;
+    span {
+      @include font(74, 60, 74);
+      font-weight: $fw-bold;
+    }
+    @include font(25, 0, 25);
+    font-weight: $fw-bold;
+    border-bottom: none;
+    &::after {
+      display: none;
+    }
+  }
+  &__subTitle {
+    width: 100%;
+    @include font(18, 0, 18);
+    font-weight: $fw-bold;
+    position: relative;
+    margin-bottom: 40px;
+    &::after {
+      content: '';
+      width: 45px;
+      height: 2px;
+      background-color: var(--color-Primary);
+      display: inline-block;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+    }
+  }
+  &__text {
+    width: 100%;
+    @include font(16, 44, 31);
+    font-weight: $fw-regular;
+    margin-bottom: 40px;
+  }
+}
+
+.idx-news {
+
+  .flex {
+    margin-top: 33px;
+    justify-content: center;
+  }
 }

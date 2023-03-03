@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*==================================================================
+// cta
+//================================================================*/
+
+.cta {
+  background-image: url(../../../assets/img/common/cta.jpg);
+  padding-top: 47px;
+  padding-bottom: 25px;
+  &__tel {
+    width: 100%;
+    max-width: 340px;
+    font-size: rem(16);
+    font-weight: $fw-medium;
+    color: var(--color-Primary);
+    background-color: var(--color-Gray07);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      display: inline-block;
+      &.tel {
+        color: var(--color-Primary);
+        font-weight: $fw-medium;
+        margin-top: 0.5em;
+        @include font(28, 50, 40);
+        @include icon-before(
+          19px,
+          19px,
+          url(../../../assets/img/common/icon_phone-blue.svg)
+        );
+        &::before {
+          margin-top: 4px;
+          margin-right: 0.25em;
+        }
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 40px;
+          height: 2px;
+          background-color: var(--color-Primary);
+          position: absolute;
+          transform: translateX(-50%);
+          top: -5px;
+          left: 50%;
+        }
+      }
+      &.time {
+        font-size: rem(13);
+        margin-top: 0.3em;
+        font-weight: $fw-medium;
+        span {
+          @include font(12, 0, 12);
+          border: 1px solid var(--color-Primary);
+          border-radius: 2px;
+          padding: 4px 10px;
+        }
+      }
+    }
+  }
+  &__btnContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    margin-top: 43px;
+    &__inner {
+      max-width: 326px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+  &__inner {
+    @include sectionInner(790px);
+  }
+  &__heading {
+    color: var(--color-White);
+    @include font(18, 41, 26);
+    vertical-align: bottom;
+    span {
+      @include font(22, 41, 32);
+    }
+  }
+
+  &__snsContainer {
+    width: 266px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 41px;
+    & > span {
+      font-size: rem(18);
+      @include l_spacing(60);
+      color: var(--color-White);
+
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background-color: var(--color-White);
+      }
+      &::before {
+        transform: rotate(-15deg);
+        margin-right: 5px;
+      }
+      &::after {
+        transform: rotate(15deg);
+        margin-left: 5px;
+      }
+    }
+  }
+  &__snsList {
+    display: flex;
+    margin-bottom: 12px;
+    justify-content: center;
+    li {
+      &:not(:last-of-type) {
+        margin-right: 37px;
+      }
+    }
+  }
+}

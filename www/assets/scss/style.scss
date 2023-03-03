@@ -27,12 +27,15 @@
 @import "01_component/search-tab";
 @import "01_component/filter-menu";
 @import "01_component/building-list";
+@import "01_component/review-list";
+@import "01_component/news-list";
 
 /* ==========================================================================
   02_Global
   ========================================================================== */
 
 @import "02_global/header";
+@import "02_global/cta";
 //@import "02_global/gNav";
 @import "02_global/footer";
 @import "02_global/sidebar";

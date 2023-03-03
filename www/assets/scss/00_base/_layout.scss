@@ -69,6 +69,10 @@
     padding-top: rem(37);
     padding-bottom: rem(18);
     margin-bottom: 33px;
+    padding-top: 60px;
+    @include sp {
+      padding-top: 40px;
+    };
     span {
       font-size: rem(74);
       font-weight: $fw-bold;
