@@ -12,7 +12,7 @@
     opacity: 0.8;
   }
   @include tab-large {
-    width: 100%;
+    // width: 100%; 
   }
 }
 
@@ -282,6 +282,12 @@
   padding-bottom: 14px;
   padding-left: 42px;
   padding-right: 56px;
+
+  @include sp {
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+  };
   @include icon-after(
     15px,
     21px,

@@ -7,15 +7,18 @@
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 50px;
+  @include sp {
+    row-gap: 30px;
+  };
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 25%;
     max-width: 251px;
     order: 1;
   }
   &::after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 25%;
     max-width: 251px;
@@ -25,10 +28,11 @@
     max-width: 251px;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 2px 2px 3px rgba(#000, .16);
+    box-shadow: 2px 2px 3px rgba(#000, 0.16);
     @include sp {
-      width: 50%;
-        };
+      width: 48%;
+      max-width: 100%;
+    }
     a {
       width: 100%;
       display: inline-block;
@@ -65,13 +69,11 @@
       color: var(--color-Black04);
       font-size: rem(12);
       font-weight: $fw-regular;
-
     }
-    span.red{
+    span.red {
       color: var(--color-Orange01);
       font-size: rem(20);
       font-weight: $fw-bold;
-
     }
   }
   &__info {

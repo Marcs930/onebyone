@@ -937,12 +937,6 @@ i.icon {
 .btn:hover {
   opacity: 0.8;
 }
-@media (max-width: 1080px) {
-  .btn {
-    width: 100%;
-  }
-}
-
 .ctaBtn {
   color: var(--color-White);
   font-size: 15px;
@@ -1513,6 +1507,19 @@ i.icon {
   display: inline-block;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .btnWhite {
+    max-width: 300px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .btnWhite::after {
   content: "";
   display: inline-block;
@@ -2035,6 +2042,11 @@ i.icon {
           justify-content: space-between;
   row-gap: 50px;
 }
+@media (max-width: 768px) {
+  .buildingList {
+    row-gap: 30px;
+  }
+}
 .buildingList::before {
   content: "";
   display: inline-block;
@@ -2061,7 +2073,8 @@ i.icon {
 }
 @media (max-width: 768px) {
   .buildingList__item {
-    width: 50%;
+    width: 48%;
+    max-width: 100%;
   }
 }
 .buildingList__item a {
@@ -2135,6 +2148,11 @@ i.icon {
   width: 33%;
   max-width: 354px;
 }
+@media (max-width: 768px) {
+  .reviewList::after {
+    display: none;
+  }
+}
 .reviewList__head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2154,6 +2172,12 @@ i.icon {
   -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.16);
   padding: 23px 40px 18px;
+}
+@media (max-width: 768px) {
+  .reviewList__item {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .reviewList__item a {
   width: 100%;
@@ -3384,7 +3408,6 @@ i.icon {
 .idx-review .review__btnUnderLine {
   margin-top: 50px;
 }
-
 .idx-philosophy {
   padding-top: 140px;
   padding-bottom: 170px;
