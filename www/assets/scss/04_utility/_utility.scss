@@ -16,6 +16,18 @@
     display: block;
   }
 }
+.tab-large {
+  display: block;
+  @include tab-large() {
+    display: none;
+  }
+}
+.is-tab-large {
+  display: none;
+  @include tab-large() {
+    display: block;
+  }
+}
 .tab {
   display: block;
   @include tab() {

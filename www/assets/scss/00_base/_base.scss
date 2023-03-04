@@ -88,7 +88,7 @@ p {
 a {
   text-decoration: none;
   transition: $anime-normal;
-
+  cursor: pointer;
   &:hover {
     opacity: $hover_opacity;
   }

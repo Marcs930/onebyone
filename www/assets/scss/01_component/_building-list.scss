@@ -26,6 +26,9 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 2px 2px 3px rgba(#000, .16);
+    @include sp {
+      width: 50%;
+        };
     a {
       width: 100%;
       display: inline-block;

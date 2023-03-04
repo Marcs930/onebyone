@@ -34,6 +34,9 @@
 .mv {
   height: 88vh;
   position: relative;
+  @include sp {
+    height: 75vh;
+  };
   &__inner {
     height: 100%;
   }
@@ -49,6 +52,10 @@
     @include font(36, 50, 58);
     font-weight: $fw-regular;
     text-shadow: 0 0 13px #000;
+    @include sp {
+      font-size: 23px;
+      top: 34%;
+    };
     span {
       @include font(43, 56, 43);
       font-family: "Raleway", sans-serif;
@@ -58,10 +65,21 @@
   .search-tab {
     right: 20px;
     top: 35.4vh;
+    position: absolute;
+    @include sp {
+      transform: translateX(-50%);
+      right: unset;
+      left: 50%;
+      top: unset;
+      bottom: -50px;
+    };
     &__btnToListContainer {
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
+      @include sp {
+        display: none;
+      }
     }
   }
 }
@@ -73,6 +91,9 @@
 .pickup {
   background-color: var(--color-bgBlue01);
   padding-bottom: 100px;
+  @include sp {
+    padding-top: 50px;
+  };
   &__buildingList {
     margin-top: 35px;
     margin-bottom: 50px;
@@ -100,6 +121,7 @@
 .idx-philosophy {
   padding-top: 140px;
   padding-bottom: 170px;
+  background-color: var(--color-bgBlue01);
   &__img {
     width: 45%;
     max-width: 450px;
@@ -108,7 +130,6 @@
       width: 100%;
       aspect-ratio: 450 / 300;
       object-fit: cover;
-
     }
   }
   &__inner {
@@ -148,7 +169,7 @@
     position: relative;
     margin-bottom: 40px;
     &::after {
-      content: '';
+      content: "";
       width: 45px;
       height: 2px;
       background-color: var(--color-Primary);
@@ -167,7 +188,8 @@
 }
 
 .idx-news {
-
+  padding-top: 40px;
+  padding-bottom: 88px;
   .flex {
     margin-top: 33px;
     justify-content: center;
