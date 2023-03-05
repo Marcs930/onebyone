@@ -36,7 +36,7 @@
   position: relative;
   @include sp {
     height: 75vh;
-  };
+  }
   &__inner {
     height: 100%;
   }
@@ -49,15 +49,14 @@
     top: 50%;
     z-index: 10;
     color: var(--color-White);
-    @include font(36, 50, 58);
+    @include font-mx(36, 23, 50, 58);
     font-weight: $fw-regular;
     text-shadow: 0 0 13px #000;
     @include sp {
-      font-size: 23px;
       top: 34%;
-    };
+    }
     span {
-      @include font(43, 56, 43);
+      @include font-mx(43, 34, 56, 43);
       font-family: "Raleway", sans-serif;
       font-weight: $fw-medium;
     }
@@ -72,7 +71,7 @@
       left: 50%;
       top: unset;
       bottom: -50px;
-    };
+    }
     &__btnToListContainer {
       display: flex;
       justify-content: space-between;
@@ -93,7 +92,8 @@
   padding-bottom: 100px;
   @include sp {
     padding-top: 50px;
-  };
+    padding-bottom: 40px;
+  }
   &__buildingList {
     margin-top: 35px;
     margin-bottom: 50px;
@@ -105,6 +105,10 @@
 
 .idx-review {
   padding-bottom: 86px;
+  @include sp {
+    padding-top: 18px;
+    padding-bottom: 35px;
+  }
   .review {
     &__list {
       margin-bottom: 30px;
@@ -115,7 +119,8 @@
     &__btnUnderLine {
       margin-top: 50px;
       @include sp {
-        };
+        margin-top: 24px;
+      }
     }
   }
 }
@@ -124,9 +129,18 @@
   padding-top: 140px;
   padding-bottom: 170px;
   background-color: var(--color-bgBlue01);
+  @include sp {
+    padding-top: 18px;
+    padding-bottom: 50px;
+  }
   &__img {
     width: 45%;
     max-width: 450px;
+    @include sp {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 18px;
+    };
     img {
       display: inline-block;
       width: 100%;
@@ -138,7 +152,11 @@
     @include wrapper(1080px);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    @include sp {
+      flex-direction: column;
+      width: 100%;
+    }
   }
   &__container {
     width: 50%;
@@ -146,30 +164,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include sp {
+      width: 100%;
+      max-width: 100%;
+    };
   }
   &__title {
     width: 100%;
     padding-bottom: 0;
     margin-bottom: 18px;
-
     padding-top: 0;
+
     span {
-      @include font(74, 60, 74);
+      @include font-mx(74, 53, 60, 74);
       font-weight: $fw-bold;
     }
-    @include font(25, 0, 25);
+    @include font-mx(25, 21, 0, 25);
+
     font-weight: $fw-bold;
     border-bottom: none;
     &::after {
       display: none;
     }
+    &--sp {
+      @include sp {
+        width: 100%;
+        margin-bottom: 18px;
+      }
+    }
   }
   &__subTitle {
     width: 100%;
-    @include font(18, 0, 18);
+    @include font-mx(18, 16, 0, 18);
     font-weight: $fw-bold;
     position: relative;
     margin-bottom: 40px;
+    @include sp {
+      margin-bottom: 36px;
+    };
     &::after {
       content: "";
       width: 45px;
@@ -179,19 +211,31 @@
       position: absolute;
       bottom: -20px;
       left: 0;
+      @include sp {
+        width: 35px;
+        bottom: -18px;
+      };
     }
   }
   &__text {
     width: 100%;
-    @include font(16, 44, 31);
+    // @include font(16, 44, 31);
+    @include font-mx(16, 14, 44, 31);
     font-weight: $fw-regular;
     margin-bottom: 40px;
+    @include sp {
+      margin-bottom: 18px;
+    };
   }
 }
 
 .idx-news {
   padding-top: 40px;
   padding-bottom: 88px;
+  @include sp {
+    padding-top: 10px;
+    padding-bottom: 48px;
+  };
   .flex {
     margin-top: 33px;
     justify-content: center;

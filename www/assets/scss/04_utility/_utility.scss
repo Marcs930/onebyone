@@ -52,6 +52,18 @@
     display: block;
   }
 }
+.sp-small {
+  display: block;
+  @include sp-small() {
+    display: none;
+  }
+}
+.is-sp-small {
+  display: none;
+  @include sp-small() {
+    display: block;
+  }
+}
 
 .u-line {
   text-decoration: underline;

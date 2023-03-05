@@ -12,13 +12,13 @@
     opacity: 0.8;
   }
   @include tab-large {
-    // width: 100%; 
+    // width: 100%;
   }
 }
 
 .ctaBtn {
   color: var(--color-White);
-  @include font(15, 60, 15);
+  @include font-mx(16, 15, 60, 15);
   font-weight: $fw-medium;
   display: flex;
   justify-content: center;
@@ -83,10 +83,10 @@
 
 .spPrimaryBtn {
   color: var(--color-White);
-  @include font(15, 60, 15);
+  @include font-mx(15, 15, 60, 15);
   font-weight: $fw-medium;
-  padding-top: rem(15);
-  padding-bottom: rem(15);
+  padding-top:15px;
+  padding-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,7 +224,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
-    font-size: rem(13);
+    font-size: 13px;
     border: 1px solid var(--color-Gray02);
     border-right: none;
   }
@@ -252,7 +252,7 @@
 .btnToList {
   background-color: var(--color-Blue02);
   color: var(--color-White);
-  font-size: rem(16px);
+  font-size: 16px;
   @include l_spacing(50);
   font-weight: $fw-medium;
   padding-top: rem(12);
@@ -276,7 +276,7 @@
   background-color: var(--color-White);
   border: 1px solid var(--color-Blue03);
   border-radius: 5px;
-  font-size: rem(15);
+  @include fontSize-mx(15, 14);
   @include l_spacing(0);
   padding-top: 14px;
   padding-bottom: 14px;
@@ -287,6 +287,10 @@
     max-width: 300px;
     display: flex;
     justify-content: center;
+  };
+  @include sp {
+    max-width: 100%;
+      width: 100%;
   };
   @include icon-after(
     15px,
@@ -305,7 +309,7 @@
 
 .btnUnderLine {
   color: var(--color-Primary);
-  font-size: rem(16);
+  @include fontSize-mx(16, 14);
   @include l_spacing(0);
   padding-left: 12px;
   padding-bottom: 13px;
@@ -322,201 +326,3 @@
   }
 }
 
-.c-btn {
-  display: inline-block;
-  @include anime-normal();
-
-  & > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  &__wrap {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  // Style =====================
-
-  &.--headNav {
-    @include title_font();
-    @include font(16, 20, 20);
-    border-radius: 999px;
-    border: solid 2px;
-    width: 200px;
-    height: 64px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      width: 0%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      border-radius: 999px;
-      @include anime-normal();
-    }
-
-    &:hover {
-      transform: scale(1.1) rotate(0.07deg);
-      a {
-        opacity: 1;
-      }
-    }
-
-    .icon {
-      margin-right: 12px;
-      width: 35px;
-      height: 35px;
-    }
-  }
-
-  &.--rounded {
-    @include title_font();
-    @include font(16, 20, 20);
-    border-radius: 999px;
-    border: solid 2px;
-    a {
-      padding: 1em 1em;
-    }
-
-    &:hover {
-      transform: scale(1.1) rotate(0.07deg);
-      a {
-        opacity: 1;
-      }
-    }
-  }
-
-  &.--hitodama {
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      height: 120%;
-      aspect-ratio: 80/130;
-      background: url(../img/hitodama_01.png) no-repeat center center !important;
-      background-size: contain !important;
-      will-change: transform, animation;
-      animation: fuwafuwa 2s infinite ease-in-out both;
-    }
-    &::before {
-      left: -20px;
-    }
-    &::after {
-      right: -20px;
-      animation-delay: 0.4s;
-    }
-  }
-
-  // Color =====================
-
-  &.--color {
-    &-ocher {
-      background: var(--color-btnOcherBg);
-      border-color: var(--color-btnOcherBorder);
-      a {
-        color: var(--color-btnOcherText);
-      }
-      &::after {
-        background: var(--color-btnOcherText);
-        a {
-          color: var(--color-btnOcherBg);
-        }
-      }
-    }
-    &-twi {
-      background: var(--color-btnTwitterBg);
-      border-color: var(--color-btnTwitterBorder);
-      a {
-        color: var(--color-btnTwitterText);
-      }
-      &::after {
-        background: var(--color-btnTwitterText);
-        a {
-          color: var(--color-btnTwitterBg);
-        }
-      }
-    }
-    &-turquoise {
-      background: var(--color-btnTurquoiseBg);
-      border-color: var(--color-btnTurquoiseBorder);
-      a {
-        color: var(--color-btnTurquoiseText);
-      }
-      &::after {
-        background: var(--color-btnTurquoiseText);
-        a {
-          color: var(--color-btnTurquoiseBg);
-        }
-      }
-    }
-    &-orange {
-      background: var(--color-btnOrangeBg);
-      border-color: var(--color-btnOrangeBorder);
-      a {
-        color: var(--color-btnOrangeText);
-      }
-      &::after {
-        background: var(--color-btnOrangeText);
-        a {
-          color: var(--color-btnOrangeBg);
-        }
-      }
-    }
-  }
-}
-
-@mixin btn-octagon(
-  $color: var(--color-White),
-  $bgColor: var(--color-Primary),
-  $size: 20px,
-  $width: 100%
-) {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  position: relative;
-  width: $width;
-  margin-top: $size;
-  margin-bottom: $size;
-  background-color: $bgColor;
-  border-color: $bgColor;
-  color: $color;
-  line-height: 1;
-  padding: 0 1em;
-  z-index: 1;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &::before,
-  &::after {
-    display: block;
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    border: $size solid transparent;
-    z-index: -1;
-  }
-  &::before {
-    bottom: 100%;
-    border-bottom-color: inherit;
-  }
-  &::after {
-    top: 100%;
-    border-top-color: inherit;
-  }
-}
-
-.c-btn-octagon {
-  @include btn-octagon();
-}

@@ -8,10 +8,14 @@
   background-image: url(../../../assets/img/common/cta.jpg);
   padding-top: 47px;
   padding-bottom: 25px;
+  @include sp {
+    padding-top: 27px;
+    padding-bottom: 25px;
+  };
   &__tel {
-    width: 100%;
+    width: 49%;
     max-width: 340px;
-    font-size: rem(16);
+    @include fontSize-mx(16, 15);
     font-weight: $fw-medium;
     color: var(--color-Primary);
     background-color: var(--color-Gray07);
@@ -21,14 +25,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
+    @include sp {
+      max-width: 100%;
+      width: 100%;
+      order: 1;
+      font-size: 15px;
+    }
     span {
       display: inline-block;
       &.tel {
         color: var(--color-Primary);
         font-weight: $fw-medium;
         margin-top: 0.5em;
-        @include font(28, 50, 40);
+        @include font-mx(28, 24, 50, 40);
+        @include sp {
+          font-size: 24px;
+        };
         @include icon-before(
           19px,
           19px,
@@ -51,14 +64,20 @@
         }
       }
       &.time {
-        font-size: rem(13);
+        @include fontSize-mx(13, 12);
         margin-top: 0.3em;
         font-weight: $fw-medium;
+        @include sp {
+          font-size: 12px;
+        };
         span {
-          @include font(12, 0, 12);
+          @include fontSize-mx(12, 11);
           border: 1px solid var(--color-Primary);
           border-radius: 2px;
           padding: 4px 10px;
+          line-height: 1;
+          @include sp {
+          };
         }
       }
     }
@@ -68,25 +87,54 @@
     justify-content: space-between;
     height: 150px;
     margin-top: 43px;
+    @include sp {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+    }
     &__inner {
       max-width: 326px;
-      width: 50%;
+      width: 49%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      @include sp {
+        max-width: 100%;
+        width: 100%;
+        .btn {
+          margin-bottom: 16px;
+        }
+      }
     }
   }
   &__inner {
     @include sectionInner(790px);
+    @include sp {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__heading {
     color: var(--color-White);
-    @include font(18, 41, 26);
+    @include font-mx(18, 16, 50, 26);
+    @include l_spacing(16);
     vertical-align: bottom;
+    display: inline-block;
+    margin: 0 auto;
     span {
-      @include font(22, 41, 32);
+      @include font-mx(22, 18, 50, 32);
+      margin-right: 2px;
+      margin-left: 2px;
     }
+    @include sp-small {
+      font-size: 16px;
+      span {
+        font-size: 18px;
+      }
+    };
   }
 
   &__snsContainer {
@@ -94,9 +142,15 @@
     margin: 0 auto;
     text-align: center;
     margin-top: 41px;
+    @include sp {
+      margin-top: 20px;
+    };
     & > span {
-      font-size: rem(18);
+      @include fontSize-mx(18, 16);
       @include l_spacing(60);
+      @include sp {
+        font-size: 16px;
+      };
       color: var(--color-White);
 
       &::before,

@@ -111,7 +111,7 @@
   }
   &__item {
     a {
-      font-size: rem(19);
+      font-size: 19px;
       color: var(--color-White);
       display: flex;
       flex-direction: column;
@@ -124,7 +124,7 @@
         @include en_font;
         display: inline-block;
         font-weight: $fw-light;
-        font-size: rem(15);
+        font-size: 15px;
         letter-spacing: 0;
         line-height: 1;
         margin-top: 6px;
@@ -132,13 +132,13 @@
     }
     &.tel {
       a {
-        font-size: rem(13);
+        font-size: 13px;
         letter-spacing: 0;
         line-height: 1;
         span {
           @include ja_font;
           @include l_spacing(35);
-          font-size: rem(22);
+          font-size: 22px;
           line-height: 1;
           @include icon-before(
             $width: 20px,
@@ -191,13 +191,13 @@
       display: inline-block;
       font-weight: $fw-bold;
       color: var(--color-Primary);
-      @include font(18, 0, 26);
+      font-size: 18px;
       padding-top: rem(15);
       padding-bottom: rem(15);
       position: relative;
       span {
         @include en_font;
-        font-size: rem(12);
+        font-size: 12px;
         font-weight: $fw-medium;
         margin-left: 10px;
       }
@@ -219,7 +219,7 @@
   }
   &__tel {
     width: 100%;
-    font-size: rem(14);
+    font-size: 14px;
     color: var(--color-Black01);
     padding-top: 1em;
     padding-bottom: 1em;
@@ -234,7 +234,7 @@
         color: var(--color-Primary);
         font-weight: $fw-medium;
         margin-top: 0.5em;
-        @include font(23, 50, 34);
+        @include font-mx(23, 23, 50, 34);
         @include icon-before(
           18px,
           18px,
@@ -257,7 +257,7 @@
         }
       }
       &.time {
-        font-size: rem(14);
+        font-size: 14px;
         margin-top: 0.3em;
       }
     }
@@ -273,7 +273,7 @@
   &__snsContainer {
     @include wrapper;
     & > span {
-      font-size: rem(14);
+      font-size: 14px;
       @include l_spacing(60);
       color: var(--color-Primary);
 

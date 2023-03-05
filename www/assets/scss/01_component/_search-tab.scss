@@ -73,7 +73,7 @@
     };
   }
   &__title {
-    font-size: rem(22);
+    @include fontSize-mx(22, 15);
     margin-left: 32px;
     @include sp {
       font-size: 15px;

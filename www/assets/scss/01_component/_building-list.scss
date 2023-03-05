@@ -8,7 +8,7 @@
   justify-content: space-between;
   row-gap: 50px;
   @include sp {
-    row-gap: 30px;
+    row-gap: 16px;
   };
   &::before {
     content: "";
@@ -28,7 +28,11 @@
     max-width: 251px;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 2px 2px 3px rgba(#000, 0.16);
+    box-shadow: 2px 2px 14px rgba(#000, 0.16);
+    @include tab-large {
+      width: 33%;
+      max-width: none;
+    }
     @include sp {
       width: 48%;
       max-width: 100%;
@@ -55,30 +59,49 @@
     padding-right: rem(20);
   }
   &__name {
-    font-size: rem(16);
+    @include fontSize-mx(16, 14);
     color: var(--color-Black01);
     font-weight: $fw-medium;
+    @include sp_small {
+      margin-bottom: 1px;
+    };
   }
   &__address {
     color: var(--color-Black04);
-    font-size: rem(12);
+    @include fontSize-mx(12, 11);
     font-weight: $fw-regular;
+    @include sp_small {
+      font-size: 10px;
+    };
   }
   &__price {
+    @include sp {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    };
     span {
       color: var(--color-Black04);
-      font-size: rem(12);
+      @include fontSize-mx(12, 10);
       font-weight: $fw-regular;
+      @include sp_small {
+        font-size: 8px;
+      };
     }
     span.red {
       color: var(--color-Orange01);
-      font-size: rem(20);
+      @include fontSize-mx(20, 14);
       font-weight: $fw-bold;
+      @include sp_small {
+        font-size: 14px;
+      };
     }
   }
   &__info {
     color: var(--color-Black04);
-    font-size: rem(14);
+    @include fontSize-mx(14, 12);
     font-weight: $fw-regular;
+    @include sp_small {
+      font-size: 10px;
+    };
   }
 }

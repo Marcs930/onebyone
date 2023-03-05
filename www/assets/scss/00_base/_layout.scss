@@ -61,7 +61,8 @@
   // }
 
   &Title {
-    font-size: rem(25);
+    // font-size: rem(25);
+    @include fontSize-mx(25, 21);
     font-weight: $fw-bold;
     color: var(--color-Primary);
     position: relative;
@@ -72,15 +73,21 @@
     padding-top: 60px;
     @include sp {
       padding-top: 40px;
+      font-size: 21px;
+      margin-bottom: 23px;
     };
     span {
-      font-size: rem(74);
+      // font-size: rem(74);
+      @include fontSize-mx(74, 53);
       font-weight: $fw-bold;
       @include l_spacing(60);
       color: var(--color-Gray04);
       position: absolute;
       left: 0;
       bottom: 5px;
+      // @include sp {
+      //   font-size: 53px;
+      // };
     }
     &::after {
       content: '';

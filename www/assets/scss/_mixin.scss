@@ -66,6 +66,12 @@
   font-size: rem($size);
 }
 
+// fontSize-mx (フォントサイズ, 最小サイズ)
+@mixin fontSize-mx($size, $min) {
+  font-size: $size;
+  font-size: clamp($min * 1px, rem($size), $size * 1px);
+}
+
 // line-height (フォントサイズ, 行送り) ※XD基準
 @mixin l_height($pixels, $height) {
   font-size: $pixels * 1px;
@@ -82,6 +88,14 @@
 @mixin font($pixels, $spacing, $height) {
   font-size: $pixels * 1px;
   font-size: rem($pixels);
+  line-height: calc($height / $pixels);
+  letter-spacing: calc($spacing / 1000) + em;
+}
+
+// font (フォントサイズ, 最小サイズ,トラッキング, 行送り) ※XD基準
+@mixin font-mx($pixels, $min, $spacing, $height) {
+  font-size: $pixels * 1px;
+  font-size: clamp($min * 1px, rem($pixels), $pixels * 1px);
   line-height: calc($height / $pixels);
   letter-spacing: calc($spacing / 1000) + em;
 }
@@ -198,7 +212,7 @@
   }
 }
 
-@mixin wrapper ($innerWidth: $width_pc) {
+@mixin wrapper($innerWidth: $width_pc) {
   width: 100%;
   max-width: $innerWidth;
   margin: 0 auto;
@@ -300,7 +314,12 @@
 }
 
 // くの字矢印
-@mixin arrow($width: 1rem, $bold: 0.3rem, $color: var(--color-White), $deg: bottom) {
+@mixin arrow(
+  $width: 1rem,
+  $bold: 0.3rem,
+  $color: var(--color-White),
+  $deg: bottom
+) {
   display: inline-block;
   position: absolute;
   width: #{$width};

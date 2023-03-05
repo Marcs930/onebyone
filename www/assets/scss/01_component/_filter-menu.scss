@@ -7,6 +7,9 @@
   height: 38px;
   display: flex;
   justify-content: space-between;
+  @include sp {
+    height: 34px;
+  };
   &__btnList {
     display: flex;
     justify-content: flex-start;
@@ -20,7 +23,7 @@
       justify-content: space-between;
       align-items: center;
       // display: inline-block;
-      font-size: rem(14);
+      @include fontSize-mx(14, 12);
       @include l_spacing(20);
       padding-left: rem(18);
       padding-right: rem(18);
@@ -47,6 +50,12 @@
   &__toggleBtnList {
     display: flex;
     height: 100%;
+    @include sp_small {
+      position: absolute;
+      right: 20px;
+      top: 29px;
+      height: 34px;
+    };
   }
   &__toggleBtnItem {
     height: 100%;
@@ -65,7 +74,7 @@
       color: var(--color-Blue03);
       background-color: var(--color-White);
       display: inline-block;
-      font-size: rem(14);
+      @include fontSize-mx(14, 12);
       padding-left: rem(16);
       padding-right: rem(16);
       // padding-top: rem(8);

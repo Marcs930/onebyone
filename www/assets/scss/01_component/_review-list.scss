@@ -7,6 +7,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 50px;
+  @include sp {
+    row-gap: 18px;
+  };
   // &::before {
   //   content: '';
   //   display: inline-block;
@@ -34,11 +37,12 @@
     max-width: 354px;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 2px 2px 3px rgba(#000, 0.16);
+    box-shadow: 2px 2px 14px rgba(#000, 0.16);
     padding: 23px 40px 18px;
     @include sp {
       width: 100%;
-      max-width: 100%
+      max-width: 100%;
+      padding: 16px 41px 21px 21px;
     };
     a {
       width: 100%;
@@ -58,6 +62,10 @@
       display: inline-block;
       width: 16px;
       height: 15.3px;
+      @include sp {
+        width: 14px;
+        height: 13px;
+      };
       img {
         width: 100%;
         height: 100%;
@@ -67,11 +75,11 @@
   }
   &__date {
     color: var(--color-Gray06);
-    @include font(14, 0, 20);
+    @include font-mx(14, 12, 0, 20);
   }
   &__textArea {
     p {
-      @include font(14, 0, 21);
+      @include font-mx(14, 13, 0, 21);
       height: 83px;
       overflow-y: scroll;
     }
