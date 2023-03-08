@@ -104,11 +104,7 @@ a {
 th,
 td {
   vertical-align: top;
-  font-weight: normal;
   text-align: left;
   word-break: break-all;
-  @include sp() {
-    display: block;
-    width: 100%;
-  }
+
 }

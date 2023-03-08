@@ -468,6 +468,8 @@ table {
   --color-Gray06: #949494;
   --color-Gray07: #EEE;
   --color-Gray08: #ECECEC;
+  --color-Gray09: #EFEFEF;
+  --color-Gray10: #CBCBCB;
   --color-Black: #000000;
   --color-Black01: #333333;
   --color-Black02: #484848;
@@ -527,6 +529,8 @@ table {
   --color-Gray06: #949494;
   --color-Gray07: #EEE;
   --color-Gray08: #ECECEC;
+  --color-Gray09: #EFEFEF;
+  --color-Gray10: #CBCBCB;
   --color-Black: #000000;
   --color-Black01: #333333;
   --color-Black02: #484848;
@@ -666,16 +670,8 @@ a[href^="tel:"] {
 th,
 td {
   vertical-align: top;
-  font-weight: normal;
   text-align: left;
   word-break: break-all;
-}
-@media (max-width: 768px) {
-  th,
-  td {
-    display: block;
-    width: 100%;
-  }
 }
 
 /*==================================================================
@@ -908,7 +904,7 @@ i.icon {
   color: var(--color-Gray04);
   position: absolute;
   left: 0;
-  bottom: 5px;
+  bottom: 7px;
 }
 .sectionTitle::after {
   content: "";
@@ -2302,6 +2298,50 @@ i.icon {
 .breadcrumb__item > a:hover {
   -webkit-text-decoration: underline var(--color-Gray06);
           text-decoration: underline var(--color-Gray06);
+}
+
+/*==================================================================
+// table
+//================================================================*/
+.table {
+  color: var(--color-Black01);
+  border-collapse: collapse;
+  border: 1px solid var(--color-Gray10);
+  width: 100%;
+}
+.table th,
+.table td {
+  font-size: 16;
+  font-size: clamp(13px, 1rem, 16px);
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  padding-left: 4.375rem;
+  padding-right: 4.375rem;
+}
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+}
+.table th {
+  font-weight: 700;
+  background-color: var(--color-Gray09);
+  border-top: 1px solid var(--color-Gray10);
+  border-bottom: 1px solid var(--color-Gray10);
+}
+.table td {
+  border-top: 1px solid var(--color-Gray10);
+  border-bottom: 1px solid var(--color-Gray10);
+  background-color: var(--color-White01);
+}
+@media (max-width: 768px) {
+  .table tr {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
@@ -3815,7 +3855,7 @@ i.icon {
 @media (max-width: 768px) {
   .abt-philosophy {
     padding-top: 18px;
-    padding-bottom: 50px;
+    padding-bottom: 47px;
   }
 }
 .abt-philosophy__img {
@@ -3835,6 +3875,11 @@ i.icon {
   aspect-ratio: 450/300;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 768px) {
+  .abt-philosophy__img.is-sp {
+    margin-bottom: 20px;
+  }
 }
 .abt-philosophy__inner {
   width: 100%;
@@ -3905,6 +3950,29 @@ i.icon {
   letter-spacing: 0em;
   font-weight: 700;
   border-bottom: none;
+  position: relative;
+}
+.abt-philosophy__title::after {
+  display: none;
+}
+@media (max-width: 768px) {
+  .abt-philosophy__title {
+    border-bottom: 2px solid var(--color-Gray03);
+    padding-bottom: 1.125rem;
+    margin-bottom: 24px;
+  }
+  .abt-philosophy__title::after {
+    content: "";
+    display: inline-block;
+    width: 30%;
+    height: 2px;
+    background-color: var(--color-Blue03);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
 }
 .abt-philosophy__title span {
   font-size: 74px;
@@ -3912,14 +3980,6 @@ i.icon {
   line-height: 1;
   letter-spacing: 0.06em;
   font-weight: 700;
-}
-.abt-philosophy__title::after {
-  display: none;
-}
-@media (max-width: 768px) {
-  .abt-philosophy__title.sp {
-    display: block;
-  }
 }
 .abt-philosophy__subTitle {
   width: 100%;
@@ -3965,6 +4025,47 @@ i.icon {
   .abt-philosophy__text {
     margin-bottom: 18px;
   }
+}
+
+.abt-table {
+  padding-top: 40px;
+  padding-bottom: 88px;
+}
+@media (max-width: 768px) {
+  .abt-table {
+    padding-bottom: 60px;
+  }
+}
+
+/*==================================================================
+// rct
+//================================================================*/
+.rct-jobDesc {
+  margin-top: 30px;
+  padding-bottom: 88px;
+}
+@media (max-width: 768px) {
+  .rct-jobDesc {
+    margin-top: 20px;
+    padding-bottom: 60px;
+  }
+}
+.rct-jobDesc .sectionTitle span {
+  font-size: 74px;
+  font-size: clamp(33px, 4.625rem, 74px);
+  line-height: 1.4459459459;
+  letter-spacing: 0.06em;
+}
+.rct-table {
+  margin-bottom: 38px;
+}
+@media (max-width: 768px) {
+  .rct-table {
+    margin-bottom: 30px;
+  }
+}
+.rct-table th {
+  min-width: 80px;
 }
 
 /* ==========================================================================
@@ -4293,6 +4394,14 @@ i.icon {
 
 .c-Gray08 {
   color: var(--color-Gray08);
+}
+
+.c-Gray09 {
+  color: var(--color-Gray09);
+}
+
+.c-Gray10 {
+  color: var(--color-Gray10);
 }
 
 .c-Black {

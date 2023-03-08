@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/*==================================================================
+// rct
+//================================================================*/
+
+.rct {
+  &-jobDesc {
+    margin-top: 30px;
+    padding-bottom: 88px;
+    @include sp {
+      margin-top: 20px;
+      padding-bottom: 60px;
+    }
+
+    .sectionTitle {
+      span {
+        @include font-clamp(74, 33, 60, 107);
+
+      }
+    }
+  }
+  &-table {
+    margin-bottom: 38px;
+    @include sp {
+      margin-bottom: 30px;
+    }
+    th {
+      min-width: 80px;
+    }
+  }
+}
