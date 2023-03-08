@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*==================================================================
+// breadcrumb
+//================================================================*/
+
+.breadcrumb {
+  background-color: var(--color-Gray08);
+  &__text {
+    color: var(--color-Black01);
+    @include fontSize-clamp(14, 10);
+
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    @include sp {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    };
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    &:not(:first-of-type) {
+      @include icon-before(4.9px, 9.7px, url(../../../assets/img/common/breadcrumb_arrow.png));
+      &::before {
+        margin-left: rem(13);
+        margin-right: rem(11);
+        @include sp {
+          margin-left: 12px;
+          margin-right: 10px;
+        };
+      }
+    }
+    > a {
+      transition: none;
+      &:hover {
+        text-decoration: underline var(--color-Gray06);
+      }
+
+    }
+  }
+}

@@ -29,6 +29,8 @@
 @import "01_component/building-list";
 @import "01_component/review-list";
 @import "01_component/news-list";
+@import "01_component/page-head";
+@import "01_component/breadcrumb";
 
 /* ==========================================================================
   02_Global
@@ -46,6 +48,7 @@
   ========================================================================== */
 
 @import "03_pages/01_top";
+@import "03_pages/02_about";
 
 /* ==========================================================================
   04_Utility

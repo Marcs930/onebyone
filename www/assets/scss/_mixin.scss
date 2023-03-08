@@ -66,8 +66,8 @@
   font-size: rem($size);
 }
 
-// fontSize-mx (フォントサイズ, 最小サイズ)
-@mixin fontSize-mx($size, $min) {
+// fontSize-clamp (フォントサイズ(px), 最小サイズ)
+@mixin fontSize-clamp($size, $min) {
   font-size: $size;
   font-size: clamp($min * 1px, rem($size), $size * 1px);
 }
@@ -92,8 +92,8 @@
   letter-spacing: calc($spacing / 1000) + em;
 }
 
-// font (フォントサイズ, 最小サイズ,トラッキング, 行送り) ※XD基準
-@mixin font-mx($pixels, $min, $spacing, $height) {
+// font (フォントサイズ(px), 最小サイズ(px),トラッキング, 行送り) ※XD基準
+@mixin font-clamp($pixels, $min, $spacing, $height) {
   font-size: $pixels * 1px;
   font-size: clamp($min * 1px, rem($pixels), $pixels * 1px);
   line-height: calc($height / $pixels);

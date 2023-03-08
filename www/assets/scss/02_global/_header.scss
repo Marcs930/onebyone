@@ -66,7 +66,6 @@
     }
   }
 
-
   position: fixed;
   top: 0;
   left: 0;
@@ -74,7 +73,6 @@
   z-index: $zi-header;
   transition: $anime-normal;
   background-color: transparent;
-
 
   &__inner {
     position: relative;
@@ -234,7 +232,7 @@
         color: var(--color-Primary);
         font-weight: $fw-medium;
         margin-top: 0.5em;
-        @include font-mx(23, 23, 50, 34);
+        @include font-clamp(23, 23, 50, 34);
         @include icon-before(
           18px,
           18px,
@@ -365,7 +363,6 @@
     }
   }
 }
-
 
 // .header {
 //   position: fixed;

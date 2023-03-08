@@ -49,14 +49,14 @@
     top: 50%;
     z-index: 10;
     color: var(--color-White);
-    @include font-mx(36, 23, 50, 58);
+    @include font-clamp(36, 23, 50, 58);
     font-weight: $fw-regular;
     text-shadow: 0 0 13px #000;
     @include sp {
       top: 34%;
     }
     span {
-      @include font-mx(43, 34, 56, 43);
+      @include font-clamp(43, 34, 56, 43);
       font-family: "Raleway", sans-serif;
       font-weight: $fw-medium;
     }
@@ -140,7 +140,7 @@
       width: 100%;
       max-width: 100%;
       margin-bottom: 18px;
-    };
+    }
     img {
       display: inline-block;
       width: 100%;
@@ -167,7 +167,7 @@
     @include sp {
       width: 100%;
       max-width: 100%;
-    };
+    }
   }
   &__title {
     width: 100%;
@@ -176,10 +176,10 @@
     padding-top: 0;
 
     span {
-      @include font-mx(74, 53, 60, 74);
+      @include font-clamp(74, 53, 60, 74);
       font-weight: $fw-bold;
     }
-    @include font-mx(25, 21, 0, 25);
+    @include font-clamp(25, 21, 0, 25);
 
     font-weight: $fw-bold;
     border-bottom: none;
@@ -195,13 +195,13 @@
   }
   &__subTitle {
     width: 100%;
-    @include font-mx(18, 16, 0, 18);
+    @include font-clamp(18, 16, 0, 18);
     font-weight: $fw-bold;
     position: relative;
     margin-bottom: 40px;
     @include sp {
       margin-bottom: 36px;
-    };
+    }
     &::after {
       content: "";
       width: 45px;
@@ -214,18 +214,18 @@
       @include sp {
         width: 35px;
         bottom: -18px;
-      };
+      }
     }
   }
   &__text {
     width: 100%;
     // @include font(16, 44, 31);
-    @include font-mx(16, 14, 44, 31);
+    @include font-clamp(16, 14, 44, 31);
     font-weight: $fw-regular;
     margin-bottom: 40px;
     @include sp {
       margin-bottom: 18px;
-    };
+    }
   }
 }
 
@@ -235,7 +235,7 @@
   @include sp {
     padding-top: 10px;
     padding-bottom: 48px;
-  };
+  }
   .flex {
     margin-top: 33px;
     justify-content: center;

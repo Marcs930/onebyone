@@ -15,33 +15,33 @@
       margin-bottom: 12px;
       @include sp {
         margin-bottom: 20px;
-      };
+      }
     }
     @include sp {
       padding-bottom: 15px;
-      border-bottom: 1px solid rgba($color: #001D58, $alpha: 0.14);
+      border-bottom: 1px solid rgba($color: #001d58, $alpha: 0.14);
       // border-bottom: 1px solid #000;
-    };
+    }
   }
   &__date {
-    @include font-mx(16, 14, 0, 16);
+    @include font-clamp(16, 14, 0, 16);
     width: 10%;
     max-width: 100px;
     @include sp {
       width: 100%;
       max-width: 100%;
       margin-bottom: 5px;
-    };
+    }
   }
   &__title {
-    @include font-mx(16, 14, 0, 16);
+    @include font-clamp(16, 14, 0, 16);
     text-decoration: underline;
     color: var(--color-Black01);
     width: 80%;
     max-width: 882px;
     @include sp {
       width: 100%;
-      max-width: 100%
-    };
+      max-width: 100%;
+    }
   }
 }

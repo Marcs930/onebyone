@@ -11,7 +11,7 @@
   @include sp {
     padding-top: 24px;
     padding-bottom: 24px;
-  };
+  }
   a {
     color: var(--color-White);
   }
@@ -22,7 +22,7 @@
     @include sp {
       width: 133px;
       margin-bottom: 27px;
-    };
+    }
     img {
       width: 100%;
     }
@@ -46,16 +46,16 @@
 
   &__sns {
     &.is-sp {
-      min-width: 125px
+      min-width: 125px;
     }
   }
 
   &__sns__text {
-    @include fontSize-mx(14, 12);
+    @include fontSize-clamp(14, 12);
     margin-top: 16px;
     @include sp {
       margin-top: 27px;
-    };
+    }
   }
 
   &__snsList {
@@ -65,7 +65,7 @@
     margin-top: 25px;
     @include sp {
       margin-top: 16px;
-    };
+    }
   }
 
   &__snsItem {
@@ -73,7 +73,7 @@
     width: 30px;
     @include sp {
       width: 25px;
-    };
+    }
     &:not(:last-of-type) {
       margin-right: 16px;
     }
@@ -90,10 +90,10 @@
     justify-content: center;
     border: 1px solid var(--color-White);
     border-radius: 5px;
-    @include font-mx(16, 16, 0, 16);
+    @include font-clamp(16, 16, 0, 16);
     @include sp {
       display: none;
-    };
+    }
   }
 
   &__bottom {
@@ -102,7 +102,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
-    };
+    }
   }
 
   &__bottomList {
@@ -113,7 +113,7 @@
 
   &__bottomItem {
     a {
-      @include fontSize-mx(12, 10);
+      @include fontSize-clamp(12, 10);
       text-decoration: underline;
     }
   }
@@ -124,7 +124,7 @@
     text-align: center;
     @include sp {
       margin-top: 27px;
-    };
+    }
   }
 }
 
@@ -138,22 +138,22 @@
     width: 100%;
     row-gap: 30px;
     margin-right: initial;
-  };
+  }
   &__item {
     display: flex;
     flex-direction: column;
     @include sp {
       width: 45%;
-    };
+    }
     &:not(:last-of-type) {
       margin-right: 25px;
       @include sp {
         margin-right: unset;
-      };
+      }
     }
   }
   &__heading {
-    @include fontSize-mx(16, 14);
+    @include fontSize-clamp(16, 14);
     padding-bottom: 7px;
     border-bottom: 1px solid var(--color-White);
   }
@@ -171,7 +171,7 @@
 
     a {
       height: 100%;
-      @include fontSize-mx(13, 12);
+      @include fontSize-clamp(13, 12);
       display: inline-block;
       &::before {
         content: "-";

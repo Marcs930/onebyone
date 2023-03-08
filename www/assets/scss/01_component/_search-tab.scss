@@ -11,7 +11,7 @@
   @include sp {
     // width: 100%;
     width: calc(100% - 30px);
-  };
+  }
   &__tab {
     width: 100%;
     display: flex;
@@ -20,7 +20,7 @@
       font-size: 16px;
       font-weight: $fw-bold;
       color: var(--color-White);
-      background-color: rgba(114, 113, 113, .93);
+      background-color: rgba(114, 113, 113, 0.93);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -36,13 +36,13 @@
       }
       &.current {
         color: var(--color-Black01);
-        background-color: rgba(243, 243, 243, .93);
+        background-color: rgba(243, 243, 243, 0.93);
       }
     }
   }
   &__content {
     color: var(--color-Black01);
-    background-color: rgba(243, 243, 243, .93);
+    background-color: rgba(243, 243, 243, 0.93);
     padding: 20px 20px 27px;
     border-radius: 0 0 5px 5px;
     li {
@@ -70,15 +70,15 @@
       .btn:not(:first-of-type) {
         margin-top: 10px;
       }
-    };
+    }
   }
   &__title {
-    @include fontSize-mx(22, 15);
+    @include fontSize-clamp(22, 15);
     margin-left: 32px;
     @include sp {
       font-size: 15px;
       margin-left: 0;
-    };
+    }
     font-weight: $fw-medium;
     display: inline-block;
   }
@@ -87,17 +87,16 @@
     vertical-align: bottom;
     font-size: 14px;
     @include sp {
-    };
+    }
     span {
       color: var(--color-Orange01);
-      font-size:24px;
+      font-size: 24px;
     }
   }
   .keyword-search {
     margin-top: 27px;
     @include sp {
       margin-top: 20px;
-    };
+    }
   }
-
 }
