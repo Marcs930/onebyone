@@ -126,3 +126,20 @@
     // }
   }
 }
+
+.mt80 {
+  margin-top: 80px;
+}
+
+.sidebarLayout {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    width: 80%;
+    max-width: 867px;
+  }
+  &__right {
+    width: 20%;
+    max-width: 254px;
+  }
+}

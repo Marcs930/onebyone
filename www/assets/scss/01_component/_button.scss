@@ -325,3 +325,16 @@
     margin-left: 14px;
   }
 }
+
+.searchBtn {
+  color: var(--color-White);
+  font-weight: $fw-medium;
+  @include fontSize-clamp(16, 14);
+  background-color: var(--color-Blue06);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

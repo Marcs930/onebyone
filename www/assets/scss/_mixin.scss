@@ -68,7 +68,7 @@
 
 // fontSize-clamp (フォントサイズ(px), 最小サイズ)
 @mixin fontSize-clamp($size, $min) {
-  font-size: $size;
+  font-size: $size * 1px;
   font-size: clamp($min * 1px, rem($size), $size * 1px);
 }
 

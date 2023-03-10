@@ -36,22 +36,27 @@ class Main {
   //     }
   // }
   _inviewAnimation(el, inview) {
-      if (inview) {
-          // el.classList.add("inview");
-          this.container.classList.remove("js-bgWhite");
-        } else {
-          // el.classList.remove("inview");
-          this.container.classList.add("js-bgWhite");
-      }
+    if (inview) {
+      // el.classList.add("inview");
+
+      this.container.classList.remove("js-bgWhite");
+    } else {
+      // el.classList.remove("inview");
+      this.container.classList.add("js-bgWhite");
+    }
   }
   _scrollInit() {
-      this._observers.push(
-          new ScrollObserver(".js-scrollTransTarget", this._inviewAnimation.bind(this), {
-              rootMargin: "0px 0px 0px 0px",
-              once: false,
-          })
-          // _inviewAnimationでthis.containerを使いたいので、bind(this)
-      );
+    this._observers.push(
+      new ScrollObserver(
+        ".js-scrollTransTarget",
+        this._inviewAnimation.bind(this),
+        {
+          rootMargin: "0px 0px 0px 0px",
+          once: false,
+        }
+      )
+      // _inviewAnimationでthis.containerを使いたいので、bind(this)
+    );
   }
   // _scrollToggleClassInit() {
   //     new ScrollToggleClass(".side", 350);
@@ -66,33 +71,38 @@ class Main {
 
 new Main();
 
-
 //変数宣言
-const menuItems = document.querySelectorAll('.search-tab__tab > li');
-const contents = document.querySelectorAll('.search-tab__content > li');
+const menuItems = document.querySelectorAll(".search-tab__tab > li");
+const contents = document.querySelectorAll(".search-tab__content > li");
 
-console.log(contents)
+console.log(contents);
 //タブメニュークリック時
-menuItems.forEach(clickeditem =>{
-  clickeditem.addEventListener('click',e =>{
-
+menuItems.forEach((clickeditem) => {
+  clickeditem.addEventListener("click", (e) => {
     //デフォルト動作キャンセル
     e.preventDefault();
 
     //タブメニューのclass付け替え
-    menuItems.forEach(item =>{
-      item.classList.remove('current');
+    menuItems.forEach((item) => {
+      item.classList.remove("current");
     });
-    clickeditem.classList.add('current');
+    clickeditem.classList.add("current");
 
     //コンテンツのclass付け替え
-    contents.forEach(content =>{
-      content.classList.remove('current');
+    contents.forEach((content) => {
+      content.classList.remove("current");
     });
-    document.getElementById(clickeditem.dataset.id).classList.add('current');
-
+    document.getElementById(clickeditem.dataset.id).classList.add("current");
   });
 });
+
+const searchParamsMore = document.querySelector(".searchParams__more");
+const searchParamsMoreTarget = document.querySelector(".searchParams--hidden");
+
+searchParamsMore.addEventListener("click", () => {
+  searchParamsMoreTarget.classList.toggle("js-searchParamsMore");
+});
+
 // const options = {
 //   root: null,
 //   rootMargin: "0px",
