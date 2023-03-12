@@ -29,6 +29,7 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 2px 2px 14px rgba(#000, 0.16);
+    position: relative;
     @include tab-large {
       width: 33%;
       max-width: none;
@@ -103,5 +104,18 @@
     @include sp_small {
       font-size: 10px;
     }
+  }
+  &__tag {
+    padding: 4px;
+    background-color: var(--color-Orange02);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--color-White);
+    @include fontSize-clamp(13, 12);
+    @include l_spacing(50);
+    font-weight: $fw-regular;
+    padding: 0.5em 1em;
   }
 }

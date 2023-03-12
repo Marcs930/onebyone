@@ -59,7 +59,7 @@
   <!-- Google Tag Manager (noscript) -->
   <!-- End Google Tag Manager (noscript) -->
 
-  <div class="container bgWhite">
+  <div class="container js-bgWhite">
 
     <!-- header: start -->
     <header class="header">
@@ -95,7 +95,7 @@
     <main class="main ">
 
       <div class="breadcrumb">
-        <div class="warpper">
+        <div class="wra pper">
           <ul class="breadcrumb__list">
             <li class="breadcrumb__item">
               <a href="" class="breadcrumb__text">トップページ</a>
@@ -107,54 +107,56 @@
         </div>
       </div>
 
-      <h2 class="pageTitle">
-        賃貸物件一覧
-      </h2>
+      <div class="wrapper">
+        <h2 class="pageTitle">
+          エリアから探す
+        </h2>
 
-      <ul class="searchTable">
-        <li class="searchTable__primaryList">
-          <p class="searchTable__primaryItem">
-            <input type="checkbox" name="" id="">
-            <label for="">埼玉県</label>
-          </p>
-          <ul class="searchTable__secondaryList">
-            <li class="searchTable__secondaryItem">
+        <ul class="searchTable">
+          <li class="searchTable__primaryList">
+            <p class="searchTable__primaryItem">
               <input type="checkbox" name="" id="">
-              <label for="">志木市</label>
-            </li>
-            <li class="searchTable__secondaryItem">
+              <label for="">埼玉県</label>
+            </p>
+            <ul class="searchTable__secondaryList --open">
+              <li class="searchTable__secondaryItem">
+                <input type="checkbox" name="" id="">
+                <label for="">志木市</label>
+              </li>
+              <li class="searchTable__secondaryItem">
+                <input type="checkbox" name="" id="">
+                <label for="">朝霞市</label>
+              </li>
+              <li class="searchTable__secondaryItem">
+                <input type="checkbox" name="" id="">
+                <label for="">和光市</label>
+              </li>
+            </ul>
+          </li>
+          <li class="searchTable__primaryList">
+            <p class="searchTable__primaryItem">
               <input type="checkbox" name="" id="">
-              <label for="">朝霞市</label>
-            </li>
-            <li class="searchTable__secondaryItem">
-              <input type="checkbox" name="" id="">
-              <label for="">和光市</label>
-            </li>
-          </ul>
-        </li>
-        <li class="searchTable__primaryList">
-          <p class="searchTable__primaryItem">
-            <input type="checkbox" name="" id="">
-            <label for="">東京都</label>
-          </p>
-          <ul class="searchTable__secondaryList">
-            <li class="searchTable__secondaryItem">
-              <input type="checkbox" name="" id="">
-              <label for="">渋谷区</label>
-            </li>
-            <li class="searchTable__secondaryItem">
-              <input type="checkbox" name="" id="">
-              <label for="">新宿区</label>
-            </li>
-            <li class="searchTable__secondaryItem">
-              <input type="checkbox" name="" id="">
-              <label for="">中野区</label>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <div class="flex">
-        <a href=" " class="btn searchBtn"></a>
+              <label for="">東京都</label>
+            </p>
+            <ul class="searchTable__secondaryList">
+              <li class="searchTable__secondaryItem">
+                <input type="checkbox" name="" id="">
+                <label for="">渋谷区</label>
+              </li>
+              <li class="searchTable__secondaryItem">
+                <input type="checkbox" name="" id="">
+                <label for="">新宿区</label>
+              </li>
+              <li class="searchTable__secondaryItem">
+                <input type="checkbox" name="" id="">
+                <label for="">中野区</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="flex mb60">
+          <a href=" " class="btn searchBtn">この条件で検索する</a>
+        </div>
       </div>
 
     </main>

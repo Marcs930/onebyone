@@ -32,6 +32,37 @@
       order: 1;
       font-size: 15px;
     }
+    &.--sidebar {
+      width: 100%;
+      color: var(--color-Black01);
+      background-color: var(--color-White);
+      border: 2px solid var(--color-Blue01);
+      border-radius: 2px;
+      @include fontSize-clamp(13, 12);
+      font-weight: $fw-regular;
+      padding-top: 11px;
+      padding-bottom: 14px;
+      padding-left: 28px;
+      padding-right: 28px;
+      align-items: center;
+      span {
+        &.tel {
+        @include font-clamp(23, 14, 50, 23);
+        margin-top: 16px;
+          &::after {
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-Black01);
+            top: -7px;
+          }
+        }
+        &.time {
+          margin-top: 8px;
+          font-weight: $fw-regular;
+          @include fontSize-clamp(12, 11);
+        }
+      }
+    }
     span {
       display: inline-block;
       &.tel {

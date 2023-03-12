@@ -5,10 +5,17 @@
 //================================================================*/
 
 .propertyList__buildingList {
-  .buildingList {
-    &__item {
-      width: 33%;
-      max-width: 251px;
+  &.buildingList {
+    // column-gap: 30px;
+    .buildingList {
+
+      &__item {
+        width: 31%;
+        max-width: 251px;
+      }
+    }
+    @include tab-large {
+      row-gap: 30px;
     }
   }
 }

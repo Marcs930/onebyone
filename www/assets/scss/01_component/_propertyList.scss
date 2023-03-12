@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/*==================================================================
+// propertyList
+//================================================================*/
+
+.propertyList {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__amount {
+    font-weight: $fw-medium;
+    @include fontSize-clamp(20, 14);
+    span {
+      color: var(--color-Orange01);
+      font-weight: $fw-medium;
+      @include fontSize-clamp(29, 20);
+    }
+  }
+
+  &__sort {
+    @include icon-before(27px, 16px, url(../../../assets/img/common/sort_arrow.png));
+    &::before {
+      margin-right: 8px;
+    }
+    select {
+      @include fontSize-clamp(14, 12);
+      padding: 4px 8px;
+      font-weight: $fw-medium;
+      border: 2px solid var(--color-Gray15);
+    }
+  }
+}

@@ -10,6 +10,9 @@
   z-index: $zi-container;
 
   //display: none;
+  &.js-bgWhite {
+    padding-top: 80px;
+  }
 }
 
 .contents {
@@ -99,6 +102,7 @@
       left: 0;
       bottom: 0;
       transform: translateY(100%);
+      min-width: 160px;
     }
     // @include sp() {
     //   border-width: 1rem;
@@ -130,16 +134,20 @@
 .mt80 {
   margin-top: 80px;
 }
+.mb60 {
+  margin-bottom: 60px;
+}
 
 .sidebarLayout {
   display: flex;
   justify-content: space-between;
   &__left {
-    width: 80%;
-    max-width: 867px;
+    width: 72%;
+    max-width: 860px;
   }
   &__right {
-    width: 20%;
+    width: 22%;
     max-width: 254px;
+    min-width: 250px;
   }
 }

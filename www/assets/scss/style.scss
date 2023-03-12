@@ -32,6 +32,9 @@
 @import "01_component/page-head";
 @import "01_component/breadcrumb";
 @import "01_component/table";
+@import "01_component/pager";
+@import "01_component/pageTitle";
+@import "01_component/propertyList";
 
 /* ==========================================================================
   02_Global
@@ -52,6 +55,8 @@
 @import "03_pages/02_about";
 @import "03_pages/03_recruit";
 @import "03_pages/04_archive-building";
+@import "03_pages/05_searchby";
+@import "03_pages/06_single-building";
 
 /* ==========================================================================
   04_Utility

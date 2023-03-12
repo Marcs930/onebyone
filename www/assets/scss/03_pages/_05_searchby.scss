@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+//==================================================================
+// searchby
+//==================================================================
+
+.searchTable {
+  margin-bottom: 20px;
+  &__primaryList {
+    border: 1px solid var(--color-Gray16);
+    border-radius: 3px;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__primaryItem {
+    @include fontSize-clamp(16, 14);
+    font-weight: $fw-medium;
+    padding-top: rem(13);
+    padding-bottom: rem(13);
+    padding-left: rem(11px);
+    width: 100%;
+    background-color: var(--color-Gray07);
+  }
+
+  &__secondaryItem {
+    @include fontSize-clamp(15, 14);
+    font-weight: $fw-regular;
+    background-color: var(--color-White);
+  }
+
+  &__secondaryList {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+    padding-left: rem(30);
+    column-gap: 30px;
+    display: none;
+    &.--open {
+      display: flex;
+    }
+  }
+}

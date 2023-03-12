@@ -103,6 +103,7 @@ searchParamsMore.addEventListener("click", () => {
   searchParamsMoreTarget.classList.toggle("js-searchParamsMore");
 });
 
+
 // const options = {
 //   root: null,
 //   rootMargin: "0px",

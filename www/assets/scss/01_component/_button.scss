@@ -333,8 +333,47 @@
   background-color: var(--color-Blue06);
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 44px;
+  padding-left: 44px;
+  margin: 0 auto;
+  @include sp {
+    width: 100%;
+  };
+  &.--sidebar {
+  width: 100%;
+  }
+}
+
+.sidebar__snsBtn {
+  width: 100%;
+  @include fontSize-clamp(16, 14);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: inline-block;
+  color: var(--color-White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  img {
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+  }
+  &.--youtube {
+    background-color: var(--color-Youtube);
+    img {
+      width: 30px;
+      height: 22px;
+      margin-right: 8px;
+    }
+  }
+
+  &.--tiktok {
+    background-color: var(--color-Tiktok);
+  }
 }

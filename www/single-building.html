@@ -59,7 +59,7 @@
   <!-- Google Tag Manager (noscript) -->
   <!-- End Google Tag Manager (noscript) -->
 
-  <div class="container bgWhite">
+  <div class="container js-bgWhite">
 
     <!-- header: start -->
     <header class="header">
@@ -95,7 +95,7 @@
     <main class="main ">
 
       <div class="breadcrumb">
-        <div class="warpper">
+        <div class="wrapper">
           <ul class="breadcrumb__list">
             <li class="breadcrumb__item">
               <a href="" class="breadcrumb__text">トップページ</a>
@@ -107,204 +107,215 @@
         </div>
       </div>
 
-      <div class="sidebarLayout">
-        <div class="sidebarLayout__left">
-          <p class="buildingTitle">六本木ヒルズ</p>
+      <div class="wrapper">
+        <div class="sidebarLayout">
+          <div class="sidebarLayout__left">
+            <p class="buildingTitle">
+              <span>六本木ヒルズ</span>
 
-          <!-- Slider main container -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              ...
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            </p>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-          </div>
-
-
-          <div class="roomInfo roomList">
-            <p class="roomInfo__title">賃貸物件一覧</p>
-            <div class="roomInfo__head roomList__head">
-              <div class="roomList__col1"></div>
-              <div class="roomList__col2">階</div>
-              <div class="roomList__col3">賃料/管理費</div>
-              <div class="roomList__col4">敷金/礼金</div>
-              <div class="roomList__col5">間取り/専有面積</div>
-              <div class="roomList__col6"></div>
-            </div>
-            <div class="roomList__item">
-              <div class="roomList__col1 --img"></div>
-              <img src="" alt="">
-              <div class="roomList__col2 --floor">
-                1階
+            <!-- Slider main container -->
+            <div class="swiper buildingSlider">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/slider_dammy.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/slider_dammy.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/slider_dammy.jpg" alt="">
+                </div>
               </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
 
-              <div class="roomList__col3 --price"></div>
-              <span>150,000円</span>
-              <span>150,000円</span>
-              <div class="roomList__col4 --deposit"></div>
-              <span class="roomList__siki">
-                <span class="roomList__depositIcon">
-                  敷
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+            </div>
+
+
+            <div class="roomInfo roomList">
+              <p class="roomInfo__title">賃貸物件一覧</p>
+              <div class="roomInfo__head roomList__head">
+                <div class="roomList__col1"></div>
+                <div class="roomList__col2">階</div>
+                <div class="roomList__col3">賃料/管理費</div>
+                <div class="roomList__col4">敷金/礼金</div>
+                <div class="roomList__col5">間取り/専有面積</div>
+                <div class="roomList__col6"></div>
+              </div>
+              <div class="roomList__item">
+                <div class="roomList__col1 --img">
+
+                  <img src="" alt="">
+                </div>
+                <div class="roomList__col2 --floor">
+                  1階
+                </div>
+
+                <div class="roomList__col3 --price">
+
+                  <span>150,000円</span>
+                  <span>150,000円</span>
+                </div>
+                <div class="roomList__col4 --deposit">
+
+                  <span class="roomList__siki">
+                    <span class="roomList__depositIcon">
+                      敷
+                    </span>
+                    150,000円</span>
+                  <span class="roomList__rei">
+                    <span class="roomList__depositIcon">
+                      礼
+                    </span>
+                    150,000円
+                  </span>
+                </div>
+                <div class="roomList__col5 --layout">
+                  <span>1LDK</span>
+                  <span>42.15m2</span>
+                </div>
+
+                <div class="roomList__col6 --contact">
+                  <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
+                  <a href="" class="btn roomList__detailBtn">詳細を見る</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="roomInfo roomList">
+              <p class="roomInfo__title">購入物件一覧</p>
+              <div class="roomInfo__head roomList__head">
+                <div class="roomList__col1"></div>
+                <div class="roomList__col2">階</div>
+                <div class="roomList__col3">賃料/管理費</div>
+                <div class="roomList__col4">敷金/礼金</div>
+                <div class="roomList__col5">間取り/専有面積</div>
+                <div class="roomList__col6"></div>
+              </div>
+              <div class="roomList__item">
+                <div class="roomList__col1 --img"></div>
+                <img src="" alt="">
+                <div class="roomList__col2 --floor">
+                  1階
+                </div>
+
+                <div class="roomList__col3 --price"></div>
+                <span>150,000円</span>
+                <span>150,000円</span>
+                <div class="roomList__col4 --deposit"></div>
+                <span class="roomList__siki">
+                  <span class="roomList__depositIcon">
+                    敷
+                  </span>
+                  150,000円</span>
+                <span class="roomList__rei">
+                  <span class="roomList__depositIcon">
+                    礼
+                  </span>
+                  150,000円
                 </span>
-                150,000円</span>
-              <span class="roomList__rei">
-                <span class="roomList__depositIcon">
-                  礼
-                </span>
-                150,000円
-              </span>
-              <div class="roomList__col5 --layout">
-                <span>1LDK</span>
-                <span>42.15m2</span>
-              </div>
+                <div class="roomList__col5 --layout">
+                  <span>1LDK</span>
+                  <span>42.15m2</span>
+                </div>
 
-              <div class="roomList__col6 --contact">
-                <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
-                <a href="" class="btn roomList__detailBtn">詳細を見る</a>
-              </div>
+                <div class="roomList__col6 --contact">
+                  <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
+                  <a href="" class="btn roomList__detailBtn">詳細を見る</a>
+                </div>
 
+              </div>
+            </div>
+
+            <div class="roomInfo">
+              <div class="roomInfo__head">
+                概要
+              </div>
+              <table class="table roomInfo__table">
+                <tr>
+                  <th>所在地</th>
+                  <td>埼玉県志木市本町1-2-3</td>
+                </tr>
+                <tr>
+                  <th>駅徒歩</th>
+                  <td>
+                    ＪＲ川越線/西大宮駅 歩4分
+                    <br>
+
+                    ＪＲ京浜東北線/大宮駅 バス18分 (バス停)シティハイツ三橋 歩9分
+                    <br>
+                    ＪＲ川越線/指扇駅 歩21分
+                  </td>
+                </tr>
+                <tr>
+                  <th>総階数</th>
+                  <td>地上5階　地下1階</td>
+                </tr>
+                <tr>
+                  <th>建物種別</th>
+                  <td>マンション</td>
+                  <th>戸数</th>
+                  <td>30戸</td>
+                </tr>
+                <tr>
+                  <th>築年数</th>
+                  <td>築10年</td>
+                  <th>向き</th>
+                  <td>南</td>
+                </tr>
+              </table>
+            </div>
+            <div class="roomInfo">
+              <div class="roomInfo__head">
+                所在地
+              </div>
+              <div class="roomInfo__map">
+                <!-- googleMap -->
+                <iframe src="" frameborder="0"></iframe>
+              </div>
             </div>
           </div>
-          <div class="roomInfo roomList">
-            <p class="roomInfo__title">購入物件一覧</p>
-            <div class="roomInfo__head roomList__head">
-              <div class="roomList__col1"></div>
-              <div class="roomList__col2">階</div>
-              <div class="roomList__col3">賃料/管理費</div>
-              <div class="roomList__col4">敷金/礼金</div>
-              <div class="roomList__col5">間取り/専有面積</div>
-              <div class="roomList__col6"></div>
-            </div>
-            <div class="roomList__item">
-              <div class="roomList__col1 --img"></div>
-              <img src="" alt="">
-              <div class="roomList__col2 --floor">
-                1階
-              </div>
-
-              <div class="roomList__col3 --price"></div>
-              <span>150,000円</span>
-              <span>150,000円</span>
-              <div class="roomList__col4 --deposit"></div>
-              <span class="roomList__siki">
-                <span class="roomList__depositIcon">
-                  敷
-                </span>
-                150,000円</span>
-              <span class="roomList__rei">
-                <span class="roomList__depositIcon">
-                  礼
-                </span>
-                150,000円
-              </span>
-              <div class="roomList__col5 --layout">
-                <span>1LDK</span>
-                <span>42.15m2</span>
-              </div>
-
-              <div class="roomList__col6 --contact">
-                <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
-                <a href="" class="btn roomList__detailBtn">詳細を見る</a>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="roomInfo">
-            <div class="roomInfo__head">
-              概要
-            </div>
-            <table class="table roomInfo__table">
-              <tr>
-                <th>所在地</th>
-                <td>埼玉県志木市本町1-2-3</td>
-              </tr>
-              <tr>
-                <th>駅徒歩</th>
-                <td>
-                  ＪＲ川越線/西大宮駅 歩4分
-                  <br>
-
-                  ＪＲ京浜東北線/大宮駅 バス18分 (バス停)シティハイツ三橋 歩9分
-                  <br>
-                  ＪＲ川越線/指扇駅 歩21分
-                </td>
-              </tr>
-              <tr>
-                <th>総階数</th>
-                <td>地上5階　地下1階</td>
-              </tr>
-              <tr>
-                <th>建物種別</th>
-                <td>マンション</td>
-                <th>戸数</th>
-                <td>30戸</td>
-              </tr>
-              <tr>
-                <th>築年数</th>
-                <td>築10年</td>
-                <th>向き</th>
-                <td>南</td>
-              </tr>
-            </table>
-          </div>
-          <div class="roomInfo">
-            <div class="roomInfo__head">
-              所在地
-            </div>
-            <div class="roomInfo__map">
-              <!-- googleMap -->
-              <iframe src="" frameborder="0"></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="sidebarLayout__right">
-          <aside class="sidebar">
-
+          <div class="sidebarLayout__right">
             <div class="sidebar__cta">
-              <a href="tel:012-345-6789" class="cta__tel btn">
+              <p class="sidebar__cta__text">お気軽にお問い合わせ下さい！</p>
+              <a href="tel:012-345-6789" class="cta__tel --sidebar btn">
                 お電話でのお問い合わせはこちら
                 <span class="tel">012-345-6789</span>
                 <span class="time">
-                  <span>受付時間</span>
                   10:00~17:00（水曜定休）</span>
               </a>
-              <div class="cta__btnContainer__inner">
+              <div class="sidebar__cta__btnContainer">
                 <a href="/contact" class="btn ctaBtn --contact">
                   <span>
-                    お問い合わせフォームで相談
+                    お問い合わせ
                   </span>
                 </a>
                 <a href="" class="btn ctaBtn --line">
                   <span>
-
                     LINEで相談
                   </span>
                 </a>
               </div>
             </div>
-            <di v class="sidebar__sns">
-              <span>SNSでも内見動画配信中!!</span>
+            <div class="sidebar__sns">
+              <p class="sidebar__sns__text">\ SNSでも内見動画配信中!! /</p>
               <ul class="sidebar__snsList">
-                <li><a href="" class="sidebar__snsBtn"><img src="./assets/img/common/icon_youtube.png" alt=""></a></li>
-                <li><a href="" class="sidebar__snsBtn"><img src="./assets/img/common/icon_tiktok.png" alt=""></a></li>
+                <li><a href="" class="sidebar__snsBtn --youtube"><img src="./assets/img/common/icon_youtube_white.png" alt="">YouTubeチャンネル</a></li>
+                <li><a href="" class="sidebar__snsBtn --tiktok"><img src="./assets/img/common/icon_tiktok.png" alt="">Tiktokアカウント</a></li>
               </ul>
-            </di>
-          </aside>
+            </div>
+            </aside>
+          </div>
         </div>
       </div>
-
-
 
 
     </main>
