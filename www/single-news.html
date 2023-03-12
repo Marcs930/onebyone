@@ -55,7 +55,7 @@
 
 </head>
 
-<body id="page-index" class="rcrt">
+<body id="page-index" class="snws">
   <!-- Google Tag Manager (noscript) -->
   <!-- End Google Tag Manager (noscript) -->
 
@@ -117,11 +117,12 @@
       <div class="sidebarLayout wrapper">
         <div class="sidebarLayout__left">
           <article>
-            <div class="articleHeadig">
+            <div class="articleHeading">
               <p class="articleHeading__title">ホームページをリニューアルしました！</p>
               <span class="articleHeading__date">2022/05/26</span>
             </div>
 
+            <h1>h1テキスト</h1>
             <h2>h2テキスト</h2>
             <h3>h3テキスト</h3>
             <h4>h4テキスト</h4>
@@ -137,50 +138,47 @@
             <ul class="articlePager__list">
               <li class="articlePager__item --prev">
                 <a href="" class="articlePager__text">
-                  前へ
+                  &lt; 前へ
                 </a>
               </li>
 
               <li class="articlePager__item --next">
                 <a href="" class="articlePager__text">
-                  次へ
+                  次へ &gt;
                 </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="sidebarLayout__right">
-          <aside class="sidebar">
-
-            <div class="sidebar__cta">
-              <a href="tel:012-345-6789" class="cta__tel btn">
-                お電話でのお問い合わせはこちら
-                <span class="tel">012-345-6789</span>
-                <span class="time">
-                  <span>受付時間</span>
-                  10:00~17:00（水曜定休）</span>
+          <div class="sidebar__cta">
+            <p class="sidebar__cta__text">お気軽にお問い合わせ下さい！</p>
+            <a href="tel:012-345-6789" class="cta__tel --sidebar btn">
+              お電話でのお問い合わせはこちら
+              <span class="tel">012-345-6789</span>
+              <span class="time">
+                10:00~17:00（水曜定休）</span>
+            </a>
+            <div class="sidebar__cta__btnContainer">
+              <a href="/contact" class="btn ctaBtn --contact">
+                <span>
+                  お問い合わせ
+                </span>
               </a>
-              <div class="cta__btnContainer__inner">
-                <a href="/contact" class="btn ctaBtn --contact">
-                  <span>
-                    お問い合わせフォームで相談
-                  </span>
-                </a>
-                <a href="" class="btn ctaBtn --line">
-                  <span>
-
-                    LINEで相談
-                  </span>
-                </a>
-              </div>
+              <a href="" class="btn ctaBtn --line">
+                <span>
+                  LINEで相談
+                </span>
+              </a>
             </div>
-            <di v class="sidebar__sns">
-              <span>SNSでも内見動画配信中!!</span>
-              <ul class="sidebar__snsList">
-                <li><a href="" class="sidebar__snsBtn"><img src="./assets/img/common/icon_youtube.png" alt=""></a></li>
-                <li><a href="" class="sidebar__snsBtn"><img src="./assets/img/common/icon_tiktok.png" alt=""></a></li>
-              </ul>
-            </di>
+          </div>
+          <div class="sidebar__sns">
+            <p class="sidebar__sns__text">\ SNSでも内見動画配信中!! /</p>
+            <ul class="sidebar__snsList">
+              <li><a href="" class="sidebar__snsBtn --youtube"><img src="./assets/img/common/icon_youtube_white.png" alt="">YouTubeチャンネル</a></li>
+              <li><a href="" class="sidebar__snsBtn --tiktok"><img src="./assets/img/common/icon_tiktok.png" alt="">Tiktokアカウント</a></li>
+            </ul>
+          </div>
           </aside>
         </div>
       </div>
