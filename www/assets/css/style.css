@@ -4891,6 +4891,30 @@ i.icon {
   margin-right: 4px;
 }
 
+.qa-qa dt {
+  background-color: var(--color-Gray09);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 18px;
+  font-size: clamp(16px, 1.125rem, 18px);
+  font-weight: 500;
+  letter-spacing: 0.026em;
+}
+.qa-qa__question {
+  padding-left: 60px;
+  position: relative;
+}
+.qa-qa__question::before {
+  content: "";
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  background-image: url(../../../assets/img/qa/icon_qa_question.png);
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+
 /* ==========================================================================
   04_Utility
   ========================================================================== */

@@ -1,0 +1,25 @@
+.qa-qa{
+    dt {
+      background-color: var(--color-Gray09);
+      padding-top: 24px;
+      padding-bottom: 24px;
+      @include fontSize-clamp(18, 16);
+      font-weight: $fw-medium;
+      @include l_spacing(26);
+    }
+
+    &__question {
+      padding-left: 60px;
+      position: relative;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 43px;
+        height: 43px;
+        background-image: url(../../../assets/img/qa/icon_qa_question.png);
+        position: absolute;
+        top: 15px;
+        left: 10px;
+             }
+    }
+}
