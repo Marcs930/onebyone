@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/*==================================================================
+// archive-review
+//================================================================*/
+
+.arre{
+  &-reviewList  {
+    margin-bottom: 60px;
+  }
+  &-pager {
+    margin-bottom: 100px;
+  }
+  &-reviewPostBtn {
+    position: absolute;
+    top: 20px;
+    right:20px;
+    @include sp {
+      position: relative;
+      top: initial;
+      right: initial;
+      margin-bottom: 16px;
+    };
+  }
+}
