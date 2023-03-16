@@ -115,7 +115,7 @@
         </div>
       </div>
 
-      <div class="wrapper">
+      <!-- <div class="wrapper">
         <h2 class="sectionTitle">
           <span>Contact</span>
           お問い合わせ
@@ -137,70 +137,93 @@
               <span class="step_num">STEP3</span>
               <span class="step_txt">完了</span>
           </div>
-      </div>
+      </div> -->
 
-      <!-- <form action="" method="POST" class=""> -->
-      <!-- formタグはプラグインによる自動挿入 -->
-      <!-- プラグインに貼り付け -->
-      <div class="form wrapper">
+      <div class="wrapper progressbarContainer">
+
+
+        <ul class="progressbar">
+          <li class="complete">ご入力</li>
+          <li class="active">ご確認</li>
+          <li class="">完了</li>
+        </ul>
+
+        <!-- <form action="" method="POST" class=""> -->
+        <!-- formタグはプラグインによる自動挿入 -->
+        <!-- プラグインに貼り付け -->
+        <div class="form wrapper">
 
           <div class="form_item">
-              <div class="form_lc">
-                  <span class="form_op">任意</span>
-                  <label for="">会社名</label>
-              </div>
-              <div class="form_ic">
-                  <input class="form_input" type="text" name="" id="" placeholder="田中　太郎">
-                  <p class="form_error">会社名は必須項目です</p>
-              </div>
-          </div>
-          <div class="form_item">
-              <div class="form_lc">
-                  <span class="form_req">必須</span>
-                  <label for="">お名前</label>
-              </div>
-              <div class="form_ic">
-                  <input class="form_input" type="text" name="" id="" placeholder="田中　太郎">
-                  <p class="form_error">お名前は必須項目です</p>
-              </div>
-          </div>
-          <div class="form_item">
-              <div class="form_lc">
-                  <span class="form_req">必須</span>
-                  <label for="">メールアドレス</label>
-              </div>
-              <div class="form_ic">
-                  <input class="form_input" type="text" name="" id="" placeholder="田中　太郎">
-                  <p class="form_error">メールアドレスは必須項目です</p>
-              </div>
-          </div>
-          <div class="form_item">
-              <div class="form_lc">
-                  <span class="form_req">必須</span>
-                  <label for="">お問い合わせ内容</label>
-              </div>
-              <div class="form_ic">
-                  <textarea class="form_textarea" name="" id="" cols="30" rows="10" placeholder="お問い合わせ内容を記入してください"></textarea>
-                  <p class="form_error">お問い合わせ内容は必須項目です</p>
-              </div>
-          </div>
-
-          <!-- <div class="form_notice">
-              <p>
-                  <a href="">プライバシーポリシー</a>
-                  を一読のうえ、<br class="sm-hide">確認画面へお進みください。
+            <div class="form__room">
+              <p class="form__heading">
+                お問い合わせ物件
               </p>
-          </div> -->
-          <div class="form_btn-container">
-
-              <input type="submit" name="" id="" value="戻る"  class="btn"/>
-              <input type="submit" name="" id="" value="送信する"  class="btn -arg"/>
+              <div class="form__room__container">
+                <img src="" alt="">
+                <div class="form__room__info">
+                  <span> 六本木ヒルズ</span>/<span>16階</span>/<span>3LDK</span>
+                </div>
+              </div>
+            </div>
           </div>
-      </div>
-      <!-- プラグインに貼り付け -->
+          <div class="form__content">
+            <p class="form__heading">
+              お問い合わせ内容
+            </p>
+            <div class="form__label">
+              <label for="">会社名</label>
+            </div>
+            <div class="form__input">
+              <p class="form__error">会社名は必須項目です</p>
+              <input class="form_input" type="text" name="" id="" placeholder="田中　太郎">
+            </div>
+            <div class="form__label">
+              <label for="">ご連絡方法</label>
+            </div>
+            <div class="form__input">
+              <p class="form__error">会社名は必須項目です</p>
+              <div class="form__radio">
+                <label for="option">
+                  <input type="radio" name="option" id="option">
+                  Option
+                </label>
+              </div>
 
-      <!-- formタグはプラグインによる自動挿入 -->
-      <!-- </form> -->
+            </div>
+            <div class="form__label">
+              <label for="">お問い合わせ内容</label>
+            </div>
+            <div class="form__input">
+              <p class="form__error">会社名は必須項目です</p>
+              <label for="check">
+                <input type="checkbox" name="" id="check">
+                check
+              </label>
+            </div>
+            <div class="form__label">
+              <label for="">お問い合わせ内容</label>
+            </div>
+            <div class="form__input">
+              <textarea name="" id="" cols="30" rows="10" placeholder="お問い合わせ内容をご記入ください"></textarea>
+            </div>
+          </div>
+
+          <div class="form__notice">
+            <p>
+              <a href="">プライバシーポリシー</a>
+              を一読のうえ、<br class="sm-hide">確認画面へお進みください。
+            </p>
+          </div>
+          <div class="form__btn-container">
+
+            <input type="submit" name="" id="" value="戻る" class="btn" />
+            <input type="submit" name="" id="" value="送信する" class="btn -arg" />
+          </div>
+        </div>
+        <!-- プラグインに貼り付け -->
+
+        <!-- formタグはプラグインによる自動挿入 -->
+        <!-- </form> -->
 
       </div>
 
