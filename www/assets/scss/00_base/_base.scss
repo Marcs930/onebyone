@@ -108,3 +108,10 @@ td {
   word-break: break-all;
 
 }
+
+img {
+  display: inline-block;
+  object-fit: cover;
+  object-position: center center;
+  vertical-align: middle;
+}

@@ -8,6 +8,7 @@
   display: inline-block;
   @include anime-normal();
   border-radius: 5px;
+  cursor: pointer;
   &:hover {
     opacity: 0.8;
   }
@@ -391,5 +392,53 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+
+.ctcBtn {
+  @include fontSize-clamp(16, 14);
+  color: var(--color-White);
+  border: none;
+  font-weight: $fw-bold;
+  padding-block: 13px;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
+  &.--submit {
+    background-color: var(--color-btnOrangeBg);
+    @include icon-after(10px, 20px,url(../../../assets/img/ctc/ctc-btn_arrow.png));
+    &::after {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 8%;
+      @include sp {
+        display: none;
+      };
+    }
+  }
+  &.--confirm {
+    background-color: var(--color-btnOrangeBg);
+    @include icon-after(10px, 20px,url(../../../assets/img/ctc/ctc-btn_arrow.png));
+    &::after {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 8%;
+    }
+  }
+  &.--back {
+    background-color: var(--color-Gray13);
+    @include icon-after(10px, 20px,url(../../../assets/img/ctc/ctc-btn_arrow.png));
+    &::after {
+      position: absolute;
+      transform: translateY(-50%) rotate(180deg);
+      top: 50%;
+      left: 8%;
+      @include sp {
+        display: none;
+      };
+    }
   }
 }

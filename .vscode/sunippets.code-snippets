@@ -21,5 +21,19 @@
 		"body": [
 			"url(../../../assets/img/common/$1)"
 		],
-	}
+	},
+	"font-wieght": {
+		"scope": "scss",
+		"prefix": "fw",
+		"body": [
+			"font-weight: \\$fw$1;"
+		],
+	},
+	"var-color": {
+		"scope": "scss",
+		"prefix": "var",
+		"body": [
+			"var(--color$1)"
+		],
+	},
 }
