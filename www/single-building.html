@@ -40,12 +40,14 @@
   <!-- //fonts -->
 
   <!-- css -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- //css -->
 
   <!-- js -->
   <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- //js -->
 
@@ -112,8 +114,22 @@
           <div class="sidebarLayout__left">
             <p class="buildingTitle">
               <span>六本木ヒルズ</span>
-
             </p>
+            <div class="buildingInfo">
+              <p class="buildingInfo__price">
+                <span class="buildingInfo__large">900,000円</span>
+                <span class="buildingInfo__small">(管理費 8,000円)</span>
+              </p>
+              <p class="buildingInfo__other">
+                <span>敷金：1ヶ月</span>
+                <span> / </span>
+                <span>礼金：1ヶ月</span>
+                <span> / </span>
+                <span>専有面積：71.78m2</span>
+
+              </p>
+            </div>
+
 
             <!-- Slider main container -->
             <div class="swiper buildingSlider">
@@ -121,13 +137,32 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="./assets/img/common/slider_dammy.jpg" alt="">
+                  <img src="./assets/img/common/slider01.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
                   <img src="./assets/img/common/slider_dammy.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
-                  <img src="./assets/img/common/slider_dammy.jpg" alt="">
+                  <img src="./assets/img/common/slider02.jpg" alt="">
+
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/slider03.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/philosophy.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/cta.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/slider03.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/philosophy.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/common/cta.jpg" alt="">
                 </div>
               </div>
               <!-- If we need pagination -->
@@ -139,101 +174,540 @@
 
             </div>
 
+            <!-- サムネイル -->
+            <div class="buildingThumbnailContainer">
 
-            <div class="roomInfo roomList">
-              <p class="roomInfo__title">賃貸物件一覧</p>
-              <div class="roomInfo__head roomList__head">
-                <div class="roomList__col1"></div>
-                <div class="roomList__col2">階</div>
-                <div class="roomList__col3">賃料/管理費</div>
-                <div class="roomList__col4">敷金/礼金</div>
-                <div class="roomList__col5">間取り/専有面積</div>
-                <div class="roomList__col6"></div>
+              <div class="swiper buildingSlider__thumbnail">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/slider01.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/slider_dammy.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/slider02.jpg" alt="">
+
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/slider03.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/philosophy.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/cta.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/slider03.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/philosophy.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/img/common/cta.jpg" alt="">
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
               </div>
-              <div class="roomList__item">
-                <div class="roomList__col1 --img">
-
-                  <img src="" alt="">
-                </div>
-                <div class="roomList__col2 --floor">
-                  1階
-                </div>
-
-                <div class="roomList__col3 --price">
-
-                  <span>150,000円</span>
-                  <span>150,000円</span>
-                </div>
-                <div class="roomList__col4 --deposit">
-
-                  <span class="roomList__siki">
-                    <span class="roomList__depositIcon">
-                      敷
-                    </span>
-                    150,000円</span>
-                  <span class="roomList__rei">
-                    <span class="roomList__depositIcon">
-                      礼
-                    </span>
-                    150,000円
-                  </span>
-                </div>
-                <div class="roomList__col5 --layout">
-                  <span>1LDK</span>
-                  <span>42.15m2</span>
-                </div>
-
-                <div class="roomList__col6 --contact">
-                  <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
-                  <a href="" class="btn roomList__detailBtn">詳細を見る</a>
-                </div>
-
-              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
-            <div class="roomInfo roomList">
-              <p class="roomInfo__title">購入物件一覧</p>
-              <div class="roomInfo__head roomList__head">
-                <div class="roomList__col1"></div>
-                <div class="roomList__col2">階</div>
-                <div class="roomList__col3">賃料/管理費</div>
-                <div class="roomList__col4">敷金/礼金</div>
-                <div class="roomList__col5">間取り/専有面積</div>
-                <div class="roomList__col6"></div>
-              </div>
-              <div class="roomList__item">
-                <div class="roomList__col1 --img"></div>
-                <img src="" alt="">
-                <div class="roomList__col2 --floor">
-                  1階
-                </div>
 
-                <div class="roomList__col3 --price"></div>
-                <span>150,000円</span>
-                <span>150,000円</span>
-                <div class="roomList__col4 --deposit"></div>
-                <span class="roomList__siki">
-                  <span class="roomList__depositIcon">
-                    敷
-                  </span>
-                  150,000円</span>
-                <span class="roomList__rei">
-                  <span class="roomList__depositIcon">
-                    礼
-                  </span>
-                  150,000円
-                </span>
-                <div class="roomList__col5 --layout">
-                  <span>1LDK</span>
-                  <span>42.15m2</span>
-                </div>
+            <a href="" class="btn spPrimaryBtn --contact roomContactBtn">
+              <span>
+                この物件を問い合わせる
+              </span>
+            </a>
 
-                <div class="roomList__col6 --contact">
-                  <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
-                  <a href="" class="btn roomList__detailBtn">詳細を見る</a>
-                </div>
+            <div class="roomList">
+              <p class="roomList__title">賃貸物件一覧</p>
+              <table class="roomList__table --sp">
 
-              </div>
+                <tr class="roomList__head roomList__head">
+                  <th class="roomList__col1"></th>
+                  <th class="roomList__col2">階</th>
+                  <th class="roomList__col3">賃料/管理費</th>
+                  <th class="roomList__col4">敷金/礼金</th>
+                  <th class="roomList__col5">間取り/専有面積</th>
+                  <th class="roomList__col6"></th>
+                </tr>
+                <tr class="roomList__item">
+                  <td class="roomList__col1 --img">
+
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                  </td>
+                  <td class="roomList__col2 --floor">
+                    1階
+                  </td>
+
+                  <td class="roomList__col3 --price">
+
+                    <span>150,000円</span>
+                    <span>150,000円</span>
+                  </td>
+                  <td class="roomList__col4 --deposit">
+
+                    <span class="roomList__siki">
+                      <span class="roomList__depositIcon">
+                        敷
+                      </span>
+                      150,000円</span>
+                    <span class="roomList__rei">
+                      <span class="roomList__depositIcon">
+                        礼
+                      </span>
+                      150,000円
+                    </span>
+                  </td>
+                  <td class="roomList__col5 --layout">
+                    <span>1LDK</span>
+                    <span>42.15m2</span>
+                  </td>
+
+                  <td class="roomList__col6 --contact">
+                    <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
+                    <a href="" class="btn roomList__detailBtn">詳細を見る</a>
+                  </td>
+
+                </tr>
+                <tr class="roomList__item">
+                  <td class="roomList__col1 --img">
+
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                  </td>
+                  <td class="roomList__col2 --floor">
+                    1階
+                  </td>
+
+                  <td class="roomList__col3 --price">
+
+                    <span>150,000円</span>
+                    <span>150,000円</span>
+                  </td>
+                  <td class="roomList__col4 --deposit">
+
+                    <span class="roomList__siki">
+                      <span class="roomList__depositIcon">
+                        敷
+                      </span>
+                      150,000円
+                    </span>
+                    <span class="roomList__rei">
+                      <span class="roomList__depositIcon">
+                        礼
+                      </span>
+                      150,000円
+                    </span>
+                  </td>
+                  <td class="roomList__col5 --layout">
+                    <span>1LDK</span>
+                    <span>42.15m2</span>
+                  </td>
+
+                  <td class="roomList__col6 --contact">
+                    <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
+                    <a href="" class="btn roomList__detailBtn">詳細を見る</a>
+                  </td>
+
+                </tr>
+                <tr class="roomList__item">
+                  <td class="roomList__col1 --img">
+
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                  </td>
+                  <td class="roomList__col2 --floor">
+                    1階
+                  </td>
+
+                  <td class="roomList__col3 --price">
+
+                    <span>150,000円</span>
+                    <span>150,000円</span>
+                  </td>
+                  <td class="roomList__col4 --deposit">
+
+                    <span class="roomList__siki">
+                      <span class="roomList__depositIcon">
+                        敷
+                      </span>
+                      150,000円</span>
+                    <span class="roomList__rei">
+                      <span class="roomList__depositIcon">
+                        礼
+                      </span>
+                      150,000円
+                    </span>
+                  </td>
+                  <td class="roomList__col5 --layout">
+                    <span>1LDK</span>
+                    <span>42.15m2</span>
+                  </td>
+
+                  <td class="roomList__col6 --contact">
+                    <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
+                    <a href="" class="btn roomList__detailBtn">詳細を見る</a>
+                  </td>
+
+                </tr>
+              </table>
+              <ul class="roomListSp is-sp">
+                <li class="roomListSpItem">
+                  <a href="" class="roomListSpItem__container">
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                    <div class="roomListSpItem__info">
+                      <div class="roomListSpItem__price">
+                        <span class="large">14.7</span>
+                        <span class="small">万円/月 （管理費</span>
+                        <span class="small">8,000</span>
+                        <span class="small">）円</span>
+
+                      </div>
+                      <div class="roomListSpItem__deposit">
+                        <span class="roomList__siki">
+                          <span class="roomList__depositIcon">
+                            敷
+                          </span>
+                          1ヶ月
+                        </span>
+                        <span class="roomList__rei">
+                          <span class="roomList__depositIcon">
+                            礼
+                          </span>
+                          1ヶ月
+                        </span>
+                      </div>
+                      <div class="roomListSpItem__other">
+
+                        <span>3LDK</span>
+                        <span> / </span>
+                        <span>71.78m2</span>
+                        <span> / </span>
+                        <span>23階</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="roomListSpItem">
+                  <a href="" class="roomListSpItem__container">
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                    <div class="roomListSpItem__info">
+                      <div class="roomListSpItem__price">
+                        <span class="large">14.7</span>
+                        <span class="small">万円/月 （管理費</span>
+                        <span class="small">8,000</span>
+                        <span class="small">）円</span>
+
+                      </div>
+                      <div class="roomListSpItem__deposit">
+                        <span class="roomList__siki">
+                          <span class="roomList__depositIcon">
+                            敷
+                          </span>
+                          1ヶ月
+                        </span>
+                        <span class="roomList__rei">
+                          <span class="roomList__depositIcon">
+                            礼
+                          </span>
+                          1ヶ月
+                        </span>
+                      </div>
+                      <div class="roomListSpItem__other">
+
+                        <span>3LDK</span>
+                        <span> / </span>
+                        <span>71.78m2</span>
+                        <span> / </span>
+                        <span>23階</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="roomListSpItem">
+                  <a href="" class="roomListSpItem__container">
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                    <div class="roomListSpItem__info">
+                      <div class="roomListSpItem__price">
+                        <span class="large">14.7</span>
+                        <span class="small">万円/月 （管理費</span>
+                        <span class="small">8,000</span>
+                        <span class="small">）円</span>
+
+                      </div>
+                      <div class="roomListSpItem__deposit">
+                        <span class="roomList__siki">
+                          <span class="roomList__depositIcon">
+                            敷
+                          </span>
+                          1ヶ月
+                        </span>
+                        <span class="roomList__rei">
+                          <span class="roomList__depositIcon">
+                            礼
+                          </span>
+                          1ヶ月
+                        </span>
+                      </div>
+                      <div class="roomListSpItem__other">
+
+                        <span>3LDK</span>
+                        <span> / </span>
+                        <span>71.78m2</span>
+                        <span> / </span>
+                        <span>23階</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
+
+            <div class="roomList">
+              <p class="roomList__title">購入物件一覧</p>
+              <table class="roomList__table --sp">
+
+                <tr class="roomList__head roomList__head">
+                  <th class="roomList__col1"></th>
+                  <th class="roomList__col2">階</th>
+                  <th class="roomList__col3">賃料/管理費</th>
+                  <th class="roomList__col4">敷金/礼金</th>
+                  <th class="roomList__col5">間取り/専有面積</th>
+                  <th class="roomList__col6"></th>
+                </tr>
+                <tr class="roomList__item">
+                  <td class="roomList__col1 --img">
+
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                  </td>
+                  <td class="roomList__col2 --floor">
+                    1階
+                  </td>
+
+                  <td class="roomList__col3 --price">
+
+                    <span>150,000円</span>
+                    <span>150,000円</span>
+                  </td>
+                  <td class="roomList__col4 --deposit">
+
+                    <span class="roomList__siki">
+                      <span class="roomList__depositIcon">
+                        敷
+                      </span>
+                      150,000円</span>
+                    <span class="roomList__rei">
+                      <span class="roomList__depositIcon">
+                        礼
+                      </span>
+                      150,000円
+                    </span>
+                  </td>
+                  <td class="roomList__col5 --layout">
+                    <span>1LDK</span>
+                    <span>42.15m2</span>
+                  </td>
+
+                  <td class="roomList__col6 --contact">
+                    <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
+                    <a href="" class="btn roomList__detailBtn">詳細を見る</a>
+                  </td>
+
+                </tr>
+                <tr class="roomList__item">
+                  <td class="roomList__col1 --img">
+
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                  </td>
+                  <td class="roomList__col2 --floor">
+                    1階
+                  </td>
+
+                  <td class="roomList__col3 --price">
+
+                    <span>150,000円</span>
+                    <span>150,000円</span>
+                  </td>
+                  <td class="roomList__col4 --deposit">
+
+                    <span class="roomList__siki">
+                      <span class="roomList__depositIcon">
+                        敷
+                      </span>
+                      150,000円
+                    </span>
+                    <span class="roomList__rei">
+                      <span class="roomList__depositIcon">
+                        礼
+                      </span>
+                      150,000円
+                    </span>
+                  </td>
+                  <td class="roomList__col5 --layout">
+                    <span>1LDK</span>
+                    <span>42.15m2</span>
+                  </td>
+
+                  <td class="roomList__col6 --contact">
+                    <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
+                    <a href="" class="btn roomList__detailBtn">詳細を見る</a>
+                  </td>
+
+                </tr>
+                <tr class="roomList__item">
+                  <td class="roomList__col1 --img">
+
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                  </td>
+                  <td class="roomList__col2 --floor">
+                    1階
+                  </td>
+
+                  <td class="roomList__col3 --price">
+
+                    <span>150,000円</span>
+                    <span>150,000円</span>
+                  </td>
+                  <td class="roomList__col4 --deposit">
+
+                    <span class="roomList__siki">
+                      <span class="roomList__depositIcon">
+                        敷
+                      </span>
+                      150,000円</span>
+                    <span class="roomList__rei">
+                      <span class="roomList__depositIcon">
+                        礼
+                      </span>
+                      150,000円
+                    </span>
+                  </td>
+                  <td class="roomList__col5 --layout">
+                    <span>1LDK</span>
+                    <span>42.15m2</span>
+                  </td>
+
+                  <td class="roomList__col6 --contact">
+                    <a href="" class="btn roomList__contactBtn">お問い合わせ</a>
+                    <a href="" class="btn roomList__detailBtn">詳細を見る</a>
+                  </td>
+
+                </tr>
+              </table>
+              <ul class="roomListSp is-sp">
+                <li class="roomListSpItem">
+                  <a href="" class="roomListSpItem__container">
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                    <div class="roomListSpItem__info">
+                      <div class="roomListSpItem__price">
+                        <span class="large">14.7</span>
+                        <span class="small">万円/月 （管理費</span>
+                        <span class="small">8,000</span>
+                        <span class="small">）円</span>
+
+                      </div>
+                      <div class="roomListSpItem__deposit">
+                        <span class="roomList__siki">
+                          <span class="roomList__depositIcon">
+                            敷
+                          </span>
+                          1ヶ月
+                        </span>
+                        <span class="roomList__rei">
+                          <span class="roomList__depositIcon">
+                            礼
+                          </span>
+                          1ヶ月
+                        </span>
+                      </div>
+                      <div class="roomListSpItem__other">
+
+                        <span>3LDK</span>
+                        <span> / </span>
+                        <span>71.78m2</span>
+                        <span> / </span>
+                        <span>23階</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="roomListSpItem">
+                  <a href="" class="roomListSpItem__container">
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                    <div class="roomListSpItem__info">
+                      <div class="roomListSpItem__price">
+                        <span class="large">14.7</span>
+                        <span class="small">万円/月 （管理費</span>
+                        <span class="small">8,000</span>
+                        <span class="small">）円</span>
+
+                      </div>
+                      <div class="roomListSpItem__deposit">
+                        <span class="roomList__siki">
+                          <span class="roomList__depositIcon">
+                            敷
+                          </span>
+                          1ヶ月
+                        </span>
+                        <span class="roomList__rei">
+                          <span class="roomList__depositIcon">
+                            礼
+                          </span>
+                          1ヶ月
+                        </span>
+                      </div>
+                      <div class="roomListSpItem__other">
+
+                        <span>3LDK</span>
+                        <span> / </span>
+                        <span>71.78m2</span>
+                        <span> / </span>
+                        <span>23階</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="roomListSpItem">
+                  <a href="" class="roomListSpItem__container">
+                    <img src="./assets/img/common/madorizu.jpg" alt="">
+                    <div class="roomListSpItem__info">
+                      <div class="roomListSpItem__price">
+                        <span class="large">14.7</span>
+                        <span class="small">万円/月 （管理費</span>
+                        <span class="small">8,000</span>
+                        <span class="small">）円</span>
+
+                      </div>
+                      <div class="roomListSpItem__deposit">
+                        <span class="roomList__siki">
+                          <span class="roomList__depositIcon">
+                            敷
+                          </span>
+                          1ヶ月
+                        </span>
+                        <span class="roomList__rei">
+                          <span class="roomList__depositIcon">
+                            礼
+                          </span>
+                          1ヶ月
+                        </span>
+                      </div>
+                      <div class="roomListSpItem__other">
+
+                        <span>3LDK</span>
+                        <span> / </span>
+                        <span>71.78m2</span>
+                        <span> / </span>
+                        <span>23階</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
 
             <div class="roomInfo">
               <div class="roomInfo__head">
@@ -242,11 +716,11 @@
               <table class="table roomInfo__table">
                 <tr>
                   <th>所在地</th>
-                  <td>埼玉県志木市本町1-2-3</td>
+                  <td colspan="3">埼玉県志木市本町1-2-3</td>
                 </tr>
                 <tr>
                   <th>駅徒歩</th>
-                  <td>
+                  <td colspan="3">
                     ＪＲ川越線/西大宮駅 歩4分
                     <br>
 
@@ -257,7 +731,7 @@
                 </tr>
                 <tr>
                   <th>総階数</th>
-                  <td>地上5階　地下1階</td>
+                  <td colspan="3">地上5階　地下1階</td>
                 </tr>
                 <tr>
                   <th>建物種別</th>
@@ -273,13 +747,15 @@
                 </tr>
               </table>
             </div>
+
             <div class="roomInfo">
               <div class="roomInfo__head">
                 所在地
               </div>
               <div class="roomInfo__map">
                 <!-- googleMap -->
-                <iframe src="" frameborder="0"></iframe>
+                <!-- <iframe src="" frameborder="0"></iframe> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4581.559174754197!2d139.8076031700237!3d35.710191200664234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1679320164888!5m2!1sja!2sjp" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>

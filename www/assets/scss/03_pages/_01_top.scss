@@ -29,6 +29,8 @@
     }
     &-pagination-bullet {
       margin: 0 15px !important;
+      width:10px;
+      height: 10px;
     }
   }
 }
@@ -53,7 +55,7 @@
     color: var(--color-White);
     @include font-clamp(36, 23, 50, 58);
     font-weight: $fw-regular;
-    text-shadow: 0 0 13px #000;
+    text-shadow: 0 0 8px #000;
     @include sp {
       top: 34%;
     }
@@ -69,9 +71,9 @@
     position: absolute;
     @include sp {
       transform: translateX(-50%);
-      right: unset;
+      right: initial;
       left: 50%;
-      top: unset;
+      top: initial;
       bottom: -50px;
     }
     &__btnToListContainer {
@@ -93,7 +95,7 @@
   background-color: var(--color-bgBlue01);
   padding-bottom: 100px;
   @include sp {
-    padding-top: 50px;
+    padding-top: 70px;
     padding-bottom: 40px;
   }
   &__buildingList {
@@ -106,6 +108,7 @@
 }
 
 .idx-review {
+  padding-top: 30px;
   padding-bottom: 86px;
   @include sp {
     padding-top: 18px;

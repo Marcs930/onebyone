@@ -283,7 +283,14 @@
   padding-bottom: 14px;
   padding-left: 42px;
   padding-right: 56px;
-
+  &:hover {
+    color: var(--color-White);
+    background-color: var(--color-Blue03);
+    opacity: 1;
+    &::after {
+      background-image: url(../../../assets/img/common/arrow_right_white.png);
+    }
+  }
   @include sp {
     max-width: 300px;
     display: flex;
@@ -314,8 +321,9 @@
   @include l_spacing(0);
   padding-left: 12px;
   padding-bottom: 13px;
-  // padding-right: 48px;
+  padding-top: 13px;
   border-bottom: 1px solid var(--color-Primary);
+  padding-right: 50px;
   @include icon-after(
     31px,
     5.3px,
@@ -323,7 +331,16 @@
   );
   display: inline-block;
   &::after {
-    margin-left: 14px;
+    transition: all .3s ease;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+  }
+  &:hover {
+    &::after {
+      right: -5px;
+    }
   }
 }
 
@@ -395,7 +412,6 @@
   }
 }
 
-
 .ctcBtn {
   @include fontSize-clamp(16, 14);
   color: var(--color-White);
@@ -407,7 +423,11 @@
   justify-content: center;
   &.--submit {
     background-color: var(--color-btnOrangeBg);
-    @include icon-after(10px, 20px,url(../../../assets/img/ctc/ctc-btn_arrow.png));
+    @include icon-after(
+      10px,
+      20px,
+      url(../../../assets/img/ctc/ctc-btn_arrow.png)
+    );
     &::after {
       position: absolute;
       transform: translateY(-50%);
@@ -415,12 +435,16 @@
       right: 8%;
       @include sp {
         display: none;
-      };
+      }
     }
   }
   &.--confirm {
     background-color: var(--color-btnOrangeBg);
-    @include icon-after(10px, 20px,url(../../../assets/img/ctc/ctc-btn_arrow.png));
+    @include icon-after(
+      10px,
+      20px,
+      url(../../../assets/img/ctc/ctc-btn_arrow.png)
+    );
     &::after {
       position: absolute;
       transform: translateY(-50%);
@@ -430,7 +454,11 @@
   }
   &.--back {
     background-color: var(--color-Gray13);
-    @include icon-after(10px, 20px,url(../../../assets/img/ctc/ctc-btn_arrow.png));
+    @include icon-after(
+      10px,
+      20px,
+      url(../../../assets/img/ctc/ctc-btn_arrow.png)
+    );
     &::after {
       position: absolute;
       transform: translateY(-50%) rotate(180deg);
@@ -438,7 +466,21 @@
       left: 8%;
       @include sp {
         display: none;
-      };
+      }
     }
+  }
+}
+
+.roomList {
+  &__contactBtn {
+    @include fontSize-clamp(16, 14);
+    color: var(--color-White);
+    background-color: var(--color-btnOrangeBg);
+    padding: 6px 15px;
+  }
+  &__detailBtn {
+    @include fontSize-clamp(16, 14);
+    color: var(--color-Primary);
+    text-decoration: underline;
   }
 }
