@@ -55,7 +55,7 @@
     color: var(--color-White);
     @include font-clamp(36, 23, 50, 58);
     font-weight: $fw-regular;
-    text-shadow: 0 0 8px #000;
+    text-shadow: 0 0 8px var(--color-Black);
     @include sp {
       top: 34%;
     }

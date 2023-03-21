@@ -1,10 +1,12 @@
 const mvSwiper = new Swiper(".mv__slider", {
   // Optional parameters
   direction: "horizontal",
+  effect: 'fade',
+  speed: '2000',
   loop: true,
   slidesPerView: 1,
   autoplay: {
-    delay: 30000,
+    delay: 5000,
     loop: true,
   },
   // If we need pagination

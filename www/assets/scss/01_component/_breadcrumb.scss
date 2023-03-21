@@ -6,10 +6,10 @@
 
 .breadcrumb {
   background-color: var(--color-Gray08);
-  margin-bottom: 60px;
-  @include sp {
-    margin-bottom: 30px;
-  };
+  // margin-bottom: 60px;
+  // @include sp {
+  //   margin-bottom: 30px;
+  // };
   &__text {
     color: var(--color-Black01);
     @include fontSize-clamp(14, 10);

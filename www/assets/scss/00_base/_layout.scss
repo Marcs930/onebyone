@@ -12,16 +12,24 @@
   //display: none;
   &.js-bgWhite {
     padding-top: 80px;
+    @include tab-large {
+      padding-top: 65px;
+    };
   }
 }
 
 .contents {
   position: relative;
-  width: 100%;
-  &__inner {
-    position: relative;
+  padding-top: 60px;
+  @include tab-large {
+    padding-top: 40px;
   }
+  @include sp {
+    padding-top: 30px;
+  };
 }
+
+
 
 .main {
   position: relative;
@@ -141,6 +149,7 @@
 .sidebarLayout {
   display: flex;
   justify-content: space-between;
+
   &__left {
     width: 72%;
     max-width: 760px;

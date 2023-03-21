@@ -20,6 +20,7 @@
     justify-content: center;
     color: var(--color-White);
     font-weight: $fw-regular;
+    text-shadow: $text-shadow02;
     span {
       @include fontSize-clamp(21, 16);
 

@@ -4,8 +4,8 @@
 // archive-review
 //================================================================*/
 
-.arre{
-  &-reviewList  {
+.arre {
+  &-reviewList {
     margin-bottom: 60px;
   }
   &-pager {
@@ -13,13 +13,132 @@
   }
   &-reviewPostBtn {
     position: absolute;
-    top: 20px;
-    right:20px;
+    top: 90px;
+    right: 20px;
+    @include tab-large {
+      top: 75px;
+    }
     @include sp {
       position: relative;
       top: initial;
       right: initial;
       margin-bottom: 16px;
+    }
+  }
+}
+
+body.open {
+  overflow-y: hidden;
+}
+
+/* モーダル */
+.modalBg {
+  display: none;
+  position: fixed;
+  z-index: 300;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: modalopen;
+  animation-duration: .7s;
+}
+
+.arre-modal {
+  animation-name: modalopen;
+  animation-duration: .7s;
+  display: none;
+  z-index: 400;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  width: 700px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  @include sp {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  };
+  &__title {
+    text-align: center;
+    @include fontSize-clamp(28, 18);
+    font-weight: $fw-medium;
+    margin-bottom: 40px;
+    @include sp {
+      margin-bottom: 16px;
     };
+  }
+
+  &__container {
+    margin-inline: auto;
+    max-width: 390px;
+    @include sp {
+      width: 90%;
+      max-width: initial;
+    };
+  }
+
+  &__row {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    @include sp {
+      flex-direction: column;
+    };
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+      @include sp {
+        margin-bottom: 20px;
+      };
+    }
+    .label {
+      display: inline-block;
+      position: absolute;
+      left: -70px;
+      top: 8px;
+      font-size: 16px;
+      font-weight: $fw-regular;
+      @include sp {
+        position: relative;
+        display: block;
+        left: initial;
+        top: initial;
+        margin-bottom: 10px;
+      };
+    }
+    select {
+      width: 100%;
+      padding: 7px 20px;
+      font-size: 14px;
+    }
+    textarea {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  width: 50%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

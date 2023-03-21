@@ -42,6 +42,8 @@
     .pcNav__item {
       a {
         color: var(--color-Black);
+      text-shadow: none;
+
       }
       &.tel {
         span {
@@ -90,6 +92,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tab-large {
+      height: 65px;
+    };
   }
 
   &__logo {
@@ -103,6 +108,12 @@
     @include pc {
       width: 13vw;
       min-width: 130px;
+      padding-left: 10px;
+    }
+    @include tab-large {
+      width: 13vw;
+      min-width: 120px;
+      padding-left: 0;
     }
   }
 }
@@ -126,6 +137,7 @@
       padding-left: 34px;
       padding-right: 34px;
       line-height: 1;
+      text-shadow: $text-shadow02;
       span {
         @include en_font;
         display: inline-block;
@@ -336,6 +348,8 @@
 
   @include sp() {
     margin-left: 1rem;
+    width: 40px;
+    height: 18px;
   }
 
   span {

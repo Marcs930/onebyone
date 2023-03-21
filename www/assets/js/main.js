@@ -99,9 +99,11 @@ menuItems.forEach((clickeditem) => {
 const searchParamsMore = document.querySelector(".searchParams__more");
 const searchParamsMoreTarget = document.querySelector(".searchParams--hidden");
 
-searchParamsMore.addEventListener("click", () => {
-  searchParamsMoreTarget.classList.toggle("js-searchParamsMore");
-});
+if(searchParamsMore) {
+  searchParamsMore.addEventListener("click", () => {
+    searchParamsMoreTarget.classList.toggle("js-searchParamsMore");
+  });
+}
 
 
 // const options = {
@@ -157,3 +159,28 @@ searchParamsMore.addEventListener("click", () => {
 //         window.scrollTo(0, scrollPos);
 //     }
 // });
+const buttonOpen = document.getElementsByClassName('reviewPostBtn')[0];
+const modal = document.getElementsByClassName('arre-modal')[0];
+const modalBg = document.querySelector('.modalBg');
+const buttonClose = document.getElementsByClassName('modalClose')[0];
+const body = document.getElementsByTagName('body')[0];
+// ボタンがクリックされた時
+buttonOpen.addEventListener('click', function(){
+  modal.style.display = 'block';
+  modalBg.style.display = 'block';
+  body.classList.add('--open');
+});
+
+
+// バツ印がクリックされた時
+// buttonClose.addEventListener('click',function(){
+//   modal.style.display = 'none';
+//   body.classList.remove('open');
+// });
+
+// モーダルコンテンツ以外がクリックされた時
+modalBg.addEventListener('click', function(){
+    modal.style.display = 'none';
+    modalBg.style.display = 'none';
+    body.classList.remove('--open');
+});

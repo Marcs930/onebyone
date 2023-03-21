@@ -5,6 +5,13 @@
 //================================================================*/
 
 .qa-qa {
+padding-block: 60px;
+@include tab-large {
+  padding-block: 40px;
+}
+@include sp {
+    padding-block: 30px;
+  };
   &__list {
     overflow: hidden;
     border-radius: 5px;
@@ -17,12 +24,7 @@
       letter-spacing: 0.5px;
       margin-bottom: 17px;
     }
-    &:last-of-type {
-      margin-bottom: 50px;
-      @include sp {
-        margin-bottom: 30px;
-      };
-    }
+
   }
 
   &__question,

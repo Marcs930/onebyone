@@ -6,10 +6,10 @@
 
 .rct {
   &-jobDesc {
-    margin-top: 30px;
+    padding-top: 30px;
     padding-bottom: 88px;
     @include sp {
-      margin-top: 20px;
+      padding-top: 20px;
       padding-bottom: 60px;
     }
 
