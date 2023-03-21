@@ -93,11 +93,16 @@
     <!-- CONTENTS: START -->
 
     <main class="main">
-      <div class="pageHead js-scrollTransTarget" style="background-image: url(./assets/img/nws/nws-pageHead.jpg);">
+      <div class="pageHead js-scrollTransTarget">
+        <picture>
+          <source media="(min-width:769px)" srcset="./assets/img/ctc/ctc-pageHead.jpg">
+          <source media="(max-width:768px)" srcset="./assets/img/ctc/ctc-pageHead_sp.jpg">
+          <img src="./assets/img/ctc/ctc-pageHead.jpg" alt="">
+        </picture>
         <div class="wrapper pageHead__inner">
           <h2 class="pageHead__title">
-            お知らせ
-            <span>News</span>
+            お問い合わせ
+            <span>Contact</span>
           </h2>
         </div>
       </div>

@@ -93,7 +93,12 @@
     <!-- CONTENTS: START -->
 
     <main class="main ">
-      <div class="pageHead js-scrollTransTarget" style="background-image: url(./assets/img/rct/rct-pageHead.jpg);">
+      <div class="pageHead js-scrollTransTarget">
+        <picture>
+          <source media="(min-width:769px)" srcset="./assets/img/rct/rct-pageHead.jpg">
+          <source media="(max-width:768px)" srcset="./assets/img/rct/rct-pageHead_sp.jpg">
+          <img src="./assets/img/rct/rct-pageHead.jpg" alt="">
+        </picture>
         <div class="wrapper pageHead__inner">
           <h2 class="pageHead__title">
             採用情報

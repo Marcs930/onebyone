@@ -1,4 +1,4 @@
-const mvSwiper = new Swiper(".mv__slider", {
+const mvSwiper = new Swiper(".idx-mv__slider", {
   // Optional parameters
   direction: "horizontal",
   effect: 'fade',

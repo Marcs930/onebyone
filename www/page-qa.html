@@ -93,7 +93,14 @@
     <!-- CONTENTS: START -->
 
     <main class="main ">
-      <div class="pageHead js-scrollTransTarget" style="background-image: url(./assets/img/qa/qa-pageHead.jpg);">
+      <div class="pageHead js-scrollTransTarget --qa" >
+        <picture>
+          <source media="(min-width:769px)" srcset="./assets/img/qa/qa-pageHead_pc.jpg">
+          <source media="(max-width:480px)" srcset="./assets/img/qa/qa-pageHead_sp.jpg">
+          <source media="(max-width:768px)" srcset="./assets/img/qa/qa-pageHead_tab.jpg">
+          <img src="./assets/img/qa/qa-pageHead.jpg" alt="">
+        </picture>
+        <!-- <img src="./assets/img/qa/qa-pageHead.jpg" alt=""> -->
         <div class="wrapper pageHead__inner">
           <h2 class="pageHead__title">
             よくあるご質問
