@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/*==================================================================
+// table
+//================================================================*/
+
+.table {
+  color: var(--color-Black01);
+  border-collapse: collapse;
+  border: 1px solid var(--color-Gray10);
+  width: 100%;
+  th,
+  td {
+    @include fontSize-clamp(16, 13);
+    padding-top: rem(14);
+    padding-bottom: rem(14);
+    padding-left: rem(70);
+    padding-right: rem(70);
+    @include sp {
+      padding-top: rem(18);
+      padding-bottom: rem(18);
+      padding-left: rem(18);
+      padding-right: rem(18);
+
+    };
+  }
+  th {
+    font-weight: $fw-bold;
+    background-color: var(--color-Gray09);
+    border-top: 1px solid var(--color-Gray10);
+    border-bottom: 1px solid var(--color-Gray10);
+  }
+  td {
+    border-top: 1px solid var(--color-Gray10);
+    border-bottom: 1px solid var(--color-Gray10);
+    background-color: var(--color-White01);
+  }
+  tr {
+    @include sp {
+      width: 100%;
+    };
+  }
+}

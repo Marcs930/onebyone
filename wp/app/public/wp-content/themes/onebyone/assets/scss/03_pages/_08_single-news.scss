@@ -1,0 +1,144 @@
+.snws {
+  &-article {
+    padding-top: 60px;
+    @include sp {
+      padding-top: 30px;
+    };
+  }
+  .article {
+    &Heading {
+      position: relative;
+      border-bottom: 2px solid var(--color-Gray03);
+      padding-bottom: rem(18);
+      margin-bottom: 20px;
+      @include sp {
+        margin-bottom: 12px;
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 30%;
+        height: 2px;
+        background-color: var(--color-Blue03);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(100%);
+        min-width: 160px;
+      }
+      &__title {
+        @include fontSize-clamp(30, 20);
+        font-weight: $fw-medium;
+        margin-bottom: 8px;
+      }
+      &__date {
+        @include fontSize-clamp(16, 14);
+      }
+    }
+
+    &Pager {
+      width: 100%;
+      margin-top: 21px;
+      margin-bottom: 100px;
+      @include tab-large {
+        margin-bottom: 60px;
+      };
+      @include sp {
+        margin-bottom: 40px;
+      };
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__item {
+        &.--prev {
+          margin-right: auto;
+        }
+        &.--next {
+          margin-left: auto;
+        }
+      }
+
+      &__text {
+        @include fontSize-clamp(16, 14);
+        font-weight: $fw-regular;
+        line-height: 1.6em;
+        margin-bottom: 0.6em;
+        color: var(--color-Black01);
+      }
+    }
+  }
+  article {
+    // padding-top: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-Gray17);
+    @include sp {
+      // padding-top: 30px;
+    };
+    h1 {
+      @include fontSize-clamp(24, 22);
+      font-weight: $fw-bold;
+      margin-bottom: 0.6em;
+      line-height: 1.6em;
+    }
+    h2 {
+      @include fontSize-clamp(22, 20);
+      font-weight: $fw-bold;
+      margin-bottom: 0.6em;
+      line-height: 1.6em;
+    }
+    h3 {
+      @include fontSize-clamp(20, 18);
+      font-weight: $fw-medium;
+      padding-left: 0.5em;
+      border-left: 4px solid var(--color-Blue03);
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.6em;
+      line-height: 1.6em;
+    }
+    h4 {
+      @include fontSize-clamp(18, 16);
+      font-weight: $fw-medium;
+      margin-bottom: 0.6em;
+      line-height: 1.6em;
+    }
+    p {
+      @include fontSize-clamp(16, 14);
+      font-weight: $fw-regular;
+      line-height: 1.6em;
+      margin-bottom: 0.6em;
+    }
+
+    li {
+      list-style: disc;
+      margin-left: 0.6em;
+      @include fontSize-clamp(16, 14);
+      font-weight: $fw-regular;
+      line-height: 1.6em;
+      margin-bottom: 0.6em;
+      &::marker {
+        background-color: 4px solid var(--color-Blue03);
+      }
+    }
+
+    a {
+      @include fontSize-clamp(16, 14);
+      font-weight: $fw-regular;
+      line-height: 1.6em;
+      margin-bottom: 0.6em;
+      text-decoration: underline;
+      color: var(--color-Link);
+      @include icon-before(
+        12.6px,
+        12.6px,
+        url(../../../assets/img/common/icon_open-in-new.png)
+      );
+      &::before {
+        margin-right: 4px;
+      }
+    }
+  }
+}

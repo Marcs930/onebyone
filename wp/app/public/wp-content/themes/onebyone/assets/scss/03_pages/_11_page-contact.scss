@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/*==================================================================
+// page-contact
+//================================================================*/
+
+.progressbarContainer {
+  margin-bottom: 60px;
+}
+
+.progressbar {
+  max-width: 1180px;
+}
+
+.progressbar {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include fontSize-clamp(18, 16);
+}
+.progressbar li {
+  position: relative;
+  list-style-type: none;
+  text-align: center;
+  text-transform: uppercase;
+  width: 33.333%;
+  color: var(--color-Gray10);
+  font-weight: bold;
+}
+.progressbar li:before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 7px auto 20px auto;
+  content: "";
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--color-Gray10);
+}
+.progressbar li:after {
+  position: absolute;
+  z-index: -1;
+  top: 15px;
+  left: -50%;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background-color: var(--color-Gray10);
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active,
+.progressbar li.complete {
+  color: #0070bd;
+}
+.progressbar li.active:before,
+.progressbar li.complete:before {
+  background-color: #0070bd;
+}
+.progressbar li.active:after,
+.progressbar li.complete:after {
+  background-color: #0070bd;
+}
+
+.ctc-form {
+  @include sectionInner(820px);
+  padding-bottom: 60px;
+  @include tab-large {
+    padding-bottom: 30px;
+  }
+  &__heading {
+    @include fontSize-clamp(21, 18);
+    font-weight: $fw-medium;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-Blue03);
+    margin-bottom: 35px;
+  }
+
+  &__room {
+    margin-bottom: 70px;
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 113px;
+      height: 80px;
+      margin-right: 54px;
+    }
+    &__info {
+      @include fontSize-clamp(20, 16);
+      font-weight: $fw-regular;
+    }
+  }
+
+  &__label {
+    @include fontSize-clamp(18, 14);
+    font-weight: $fw-medium;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    label {
+      display: inline-block;
+    }
+  }
+
+  &__required {
+    @include fontSize-clamp(12, 10);
+    color: var(--color-White);
+    background-color: var(--color-Red01);
+    display: inline-block;
+    padding: 3px 13px;
+    border-radius: 3px;
+    font-weight: $fw-medium;
+    letter-spacing: 1px;
+    margin-left: 1rem;
+  }
+
+  &__error {
+    color: var(--color-Red01);
+    @include fontSize-clamp(14, 12);
+    margin-bottom: 8px;
+  }
+
+  &__input {
+    margin-bottom: 40px;
+    &.--text,
+    &.--textarea {
+      @include fontSize-clamp(16, 14);
+      font-weight: $fw-regular;
+      border-radius: 3px;
+      border: 1px solid var(--color-Gray18);
+      width: 100%;
+    }
+    &.--text {
+      padding: 14px 18px;
+    }
+    &.--textarea {
+      padding: 14px 18px;
+      width: 100%;
+      height: 100%;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+  }
+
+  &__radio {
+    display: flex;
+    flex-direction: column;
+    label {
+      cursor: pointer;
+      @include fontSize-clamp(16, 14);
+      &:not(:last-of-type) {
+        margin-bottom: 6px;
+      }
+    }
+    input {
+      margin-right: 10px;
+    }
+  }
+  &__check {
+    display: flex;
+    flex-direction: column;
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      @include fontSize-clamp(16, 14);
+      &:not(:last-of-type) {
+        margin-bottom: 6px;
+      }
+    }
+    input {
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+
+  &__notice {
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 30px;
+    p {
+      @include fontSize-clamp(16, 14);
+    }
+    a {
+      color: var(--color-Link);
+      text-decoration: underline;
+
+    }
+  }
+
+  &__btnContainer {
+   display: flex;
+   justify-content: space-between;
+   @include sp {
+    flex-direction: column;
+    row-gap: 10px;
+   };
+
+   .ctcBtn {
+    &.--back,&.--submit {
+      width: 48%;
+      @include sp {
+        width: 100%;
+      };
+    }
+
+    &.--confirm {
+      margin-inline: auto;
+    }
+   }
+  }
+}

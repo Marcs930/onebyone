@@ -10,7 +10,7 @@
   }
   @include sp {
     padding-bottom: 60px;
-  };
+  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@
   }
 
   &__sort {
-    @include icon-before(27px, 16px, url(../../../assets/img/common/sort_arrow.png));
+    @include icon-before(27px, 16px, url(../img/common/sort_arrow.png));
     &::before {
       margin-right: 8px;
     }

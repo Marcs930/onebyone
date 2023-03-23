@@ -1,0 +1,121 @@
+@charset "utf-8";
+/*==================================================================
+// building-list
+//================================================================*/
+.buildingList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 50px;
+  @include sp {
+    row-gap: 16px;
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 25%;
+    max-width: 251px;
+    order: 1;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 25%;
+    max-width: 251px;
+  }
+  &__item {
+    width: 25%;
+    max-width: 251px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 14px rgba(#000, 0.16);
+    position: relative;
+    @include tab-large {
+      width: 33%;
+      max-width: none;
+    }
+    @include sp {
+      width: 48%;
+      max-width: 100%;
+    }
+    a {
+      width: 100%;
+      display: inline-block;
+      color: var(--color-Black01);
+    }
+    img {
+      width: 100%;
+      aspect-ratio: 251 / 151;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  &__content {
+    width: 100%;
+    @include l_spacing(0);
+    background-color: var(--color-White);
+    padding-top: rem(8);
+    padding-bottom: rem(18);
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+  &__name {
+    @include fontSize-clamp(16, 14);
+    color: var(--color-Black01);
+    font-weight: $fw-medium;
+    @include sp_small {
+      margin-bottom: 1px;
+    }
+  }
+  &__address {
+    color: var(--color-Black04);
+    @include fontSize-clamp(12, 11);
+    font-weight: $fw-regular;
+    @include sp_small {
+      font-size: 10px;
+    }
+  }
+  &__price {
+    @include sp {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+    span {
+      color: var(--color-Black04);
+      @include fontSize-clamp(12, 10);
+      font-weight: $fw-regular;
+      @include sp_small {
+        font-size: 8px;
+      }
+    }
+    span.red {
+      color: var(--color-Orange01);
+      @include fontSize-clamp(20, 14);
+      font-weight: $fw-bold;
+      @include sp_small {
+        font-size: 14px;
+      }
+    }
+  }
+  &__info {
+    color: var(--color-Black04);
+    @include fontSize-clamp(14, 12);
+    font-weight: $fw-regular;
+    @include sp_small {
+      font-size: 10px;
+    }
+  }
+  &__tag {
+    padding: 4px;
+    background-color: var(--color-Orange02);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--color-White);
+    @include fontSize-clamp(13, 12);
+    @include l_spacing(50);
+    font-weight: $fw-regular;
+    padding: 0.5em 1em;
+  }
+}

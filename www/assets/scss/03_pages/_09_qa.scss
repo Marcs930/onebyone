@@ -63,7 +63,7 @@
     cursor: pointer;
     &::before {
       content: "";
-      background-image: url(../../../assets/img/qa/icon_qa_question.png);
+      background-image: url(../img/qa/icon_qa_question.png);
     }
     &::after {
       content: "";
@@ -71,7 +71,7 @@
       display: inline-block;
       width: 20px;
       height: 10px;
-      background-image: url(../../../assets/img/qa/icon_qa_arron.png);
+      background-image: url(../img/qa/icon_qa_arron.png);
       position: absolute;
       background-size: cover;
       top: 30px;
@@ -94,7 +94,7 @@
     background-color: var(--color-White);
     font-weight: $fw-regular;
     &::before {
-      background-image: url(../../../assets/img/qa/icon_qa_answer.png);
+      background-image: url(../img/qa/icon_qa_answer.png);
     }
   }
 }

@@ -5,20 +5,17 @@
 //==================================================================
 .sidebarLayout {
   &__left {
-
-
   }
   &__right {
     @include sp {
       display: none;
-    };
+    }
   }
   @include pc() {
   }
   @include tab() {
   }
   @include sp() {
-
   }
 }
 
@@ -142,7 +139,7 @@
       width: 12px;
       height: 6.5px;
       display: inline-block;
-      background-image: url(../../../assets/img/common/arrow_bottom.png);
+      background-image: url(../img/common/arrow_bottom.png);
       background-size: cover;
       margin-left: 5px;
     }

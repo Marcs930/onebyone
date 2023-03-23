@@ -30,7 +30,7 @@
     @include icon-after(
       $width: 12px,
       $height: 18px,
-      $path: url(../../../assets/img/common/icon_arrow_right_white.png)
+      $path: url(../img/common/icon_arrow_right_white.png)
     );
     &::after {
       position: absolute;
@@ -42,7 +42,7 @@
       @include icon-before(
         $width: 16px,
         $height: 12px,
-        $path: url(../../../assets/img/common/icon_mail.png)
+        $path: url(../img/common/icon_mail.png)
       );
       &::before {
         position: absolute;
@@ -58,7 +58,7 @@
     @include icon-after(
       $width: 12px,
       $height: 18px,
-      $path: url(../../../assets/img/common/icon_arrow_right_white.png)
+      $path: url(../img/common/icon_arrow_right_white.png)
     );
     &::after {
       position: absolute;
@@ -70,7 +70,7 @@
       @include icon-before(
         $width: 35px,
         $height: 35px,
-        $path: url(../../../assets/img/common/icon_line.png)
+        $path: url(../img/common/icon_line.png)
       );
       &::before {
         position: absolute;
@@ -105,7 +105,7 @@
       @include icon-before(
         $width: 1.2em,
         $height: 1.2em,
-        $path: url(../../../assets/img/common/icon_mail.png)
+        $path: url(../img/common/icon_mail.png)
       );
     }
   }
@@ -115,7 +115,7 @@
       @include icon-before(
         $width: 1.6em,
         $height: 1.6em,
-        $path: url(../../../assets/img/common/icon_line.png)
+        $path: url(../img/common/icon_line.png)
       );
     }
   }
@@ -139,7 +139,7 @@
   @include icon-before(
     $width: 20px,
     $height: 16px,
-    $path: url(../../../assets/img/common/icon_mail.png)
+    $path: url(../img/common/icon_mail.png)
   );
   &::before {
     margin-right: 0.55rem;
@@ -162,18 +162,10 @@
   background-color: var(--color-Primary);
   color: var(--color-White);
   &.--train {
-    @include icon-before(
-      21px,
-      16px,
-      url(../../../assets/img/common/icon_train.png)
-    );
+    @include icon-before(21px, 16px, url(../img/common/icon_train.png));
   }
   &.--area {
-    @include icon-before(
-      21px,
-      16px,
-      url(../../../assets/img/common/icon_map.png)
-    );
+    @include icon-before(21px, 16px, url(../img/common/icon_map.png));
   }
 
   flex-direction: column !important;
@@ -189,11 +181,9 @@
     left: calc(50% - 3.8rem);
     @include tab-large {
       left: calc(50% - 4.2rem);
-
     }
     @include tab {
       left: calc(50% - 5rem);
-
     }
     @include sp {
       left: calc(50% - 7.5rem);
@@ -237,11 +227,7 @@
     aspect-ratio: 1 / 1;
     width: auto;
     display: inline-block;
-    @include icon-before(
-      20px,
-      20px,
-      url(../../../assets/img/common/icon-search.png)
-    );
+    @include icon-before(20px, 20px, url(../img/common/icon-search.png));
     border: none;
     &::before {
       position: absolute;
@@ -262,11 +248,7 @@
   padding-bottom: rem(12);
   width: 215px;
   border-radius: 5px;
-  @include icon-after(
-    18px,
-    18px,
-    url(../../../assets/img/common/icon_arrow_round.png)
-  );
+  @include icon-after(18px, 18px, url(../img/common/icon_arrow_round.png));
   justify-content: center;
   padding-left: 20px;
   &::after {
@@ -290,7 +272,7 @@
     background-color: var(--color-Blue03);
     opacity: 1;
     &::after {
-      background-image: url(../../../assets/img/common/arrow_right_white.png);
+      background-image: url(../img/common/arrow_right_white.png);
     }
   }
   @include sp {
@@ -302,11 +284,7 @@
     max-width: 100%;
     width: 100%;
   }
-  @include icon-after(
-    15px,
-    21px,
-    url(../../../assets/img/common/arrow_right_blue.png)
-  );
+  @include icon-after(15px, 21px, url(../img/common/arrow_right_blue.png));
   display: inline-block;
   margin: 0 auto;
   &::after {
@@ -326,14 +304,10 @@
   padding-top: 13px;
   border-bottom: 1px solid var(--color-Primary);
   padding-right: 50px;
-  @include icon-after(
-    31px,
-    5.3px,
-    url(../../../assets/img/common/halfarrow_right_blue.png)
-  );
+  @include icon-after(31px, 5.3px, url(../img/common/halfarrow_right_blue.png));
   display: inline-block;
   &::after {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
@@ -429,11 +403,7 @@
   justify-content: center;
   &.--submit {
     background-color: var(--color-btnOrangeBg);
-    @include icon-after(
-      10px,
-      20px,
-      url(../../../assets/img/ctc/ctc-btn_arrow.png)
-    );
+    @include icon-after(10px, 20px, url(../img/ctc/ctc-btn_arrow.png));
     &::after {
       position: absolute;
       transform: translateY(-50%);
@@ -446,11 +416,7 @@
   }
   &.--confirm {
     background-color: var(--color-btnOrangeBg);
-    @include icon-after(
-      10px,
-      20px,
-      url(../../../assets/img/ctc/ctc-btn_arrow.png)
-    );
+    @include icon-after(10px, 20px, url(../img/ctc/ctc-btn_arrow.png));
     &::after {
       position: absolute;
       transform: translateY(-50%);
@@ -460,11 +426,7 @@
   }
   &.--back {
     background-color: var(--color-Gray13);
-    @include icon-after(
-      10px,
-      20px,
-      url(../../../assets/img/ctc/ctc-btn_arrow.png)
-    );
+    @include icon-after(10px, 20px, url(../img/ctc/ctc-btn_arrow.png));
     &::after {
       position: absolute;
       transform: translateY(-50%) rotate(180deg);

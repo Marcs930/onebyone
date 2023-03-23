@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+/*==================================================================
+// cta
+//================================================================*/
+
+.cta {
+  background-image: url(../../../assets/img/common/cta_v2.jpg);
+  padding-top: 47px;
+  padding-bottom: 25px;
+  @include sp {
+    padding-top: 27px;
+    padding-bottom: 25px;
+  }
+  &__tel {
+    width: 49%;
+    max-width: 340px;
+    @include fontSize-clamp(16, 15);
+    font-weight: $fw-medium;
+    color: var(--color-Primary);
+    background-color: var(--color-Gray07);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include sp {
+      max-width: 100%;
+      width: 100%;
+      order: 1;
+      font-size: 15px;
+    }
+    &.--sidebar {
+      width: 100%;
+      color: var(--color-Black01);
+      background-color: var(--color-White);
+      border: 2px solid var(--color-Blue01);
+      border-radius: 2px;
+      @include fontSize-clamp(13, 12);
+      font-weight: $fw-regular;
+      padding-top: 11px;
+      padding-bottom: 14px;
+      padding-left: 28px;
+      padding-right: 28px;
+      align-items: center;
+      span {
+        &.tel {
+        @include font-clamp(23, 14, 50, 23);
+        margin-top: 16px;
+          &::after {
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-Black01);
+            top: -7px;
+          }
+        }
+        &.time {
+          margin-top: 8px;
+          font-weight: $fw-regular;
+          @include fontSize-clamp(12, 11);
+        }
+      }
+    }
+    span {
+      display: inline-block;
+      &.tel {
+        color: var(--color-Primary);
+        font-weight: $fw-medium;
+        margin-top: 0.5em;
+        @include font-clamp(28, 24, 50, 40);
+        @include sp {
+          font-size: 24px;
+        }
+        @include icon-before(
+          19px,
+          19px,
+          url(../../../assets/img/common/icon_phone-blue.svg)
+        );
+        &::before {
+          margin-top: 4px;
+          margin-right: 0.25em;
+        }
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 40px;
+          height: 2px;
+          background-color: var(--color-Primary);
+          position: absolute;
+          transform: translateX(-50%);
+          top: -5px;
+          left: 50%;
+        }
+      }
+      &.time {
+        @include fontSize-clamp(13, 12);
+        margin-top: 0.3em;
+        font-weight: $fw-medium;
+        @include sp {
+          font-size: 12px;
+        }
+        span {
+          @include fontSize-clamp(12, 11);
+          border: 1px solid var(--color-Primary);
+          border-radius: 2px;
+          padding: 4px 10px;
+          line-height: 1;
+          @include sp {
+          }
+        }
+      }
+    }
+  }
+  &__btnContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    margin-top: 43px;
+    @include sp {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+    }
+    &__inner {
+      max-width: 326px;
+      width: 49%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      @include sp {
+        max-width: 100%;
+        width: 100%;
+        .btn {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  &__inner {
+    @include sectionInner(790px);
+    @include sp {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &__heading {
+    color: var(--color-White);
+    @include font-clamp(18, 16, 50, 26);
+    @include l_spacing(16);
+    display: block;
+    margin: 0 auto;
+    text-shadow: $text-shadow01;
+text-align: center;
+    span {
+      @include font-clamp(22, 18, 50, 32);
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+    @include sp-small {
+      font-size: 16px;
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__snsContainer {
+    width: 266px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 41px;
+    @include sp {
+      margin-top: 20px;
+    }
+    & > span {
+      @include fontSize-clamp(18, 16);
+      @include l_spacing(60);
+      @include sp {
+        font-size: 16px;
+      }
+      color: var(--color-White);
+      text-shadow: $text-shadow01;
+
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background-color: var(--color-White);
+      }
+      &::before {
+        transform: rotate(-15deg);
+        margin-right: 5px;
+      }
+      &::after {
+        transform: rotate(15deg);
+        margin-left: 5px;
+      }
+    }
+  }
+  &__snsList {
+    display: flex;
+    margin-bottom: 12px;
+    justify-content: center;
+    li {
+      &:not(:last-of-type) {
+        margin-right: 37px;
+      }
+    }
+  }
+}

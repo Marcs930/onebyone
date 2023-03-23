@@ -21,7 +21,7 @@
     .header {
       @include tab-large {
         box-shadow: none;
-      };
+      }
     }
   }
 }
@@ -42,13 +42,12 @@
     .pcNav__item {
       a {
         color: var(--color-Black);
-      text-shadow: none;
-
+        text-shadow: none;
       }
       &.tel {
         span {
           &::before {
-            background-image: url(../../../assets/img/common/icon_phone-black.svg);
+            background-image: url(../img/common/icon_phone-black.svg);
           }
         }
       }
@@ -94,7 +93,7 @@
     align-items: center;
     @include tab-large {
       height: 65px;
-    };
+    }
   }
 
   &__logo {
@@ -161,7 +160,7 @@
           @include icon-before(
             $width: 20px,
             $height: 20px,
-            $path: url(../../../assets/img/common/icon_phone-white.svg)
+            $path: url(../img/common/icon_phone-white.svg)
           );
           &::before {
             margin-right: 0.4em;
@@ -227,7 +226,7 @@
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
-        background-image: url(../../../assets/img/common/arrow-right.png);
+        background-image: url(../img/common/arrow-right.png);
         position: absolute;
         transform: translateY(-50%);
         top: 50%;
@@ -256,7 +255,7 @@
         @include icon-before(
           18px,
           18px,
-          url(../../../assets/img/common/icon_phone-blue.svg)
+          url(../img/common/icon_phone-blue.svg)
         );
         &::before {
           margin-top: 4px;

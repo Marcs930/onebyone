@@ -33,7 +33,7 @@
       width: 100%;
       @include sp {
         height: 42px;
-      };
+      }
       &::after {
         content: "";
         width: 11px;
@@ -43,13 +43,13 @@
         top: 25px;
         right: 18px;
         background-size: cover;
-        background-image: url(../../../assets/img/common/toggle_arrow.png);
+        background-image: url(../img/common/toggle_arrow.png);
         transition: all 0.3s;
         transform: translateY(-50%) rotate(180deg);
         transform-origin: center center;
         @include sp {
           top: 21px;
-        };
+        }
       }
     }
 
@@ -64,16 +64,15 @@
       align-items: center;
       @include sp {
         top: 21px;
-      };
+      }
       label {
         margin-left: 9px;
         line-height: 1;
         @include sp {
           margin-left: 7px;
-        };
+        }
       }
     }
-
   }
 
   &__secondaryItem {

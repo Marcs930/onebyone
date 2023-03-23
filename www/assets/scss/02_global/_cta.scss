@@ -5,7 +5,7 @@
 //================================================================*/
 
 .cta {
-  background-image: url(../../../assets/img/common/cta_v2.jpg);
+  background-image: url(../img/common/cta_v2.jpg);
   padding-top: 47px;
   padding-bottom: 25px;
   @include sp {
@@ -47,8 +47,8 @@
       align-items: center;
       span {
         &.tel {
-        @include font-clamp(23, 14, 50, 23);
-        margin-top: 16px;
+          @include font-clamp(23, 14, 50, 23);
+          margin-top: 16px;
           &::after {
             width: 40px;
             height: 1px;
@@ -76,7 +76,7 @@
         @include icon-before(
           19px,
           19px,
-          url(../../../assets/img/common/icon_phone-blue.svg)
+          url(../img/common/icon_phone-blue.svg)
         );
         &::before {
           margin-top: 4px;
@@ -155,7 +155,7 @@
     display: block;
     margin: 0 auto;
     text-shadow: $text-shadow01;
-text-align: center;
+    text-align: center;
     span {
       @include font-clamp(22, 18, 50, 32);
       margin-right: 2px;

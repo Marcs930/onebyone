@@ -3,7 +3,7 @@
     padding-top: 60px;
     @include sp {
       padding-top: 30px;
-    };
+    }
   }
   .article {
     &Heading {
@@ -42,10 +42,10 @@
       margin-bottom: 100px;
       @include tab-large {
         margin-bottom: 60px;
-      };
+      }
       @include sp {
         margin-bottom: 40px;
-      };
+      }
       &__list {
         display: flex;
         justify-content: space-between;
@@ -76,7 +76,7 @@
     border-bottom: 1px solid var(--color-Gray17);
     @include sp {
       // padding-top: 30px;
-    };
+    }
     h1 {
       @include fontSize-clamp(24, 22);
       font-weight: $fw-bold;
@@ -134,7 +134,7 @@
       @include icon-before(
         12.6px,
         12.6px,
-        url(../../../assets/img/common/icon_open-in-new.png)
+        url(../img/common/icon_open-in-new.png)
       );
       &::before {
         margin-right: 4px;

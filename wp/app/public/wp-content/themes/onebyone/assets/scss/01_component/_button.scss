@@ -1,0 +1,503 @@
+@charset "utf-8";
+
+/*==================================================================
+// btn
+//================================================================*/
+
+.btn {
+  display: inline-block;
+  @include anime-normal();
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include tab-large {
+    // width: 100%;
+  }
+}
+
+.ctaBtn {
+  color: var(--color-White);
+  @include font-clamp(16, 15, 60, 15);
+  font-weight: $fw-medium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  &.--contact {
+    background-color: var(--color-btnOrangeBg);
+    @include icon-after(
+      $width: 12px,
+      $height: 18px,
+      $path: url(../../../assets/img/common/icon_arrow_right_white.png)
+    );
+    &::after {
+      position: absolute;
+      top: calc(50% + 2px);
+      transform: translateY(-50%);
+      right: 20px;
+    }
+    span {
+      @include icon-before(
+        $width: 16px,
+        $height: 12px,
+        $path: url(../../../assets/img/common/icon_mail.png)
+      );
+      &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -36px;
+      }
+    }
+  }
+
+  &.--line {
+    background-color: var(--color-Line);
+    @include icon-after(
+      $width: 12px,
+      $height: 18px,
+      $path: url(../../../assets/img/common/icon_arrow_right_white.png)
+    );
+    &::after {
+      position: absolute;
+      top: calc(50% + 2px);
+      transform: translateY(-50%);
+      right: 20px;
+    }
+    span {
+      @include icon-before(
+        $width: 35px,
+        $height: 35px,
+        $path: url(../../../assets/img/common/icon_line.png)
+      );
+      &::before {
+        position: absolute;
+        top: calc(50% + 2px);
+        transform: translateY(-50%);
+        left: -50px;
+      }
+    }
+  }
+}
+
+.spPrimaryBtn {
+  color: var(--color-White);
+  @include font-clamp(15, 15, 60, 15);
+  font-weight: $fw-medium;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    &::before {
+      position: absolute;
+      top: calc(50% + 2px);
+      transform: translate(-50%, -50%);
+      left: calc(50% - 75px);
+    }
+  }
+  &.--contact {
+    background-color: var(--color-btnOrangeBg);
+    span {
+      @include icon-before(
+        $width: 1.2em,
+        $height: 1.2em,
+        $path: url(../../../assets/img/common/icon_mail.png)
+      );
+    }
+  }
+  &.--line {
+    background-color: var(--color-Line);
+    span {
+      @include icon-before(
+        $width: 1.6em,
+        $height: 1.6em,
+        $path: url(../../../assets/img/common/icon_line.png)
+      );
+    }
+  }
+}
+
+.pcNav__contactBtn {
+  display: inline-block;
+  @include anime-normal();
+  &:hover {
+    opacity: 0.8;
+  }
+  background-color: var(--color-btnOrangeBg);
+  color: var(--color-White) !important;
+  height: 80px;
+  font-weight: $fw-medium;
+  padding-right: rem(24) !important;
+  padding-left: rem(24) !important;
+  font-size: rem(15) !important;
+  text-shadow: none !important;
+  @include l_spacing(60);
+  @include icon-before(
+    $width: 20px,
+    $height: 16px,
+    $path: url(../../../assets/img/common/icon_mail.png)
+  );
+  &::before {
+    margin-right: 0.55rem;
+  }
+}
+
+.snsBtn {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--color-White);
+  box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchByBtn {
+  background-color: var(--color-Primary);
+  color: var(--color-White);
+  &.--train {
+    @include icon-before(
+      21px,
+      16px,
+      url(../../../assets/img/common/icon_train.png)
+    );
+  }
+  &.--area {
+    @include icon-before(
+      21px,
+      16px,
+      url(../../../assets/img/common/icon_map.png)
+    );
+  }
+
+  flex-direction: column !important;
+  @include sp {
+    flex-direction: row !important;
+  }
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+  &::before {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: calc(50% - 3.8rem);
+    @include tab-large {
+      left: calc(50% - 4.2rem);
+
+    }
+    @include tab {
+      left: calc(50% - 5rem);
+
+    }
+    @include sp {
+      left: calc(50% - 7.5rem);
+    }
+  }
+  span {
+    display: inline-block;
+    font-size: 10px;
+    @include sp {
+      margin-left: 4px;
+    }
+  }
+  width: 195px;
+  height: 50px;
+  font-size: 15px;
+  @include sp {
+    width: 49%;
+  }
+  @include sp_small {
+    width: 100%;
+  }
+}
+
+.keyword-search {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  .text-input {
+    // width: auto;
+    flex-grow: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 13px;
+    border: 1px solid var(--color-Gray02);
+    border-right: none;
+  }
+  .submit-btn {
+    background-color: var(--color-Primary);
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    width: auto;
+    display: inline-block;
+    @include icon-before(
+      20px,
+      20px,
+      url(../../../assets/img/common/icon-search.png)
+    );
+    border: none;
+    &::before {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
+}
+
+.btnToList {
+  background-color: var(--color-Blue02);
+  color: var(--color-White);
+  font-size: 16px;
+  @include l_spacing(50);
+  font-weight: $fw-medium;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  width: 215px;
+  border-radius: 5px;
+  @include icon-after(
+    18px,
+    18px,
+    url(../../../assets/img/common/icon_arrow_round.png)
+  );
+  justify-content: center;
+  padding-left: 20px;
+  &::after {
+    margin-left: rem(26);
+  }
+}
+
+.btnWhite {
+  color: var(--color-Blue03);
+  background-color: var(--color-White);
+  border: 1px solid var(--color-Blue03);
+  border-radius: 5px;
+  @include fontSize-clamp(15, 14);
+  @include l_spacing(0);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 42px;
+  padding-right: 56px;
+  &:hover {
+    color: var(--color-White);
+    background-color: var(--color-Blue03);
+    opacity: 1;
+    &::after {
+      background-image: url(../../../assets/img/common/arrow_right_white.png);
+    }
+  }
+  @include sp {
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  @include sp {
+    max-width: 100%;
+    width: 100%;
+  }
+  @include icon-after(
+    15px,
+    21px,
+    url(../../../assets/img/common/arrow_right_blue.png)
+  );
+  display: inline-block;
+  margin: 0 auto;
+  &::after {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 1rem;
+  }
+}
+
+.btnUnderLine {
+  color: var(--color-Primary);
+  @include fontSize-clamp(16, 14);
+  @include l_spacing(0);
+  padding-left: 12px;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  border-bottom: 1px solid var(--color-Primary);
+  padding-right: 50px;
+  @include icon-after(
+    31px,
+    5.3px,
+    url(../../../assets/img/common/halfarrow_right_blue.png)
+  );
+  display: inline-block;
+  &::after {
+    transition: all .3s ease;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+  }
+  &:hover {
+    &::after {
+      right: -5px;
+    }
+  }
+}
+
+.searchBtn {
+  color: var(--color-White);
+  font-weight: $fw-medium;
+  @include fontSize-clamp(16, 14);
+  background-color: var(--color-Blue06);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 44px;
+  padding-left: 44px;
+  margin: 0 auto;
+  @include sp {
+    width: 100%;
+  }
+  &.--sidebar {
+    width: 100%;
+  }
+}
+
+.sidebar__snsBtn {
+  width: 100%;
+  @include fontSize-clamp(16, 14);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: inline-block;
+  color: var(--color-White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  img {
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+  }
+  &.--youtube {
+    background-color: var(--color-Youtube);
+    img {
+      width: 30px;
+      height: 22px;
+      margin-right: 8px;
+    }
+  }
+
+  &.--tiktok {
+    background-color: var(--color-Tiktok);
+  }
+}
+
+.reviewPostBtn {
+  color: var(--color-White);
+  background-color: var(--color-Blue03);
+  padding: 20px 43px;
+  font-size: 16px;
+  padding: rem(20) rem(43);
+  @include fontSize-clamp(16, 15);
+  font-weight: $fw-bold;
+  border: none;
+  box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+
+  @include sp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+  }
+}
+
+.ctcBtn {
+  @include fontSize-clamp(16, 14);
+  color: var(--color-White);
+  border: none;
+  font-weight: $fw-bold;
+  padding-block: 13px;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
+  &.--submit {
+    background-color: var(--color-btnOrangeBg);
+    @include icon-after(
+      10px,
+      20px,
+      url(../../../assets/img/ctc/ctc-btn_arrow.png)
+    );
+    &::after {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 8%;
+      @include sp {
+        display: none;
+      }
+    }
+  }
+  &.--confirm {
+    background-color: var(--color-btnOrangeBg);
+    @include icon-after(
+      10px,
+      20px,
+      url(../../../assets/img/ctc/ctc-btn_arrow.png)
+    );
+    &::after {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 8%;
+    }
+  }
+  &.--back {
+    background-color: var(--color-Gray13);
+    @include icon-after(
+      10px,
+      20px,
+      url(../../../assets/img/ctc/ctc-btn_arrow.png)
+    );
+    &::after {
+      position: absolute;
+      transform: translateY(-50%) rotate(180deg);
+      top: 50%;
+      left: 8%;
+      @include sp {
+        display: none;
+      }
+    }
+  }
+}
+
+.roomList {
+  &__contactBtn {
+    @include fontSize-clamp(16, 14);
+    color: var(--color-White);
+    background-color: var(--color-btnOrangeBg);
+    padding: 6px 15px;
+  }
+  &__detailBtn {
+    @include fontSize-clamp(16, 14);
+    color: var(--color-Primary);
+    text-decoration: underline;
+  }
+}
+
+.modal__btn {
+  background-color: var(--color-Blue03);
+  color: var(--color-White);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding-block: 10px;
+}

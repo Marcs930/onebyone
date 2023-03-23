@@ -271,7 +271,7 @@
       display: inline-block;
       width: 10px;
       height: 20px;
-      background-image: url(../../../assets/img/common/slider_btn_arrow.png);
+      background-image: url(../img/common/slider_btn_arrow.png);
       background-size: cover;
       position: absolute;
       transform: translate(-50%, -50%);
@@ -316,7 +316,7 @@
       display: inline-block;
       width: 8px;
       height: 16px;
-      background-image: url(../../../assets/img/common/slider_btn_arrow_thumb.png);
+      background-image: url(../img/common/slider_btn_arrow_thumb.png);
       background-size: cover;
       position: absolute;
       transform: translate(-50%, -50%);
@@ -388,7 +388,7 @@
     &::after {
       content: "";
       display: inline-block;
-      background-image: url(../../../assets/img/common/roomListSp_arrow.png);
+      background-image: url(../img/common/roomListSp_arrow.png);
       background-size: cover;
       background-position: center right;
       width: 9px;
