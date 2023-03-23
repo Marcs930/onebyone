@@ -43,3 +43,5 @@
 [23-Mar-2023 14:58:49 UTC] PHP Warning:  Undefined variable $facebook_app_id in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\ogp.php on line 62
 [23-Mar-2023 15:02:04 UTC] PHP Warning:  Undefined variable $twitter_site in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\ogp.php on line 59
 [23-Mar-2023 15:02:04 UTC] PHP Warning:  Undefined variable $facebook_app_id in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\ogp.php on line 62
+[23-Mar-2023 16:17:39 UTC] PHP Warning:  Undefined variable $twitter_site in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\ogp.php on line 59
+[23-Mar-2023 16:17:39 UTC] PHP Warning:  Undefined variable $facebook_app_id in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\ogp.php on line 62

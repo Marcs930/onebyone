@@ -51,7 +51,7 @@ require_once get_theme_file_path('/functions/call_breadcrumb.php');
 require_once get_theme_file_path('/functions/breadcrumb_setting.php');
 // パンくずナビ設定
 
-require_once get_theme_file_path('/functions/ogp.php');
+// require_once get_theme_file_path('/functions/ogp.php');
 // OGP設定
 
 require_once get_theme_file_path('/functions/mb_str.php');
