@@ -5,13 +5,13 @@
 //================================================================*/
 
 .qa-qa {
-padding-block: 60px;
-@include tab-large {
-  padding-block: 40px;
-}
-@include sp {
+  padding-block: 60px;
+  @include tab-large {
+    padding-block: 40px;
+  }
+  @include sp {
     padding-block: 30px;
-  };
+  }
   &__list {
     overflow: hidden;
     border-radius: 5px;
@@ -24,7 +24,6 @@ padding-block: 60px;
       letter-spacing: 0.5px;
       margin-bottom: 17px;
     }
-
   }
 
   &__question,
@@ -39,7 +38,7 @@ padding-block: 60px;
       padding-bottom: 20px;
       padding-left: 54px;
       padding-right: 44px;
-    };
+    }
     &::before {
       content: "";
       display: inline-block;
@@ -54,7 +53,7 @@ padding-block: 60px;
         height: 29px;
         left: 13px;
         top: 17px;
-      };
+      }
     }
   }
 
@@ -83,7 +82,7 @@ padding-block: 60px;
         height: 7px;
         top: 23px;
         right: 21px;
-      };
+      }
     }
     &.--close {
       &::after {

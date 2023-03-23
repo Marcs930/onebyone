@@ -35,11 +35,11 @@
   padding-bottom: 80px;
   @include tab-large {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
   @include sp {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   };
 }
 

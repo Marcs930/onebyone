@@ -5,11 +5,11 @@
 //================================================================*/
 
 .arre {
+  &-container {
+    @extend .sectionContainer;
+  }
   &-reviewList {
     margin-bottom: 60px;
-  }
-  &-pager {
-    margin-bottom: 100px;
   }
   &-reviewPostBtn {
     position: absolute;
@@ -44,12 +44,12 @@ body.open {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
   animation-name: modalopen;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
 }
 
 .arre-modal {
   animation-name: modalopen;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   display: none;
   z-index: 400;
   position: fixed;
@@ -64,7 +64,7 @@ body.open {
     width: 90%;
     padding-top: 20px;
     padding-bottom: 30px;
-  };
+  }
   &__title {
     text-align: center;
     @include fontSize-clamp(28, 18);
@@ -72,7 +72,7 @@ body.open {
     margin-bottom: 40px;
     @include sp {
       margin-bottom: 16px;
-    };
+    }
   }
 
   &__container {
@@ -81,7 +81,7 @@ body.open {
     @include sp {
       width: 90%;
       max-width: initial;
-    };
+    }
   }
 
   &__row {
@@ -91,12 +91,12 @@ body.open {
     width: 100%;
     @include sp {
       flex-direction: column;
-    };
+    }
     &:not(:last-of-type) {
       margin-bottom: 40px;
       @include sp {
         margin-bottom: 20px;
-      };
+      }
     }
     .label {
       display: inline-block;
@@ -111,7 +111,7 @@ body.open {
         left: initial;
         top: initial;
         margin-bottom: 10px;
-      };
+      }
     }
     select {
       width: 100%;

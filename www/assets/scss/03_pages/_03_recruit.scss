@@ -6,12 +6,13 @@
 
 .rct {
   &-jobDesc {
-    padding-top: 30px;
-    padding-bottom: 88px;
-    @include sp {
-      padding-top: 20px;
-      padding-bottom: 60px;
-    }
+    @extend .sectionContainer;
+    // padding-top: 30px;
+    // padding-bottom: 88px;
+    // @include sp {
+    //   padding-top: 20px;
+    //   padding-bottom: 60px;
+    // }
 
     .sectionTitle {
       span {

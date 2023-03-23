@@ -5,9 +5,10 @@
 //================================================================*/
 
 .abt-philosophy {
+  background-color: var(--color-bgBlue01);
+  // @extend .sectionContainer;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: var(--color-bgBlue01);
   @include tab-large {
     padding-top: 70px;
     padding-bottom: 50px;
@@ -142,13 +143,12 @@
 
 }
 
-.abt {
-  &-table {
-    padding-top: 40px;
-    padding-bottom: 88px;
-    @include sp {
-      padding-bottom: 60px;
-    };
-  }
+.abt-table {
+  @extend .sectionContainer;
+    // padding-top: 40px;
+    // padding-bottom: 88px;
+    // @include sp {
+    //   padding-bottom: 60px;
+    // };
 
 }
