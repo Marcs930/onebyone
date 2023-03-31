@@ -10,6 +10,7 @@ $('.qa-qa__question').on('click', function() {//タイトル要素をクリッ�
   }
 });
 
+console.log('accordion.js');
 //ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
 // $(window).on('load', function(){
 //   $('.faq li').addClass("open"); //faqのはじめのliにあるsectionにopenクラスを追加

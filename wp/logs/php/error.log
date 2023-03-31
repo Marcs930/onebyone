@@ -45,3 +45,24 @@
 [23-Mar-2023 15:02:04 UTC] PHP Warning:  Undefined variable $facebook_app_id in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\ogp.php on line 62
 [23-Mar-2023 16:17:39 UTC] PHP Warning:  Undefined variable $twitter_site in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\ogp.php on line 59
 [23-Mar-2023 16:17:39 UTC] PHP Warning:  Undefined variable $facebook_app_id in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\ogp.php on line 62
+[24-Mar-2023 14:16:59 UTC] PHP Warning:  Undefined variable $news_posts in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\includes\idx-news.php on line 10
+[24-Mar-2023 14:16:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\includes\idx-news.php:10
+Stack trace:
+#0 C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-includes\template.php(785): require()
+#1 C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Yohei ...', false, Array)
+#2 C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\front-page.php(518): get_template_part('includes/idx-ne...')
+#4 C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Yohei ...')
+#5 C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Yohei ...')
+#6 C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\index.php(17): require('C:\\Users\\Yohei ...')
+#7 {main}
+  thrown in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\includes\idx-news.php on line 10
+[24-Mar-2023 14:32:55 UTC] フックの cron 予約解除イベントエラー: do_pings、エラーコード: could_not_set、エラーメッセージ: Cron イベントのリストを保存できません。、データ: {"schedule":false,"args":[]}
+[25-Mar-2023 04:02:52 UTC] PHP Warning:  Undefined property: stdClass::$add_a_class in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\nav_menu_customize.php on line 16
+[25-Mar-2023 04:02:52 UTC] PHP Warning:  Undefined property: stdClass::$add_a_class in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\nav_menu_customize.php on line 16
+[25-Mar-2023 04:02:55 UTC] PHP Warning:  Undefined property: stdClass::$add_a_class in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\nav_menu_customize.php on line 16
+[25-Mar-2023 04:02:55 UTC] PHP Warning:  Undefined property: stdClass::$add_a_class in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\nav_menu_customize.php on line 16
+[25-Mar-2023 04:03:05 UTC] PHP Warning:  Undefined property: stdClass::$add_a_class in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\nav_menu_customize.php on line 16
+[25-Mar-2023 04:03:05 UTC] PHP Warning:  Undefined property: stdClass::$add_a_class in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\nav_menu_customize.php on line 16
+[25-Mar-2023 04:03:39 UTC] PHP Warning:  Undefined property: stdClass::$add_a_class in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\nav_menu_customize.php on line 16
+[25-Mar-2023 04:03:39 UTC] PHP Warning:  Undefined property: stdClass::$add_a_class in C:\Users\Yohei Goto\mydrive\97_dev\onebyone\wp\app\public\wp-content\themes\onebyone\functions\nav_menu_customize.php on line 16

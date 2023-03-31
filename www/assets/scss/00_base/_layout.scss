@@ -161,7 +161,13 @@
 .sidebarLayout {
   display: flex;
   justify-content: space-between;
-
+  margin-bottom: 100px;
+  @include tab-large {
+    margin-bottom: 60px;
+  }
+  @include sp {
+    margin-bottom: 40px;
+  }
   &__left {
     width: 72%;
     max-width: 760px;
