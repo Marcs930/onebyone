@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/*==================================================================
+// archive-building
+//================================================================*/
+
+.propertyList {
+  .pager {
+    @include sp {
+      margin-top: 40px;
+    };
+  }
+}
+
+.propertyList__buildingList {
+  &.buildingList {
+    // column-gap: 30px;
+    .buildingList {
+
+      &__item {
+        width: 31%;
+        max-width: 251px;
+        @include tab-large {
+          max-width: 300px;
+        }
+        @include sp {
+          width: 48%;
+          max-width: 100%;
+        };
+      }
+    }
+    @include tab-large {
+      row-gap: 30px;
+    }
+  }
+}

@@ -1,0 +1,391 @@
+@charset "utf-8";
+
+//-----------------------------------------------------
+// Media Queries
+//-----------------------------------------------------
+
+@mixin pc_large {
+  @media (max-width: ($pc_large)) {
+    @content;
+  }
+}
+@mixin pc_medium {
+  @media (max-width: ($pc_medium)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab-large {
+  @media (max-width: ($tab-large)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin sp-small {
+  @media (max-width: ($sp_small)) {
+    @content;
+  }
+}
+@mixin sp320 {
+  @media (max-width: ($sp320)) {
+    @content;
+  }
+}
+@mixin sp-more {
+  @media (min-width: ($sp)) {
+    @content;
+  }
+}
+
+//-----------------------------------------------------
+// Text
+//-----------------------------------------------------
+
+// px to rem
+@function rem($px, $base: $font-size-base) {
+  $remValue: calc(strip-unit($px) / strip-unit($base)) + rem;
+  @return $remValue;
+}
+
+// fontSize
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+// fontSize-clamp (フォントサイズ(px), 最小サイズ)
+@mixin fontSize-clamp($size, $min) {
+  font-size: $size * 1px;
+  font-size: clamp($min * 1px, rem($size), $size * 1px);
+}
+
+// line-height (フォントサイズ, 行送り) ※XD基準
+@mixin l_height($pixels, $height) {
+  font-size: $pixels * 1px;
+  font-size: rem($pixels);
+  line-height: calc($height / $pixels);
+}
+
+// letter-spacing (トラッキング) ※XD基準
+@mixin l_spacing($spacing) {
+  letter-spacing: calc($spacing / 1000) + em;
+}
+
+// font (フォントサイズ, トラッキング, 行送り) ※XD基準
+@mixin font($pixels, $spacing, $height) {
+  font-size: $pixels * 1px;
+  font-size: rem($pixels);
+  line-height: calc($height / $pixels);
+  letter-spacing: calc($spacing / 1000) + em;
+}
+
+// font (フォントサイズ(px), 最小サイズ(px),トラッキング, 行送り) ※XD基準
+@mixin font-clamp($pixels, $min, $spacing, $height) {
+  font-size: $pixels * 1px;
+  font-size: clamp($min * 1px, rem($pixels), $pixels * 1px);
+  line-height: calc($height / $pixels);
+  letter-spacing: calc($spacing / 1000) + em;
+}
+
+// リンク色
+@mixin link-color($color) {
+  color: $color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: lighten($color, 20%);
+  }
+}
+
+//-----------------------------------------------------
+// icon
+//-----------------------------------------------------
+
+//icon 疑似要素
+@mixin icon-before($width, $height, $path) {
+  display: flex;
+  flex-direction: row !important;
+  position: relative;
+  align-items: center;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-image: $path;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @content;
+}
+
+@mixin icon-after($width, $height, $path) {
+  display: flex;
+  flex-direction: row !important;
+  position: relative;
+  align-items: center;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-image: $path;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @content;
+}
+
+//icon-list
+@mixin iconPath($iconName) {
+  .icon-#{$iconName} {
+    background-color: $icon-color-default;
+    //background-image: url(#{$icon-dir}ico-#{$iconName}.svg);
+
+    mask: url(#{$icon-dir}ico-#{$iconName}.svg) no-repeat center center;
+    mask-size: contain;
+  }
+}
+
+//icon-list
+@mixin iconBg($iconName) {
+  background-color: $icon-color-default;
+
+  mask: url(#{$icon-dir}ico-#{$iconName}.svg) no-repeat center center;
+  mask-size: contain;
+}
+
+//-----------------------------------------------------
+// strings
+//-----------------------------------------------------
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+  @return $number;
+}
+
+//-----------------------------------------------------
+// sizing
+//-----------------------------------------------------
+
+//sizing
+@mixin size($width: null, $height: null) {
+  width: $width;
+
+  @if $height == null {
+    height: $width;
+  } @else {
+    height: $height;
+  }
+}
+
+//-----------------------------------------------------
+// layout
+//-----------------------------------------------------
+
+@mixin sectionInner($innerWidth: $width_pc) {
+  width: 100%;
+  max-width: $innerWidth;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media (max-width: ($tab-large)) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@mixin wrapper($innerWidth: $width_pc) {
+  width: 100%;
+  max-width: $innerWidth;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  @media (max-width: ($innerWidth)) {
+    width: 100%;
+  }
+}
+
+@mixin p-lr($size) {
+  padding-right: $size;
+  padding-left: $size;
+}
+
+@mixin m-center($m: null, $mt: null, $mb: null) {
+  @if $m == null and $mt == null and $mb == null {
+    margin-right: auto;
+    // 横以外のmarginがいらない場合
+    margin-left: auto;
+  } @else if $m != null {
+    // 上下のmarginが共通の場合
+    margin: $m auto;
+  } @else if $mt == null and $mb !=null {
+    margin-right: auto;
+    // 下のみmarginが必要な場合
+    margin-bottom: $mb;
+    margin-left: auto;
+  } @else if $mb == null {
+    // 上のみmarginが必要な場合
+    margin-top: $mb;
+    margin-right: auto;
+    margin-left: auto;
+  } @else {
+    margin: $mt auto $mb;
+  }
+}
+
+@mixin t-center($direction: xy, $otherParam: null) {
+  position: absolute;
+  @if $otherParam==null {
+    $otherParam: "";
+  } @else {
+    $otherParam: " " + $otherParam;
+  }
+
+  @if $direction==xy {
+    // xy : 縦横方向中央寄せ
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) + $otherParam;
+  } @else if $direction==x {
+    // x : 横方向中央寄せ
+    left: 50%;
+    transform: translateX(-50%) + $otherParam;
+  } @else if $direction==y {
+    // y : 縦方向中央寄せ
+    top: 50%;
+    transform: translateY(-50%) + $otherParam;
+  }
+}
+
+@mixin lhCrop($line-height) {
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+    content: "";
+  }
+}
+
+//-----------------------------------------------------
+// shape
+//-----------------------------------------------------
+
+// 三角形
+@mixin triangle($direction, $width, $height, $color) {
+  $valWidth: calc($width / 2);
+  $valHeight: calc($height / 2);
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  content: "";
+  @if ($direction == top) {
+    border-width: 0 $valWidth $height $valWidth;
+    border-color: transparent transparent $color transparent;
+  } @else if ($direction == left) {
+    border-width: $valHeight $width $valHeight 0;
+    border-color: transparent $color transparent transparent;
+  } @else if ($direction == right) {
+    border-width: $valHeight 0 $valHeight $width;
+    border-color: transparent transparent transparent $color;
+  } @else if ($direction == bottom) {
+    border-width: $height $valWidth 0 $valWidth;
+    border-color: $color transparent transparent transparent;
+  }
+}
+
+// くの字矢印
+@mixin arrow(
+  $width: 1rem,
+  $bold: 0.3rem,
+  $color: var(--color-White),
+  $deg: bottom
+) {
+  display: inline-block;
+  position: absolute;
+  width: #{$width};
+  height: #{$width};
+  border-width: 0 #{$bold} #{$bold} 0;
+  border-style: solid;
+  border-color: $color;
+  content: "";
+
+  //角度
+  @if ($deg == "left") {
+    transform: rotate(135deg);
+  } @else if ($deg == "top") {
+    transform: rotate(225deg);
+  } @else if ($deg == "right") {
+    transform: rotate(-45deg);
+  } @else if ($deg == "bottom") {
+    transform: rotate(45deg);
+  }
+}
+
+//-----------------------------------------------------
+// symbol
+//-----------------------------------------------------
+
+@mixin scribble($size: 1) {
+  position: absolute;
+  background: url(../img/img_scribble.png) no-repeat center center;
+  background-size: contain;
+  content: "";
+
+  @if type-of($size) == "number" and not unitless($size) {
+    width: $size;
+    height: $size;
+  } @else {
+    width: #{108px * $size};
+    height: #{108px * $size};
+  }
+}
+
+//-----------------------------------------------------
+// animation
+//-----------------------------------------------------
+
+@mixin anime-normal() {
+  @include animationHack();
+  transition: $anime-normal;
+}
+
+@mixin animationHack() {
+  @include hideTapHighlightColor();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@mixin hideTapHighlightColor() {
+  //Prevent highlight colour when element is tapped
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@mixin hardwareAccel() {
+  //Improve performance on mobile/tablet devices
+  transform: translateZ(0);
+}
+@mixin improveAntiAlias() {
+  //Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}

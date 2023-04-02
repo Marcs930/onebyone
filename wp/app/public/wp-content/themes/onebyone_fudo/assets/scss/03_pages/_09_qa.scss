@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/*==================================================================
+// qa
+//================================================================*/
+
+.qa-qa {
+  padding-block: 60px;
+  @include tab-large {
+    padding-block: 40px;
+  }
+  @include sp {
+    padding-block: 30px;
+  }
+  &__list {
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 4px 2px 3px rgba($color: #000000, $alpha: 0.09);
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    @include sp {
+      font-style: 14px;
+      letter-spacing: 0.5px;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__question,
+  &__answer {
+    position: relative;
+    padding-left: 145px;
+    padding-right: 110px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @include sp {
+      padding-top: 16px;
+      padding-bottom: 20px;
+      padding-left: 54px;
+      padding-right: 44px;
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 43px;
+      height: 43px;
+      position: absolute;
+      top: 16px;
+      left: 65px;
+      background-size: cover;
+      @include sp {
+        width: 29px;
+        height: 29px;
+        left: 13px;
+        top: 17px;
+      }
+    }
+  }
+
+  &__question {
+    background-color: var(--color-Gray09);
+    font-weight: $fw-medium;
+    cursor: pointer;
+    &::before {
+      content: "";
+      background-image: url(../../../assets/img/qa/icon_qa_question.png);
+    }
+    &::after {
+      content: "";
+      cursor: pointer;
+      display: inline-block;
+      width: 20px;
+      height: 10px;
+      background-image: url(../../../assets/img/qa/icon_qa_arron.png);
+      position: absolute;
+      background-size: cover;
+      top: 30px;
+      right: 60px;
+      transition: transform 0.3 ease;
+      @include sp {
+        width: 13px;
+        height: 7px;
+        top: 23px;
+        right: 21px;
+      }
+    }
+    &.--close {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__answer {
+    background-color: var(--color-White);
+    font-weight: $fw-regular;
+    &::before {
+      background-image: url(../../../assets/img/qa/icon_qa_answer.png);
+    }
+  }
+}

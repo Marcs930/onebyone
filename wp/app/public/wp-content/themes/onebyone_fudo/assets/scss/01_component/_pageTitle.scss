@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/*==================================================================
+// pageTitle
+//================================================================*/
+
+.pageTitle {
+  @include fontSize-clamp(25, 21);
+  color: var(--color-Black01);
+  line-height: 1;
+  font-weight: $fw-medium;
+  padding-bottom: 9px;
+  position: relative;
+  border-bottom: 2px solid var(--color-Gray03);
+  margin-bottom: 30px;
+  margin-top: 40px;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 30%;
+    height: 2px;
+    background-color: var(--color-Blue03);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    min-width: 160px;
+  }
+  @include sp {
+    color: var(--color-Blue05);
+
+  };
+}

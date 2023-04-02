@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+//==================================================================
+// pager
+//==================================================================
+
+.pager {
+  width: 100%;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  &__item {
+
+    .pager__text {
+      display: inline-block;
+      border: 1px solid var(--color-Gray14);
+      border-radius: 2px;
+      background-color: var(--color-White);
+      color: var(--color-Black01);
+      padding:  7px 10px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include fontSize-clamp(18, 16);
+    }
+    &.current {
+      .pager__text {
+        color: var(--color-White);
+        background-color: var(--color-Black01);
+      }
+    }
+  }
+}

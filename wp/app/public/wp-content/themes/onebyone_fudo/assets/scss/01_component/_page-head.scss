@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/*==================================================================
+// pageHead
+//================================================================*/
+
+.pageHead {
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  position: relative;
+  @include sp {
+    height: 300px;
+  };
+
+  &.--qa {
+    img {
+      object-position: right center;
+    }
+
+  
+  }
+
+  img {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__title {
+    @include fontSize-clamp(43, 28);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-White);
+    font-weight: $fw-regular;
+    text-shadow: $text-shadow02;
+    span {
+      @include fontSize-clamp(21, 16);
+
+    }
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+   }
+}

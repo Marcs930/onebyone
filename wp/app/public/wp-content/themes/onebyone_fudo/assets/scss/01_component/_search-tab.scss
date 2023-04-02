@@ -1,0 +1,102 @@
+@charset "utf-8";
+/*==================================================================
+// search-tab
+//================================================================*/
+
+.search-tab {
+  width: 450px;
+  max-width: 100%;
+  z-index: 30;
+  border-radius: 5px;
+  @include sp {
+    // width: 100%;
+    width: calc(100% - 30px);
+  }
+  &__tab {
+    width: 100%;
+    display: flex;
+    li {
+      width: 50%;
+      font-size: 16px;
+      font-weight: $fw-bold;
+      color: var(--color-White);
+      background-color: rgba(114, 113, 113, 0.93);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      cursor: pointer;
+
+      &:first-of-type {
+        border-radius: 5px 0 0 0;
+      }
+      &:last-of-type {
+        border-radius: 0 5px 0 0;
+      }
+      &.current {
+        color: var(--color-Black01);
+        background-color: rgba(243, 243, 243, 0.93);
+      }
+    }
+  }
+  &__content {
+    color: var(--color-Black01);
+    background-color: rgba(243, 243, 243, 0.93);
+    padding: 20px 20px 27px;
+    border-radius: 0 0 5px 5px;
+    li {
+      width: 100%;
+      display: none;
+      &.current {
+        display: block;
+      }
+    }
+    .flex {
+      flex-wrap: wrap;
+    }
+  }
+  &__txtContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__btnContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 21px;
+    @include sp_small {
+      .btn:not(:first-of-type) {
+        margin-top: 10px;
+      }
+    }
+  }
+  &__title {
+    @include fontSize-clamp(22, 15);
+    margin-left: 32px;
+    @include sp {
+      font-size: 15px;
+      margin-left: 0;
+    }
+    font-weight: $fw-medium;
+    display: inline-block;
+  }
+  &__new {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 14px;
+    @include sp {
+    }
+    span {
+      color: var(--color-Orange01);
+      font-size: 24px;
+    }
+  }
+  .keyword-search {
+    margin-top: 27px;
+    @include sp {
+      margin-top: 20px;
+    }
+  }
+}

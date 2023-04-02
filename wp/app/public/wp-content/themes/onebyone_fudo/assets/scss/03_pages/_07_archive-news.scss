@@ -1,0 +1,16 @@
+.arns {
+  &-newsList {
+    @extend .sectionContainer;
+    // padding-top: 60px;
+    // @include tab-large {
+    //   padding-top: 40px;
+    // }
+    // @include sp {
+    //   padding-top: 30px;
+    // }
+  }
+  .pager {
+    margin-top: 60px;
+    // margin-bottom: 80px;
+  }
+}
