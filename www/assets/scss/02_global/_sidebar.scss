@@ -19,12 +19,84 @@
   }
 }
 
+.search {
+  .sidebarLayout {
+    &__right {
+      @include tab-large {
+        display: block;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.searchOptionBtnContainer {
+  display: none;
+  @include tab-large {
+    display: flex;
+    position: fixed;
+  }
+  top: 64px;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-bgBlue01);
+  box-shadow: 0px 3px 3px rgba($color: #000000, $alpha: 0.16);
+  position: relative;
+  .searchOptionBtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: $fw-regular;
+    &:not(:last-of-type) {
+      &::after {
+        content: "";
+        width: 2px;
+        height: 24px;
+        background-color: var(--color-Gray22);
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+    }
+    width: 50%;
+    height: 44px;
+    // background-color: pink;
+    // border: 1px solid grey;
+
+    &.--param {
+      @include icon-before(14px, 14px, url(../img/common/icon_search_blue.svg));
+      &::before {
+        margin-right: 10px;
+      }
+
+    }
+
+    &.--sort {
+      @include icon-before(25px, 20px, url(../img/common/icon_sort_arrow_blue.svg));
+      &::before {
+        margin-right: 5px;
+      }
+      select {
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
 .searchParams {
   background-color: var(--color-Gray12);
   border-radius: 3px;
   overflow: hidden;
   padding-bottom: 35px;
   color: var(--color-Black01);
+  @include tab-large {
+    display: none;
+  }
   &__heading {
     @include fontSize-clamp(16, 14);
     color: var(--color-White);
@@ -100,15 +172,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    @include tab-large {
+      justify-content: flex-start;
+      column-gap: 30px;
+    }
     &.--col2 {
       li {
         width: 50%;
+        @include tab-large {
+          width: auto;
+        }
       }
     }
     &.--col1 {
       li {
         width: 100%;
+        @include tab-large {
+          width: auto;
+        }
       }
     }
     label {
@@ -123,6 +204,9 @@
     display: none;
     &.js-searchParamsMore {
       display: block;
+       @include tab-large {
+          display: flex;
+        }
     }
   }
 
@@ -148,11 +232,23 @@
 
 .sidebar {
   margin-bottom: 100px;
+  @include tab-large {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 400;
+    width: 90%;
+    margin-inline: 5%;
+  }
   &__sns {
     width: 100%;
   }
   &__cta {
-    margin-top: 20px;
+    margin-top: 40px;
+    @include tab-large {
+      display: none;
+    }
     &__btnContainer {
       width: 100%;
     }
@@ -172,6 +268,9 @@
 
   &__sns {
     margin-top: 20px;
+    @include tab-large {
+      display: none;
+    }
     &__text {
       @include fontSize-clamp(16, 14);
       font-weight: $fw-medium;

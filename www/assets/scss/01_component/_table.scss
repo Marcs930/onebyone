@@ -23,6 +23,9 @@
       padding-right: rem(18);
 
     };
+    p {
+      @include fontSize-clamp(16, 13);
+    }
   }
   th {
     font-weight: $fw-bold;

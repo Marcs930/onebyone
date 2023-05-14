@@ -62,3 +62,6 @@ require_once get_theme_file_path('/functions/remove_menus.php');
 
 // require_once get_theme_file_path( '/functions/get_terms.php' );
 // タクソノミー名投稿に紐づくタームを全て取得
+
+require_once get_theme_file_path('/functions/search-test.php');
+// 検索機能テスト

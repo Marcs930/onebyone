@@ -16,6 +16,9 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    @include tab-large {
+      display: none;
+    }
   }
   &__amount {
     font-weight: $fw-medium;

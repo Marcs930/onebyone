@@ -46,7 +46,7 @@
     "editor.defaultFormatter": "junstyle.php-cs-fixer"
   }, */
   "html.format.wrapLineLength": 0,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "html.format.preserveNewLines": true,

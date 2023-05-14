@@ -1,9 +1,9 @@
-<?php get_header(); ?>
+<?php get_header();?>
 <!-- <body> -->
 
 <div class="container js-bgWhite">
 
-  <?php get_template_part('includes/header') ?>
+  <?php get_template_part('includes/header')?>
 
   <!-- CONTENTS: START -->
 
@@ -43,32 +43,28 @@
                 </select>
               </div>
             </div>
-            <?php
-$s = $_GET['s'];
-?>
 
-            <div>検索条件</div>
-            <?php if($s){ ?>検索キーワード：<?php echo $s; ?><br><?php } ?>
+            <h2><?php the_search_query();?>の検索結果 : <?php echo $wp_query->found_posts; ?>件</h2>
+            <!-- 投稿情報 loop -->
+            <?php if (have_posts()): ?>
+            <?php while (have_posts()): the_post()?>
+            <div class="post">
 
-            <div>検索結果</div>
+              <p>↓該当記事</p>
+              <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+            </div><!-- /post -->
+            <?php endwhile;?>
+            <?php else: ?>
+            <div class="post">
+              <p>申し訳ございません。<br />該当する記事がございません。</p>
+            </div>
+            <?php endif;?>
 
-            <?php
-query_posts( array(
-    's' => $s,
-    )
-);
-?>
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            <div><?php the_title(); ?></div>
-            <div><?php the_content(); ?></div>
+            
 
-            <?php endwhile; else : ?>
 
-            <div>該当なし</div>
 
-            <?php endif;
-wp_reset_query(); ?>
             <ul class="propertyList__buildingList buildingList">
               <li class="buildingList__item">
                 <a href="">
@@ -280,7 +276,7 @@ wp_reset_query(); ?>
 
           <aside class="sidebar">
 
-            <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
+            <form method="get" id="searchform" action="<?php bloginfo('url');?>">
               <div class="searchParams">
                 <p class="searchParams__heading">検索条件</p>
                 <div class="searchParams__inner">
@@ -459,7 +455,7 @@ wp_reset_query(); ?>
 
 
   <!-- CONTENTS: END -->
-  <?php get_template_part('includes/footer') ?>
+  <?php get_template_part('includes/footer')?>
 
 
 </div><!-- /.container -->
@@ -467,4 +463,4 @@ wp_reset_query(); ?>
 
 
 <!-- </body> -->
-<?php get_footer(); ?>
+<?php get_footer();?>

@@ -463,3 +463,26 @@
   font-size: 14px;
   padding-block: 10px;
 }
+
+.searchParamsAreaBtn {
+  color: var(--color-Black03);
+  font-weight: $fw-medium;
+  @include fontSize-clamp(16, 14);
+  background-color: var(--color-Gray10);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 44px;
+  padding-left: 44px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  @include sp {
+    width: 100%;
+  }
+  &.--sidebar {
+    width: 100%;
+  }
+}

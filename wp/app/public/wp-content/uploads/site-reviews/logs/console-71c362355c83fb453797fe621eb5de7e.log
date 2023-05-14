@@ -1,0 +1,10 @@
+[2023-04-07 00:25:02] ERROR [Modules\Validator\CaptchaValidator:157] Array (
+    [action] =&gt; 
+    [errors] =&gt; Array (
+        [invalid-input-secret] =&gt; The secret key is invalid or malformed.
+        [missing-input-secret] =&gt; Your secret key is missing.
+        [sitekey_missing] =&gt; Your site key is missing.
+    )
+    [score] =&gt; 0
+    [success] =&gt; (bool) false
+)

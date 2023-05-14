@@ -53,6 +53,7 @@ class Main {
         {
           rootMargin: "0px 0px 0px 0px",
           once: false,
+          threshold: [0],
         }
       )
       // _inviewAnimationでthis.containerを使いたいので、bind(this)
@@ -159,17 +160,34 @@ if(searchParamsMore) {
 //         window.scrollTo(0, scrollPos);
 //     }
 // });
+
 const buttonOpen = document.getElementsByClassName('reviewPostBtn')[0];
+// if('buttonOpen') {}
 const modal = document.getElementsByClassName('arre-modal')[0];
 const modalBg = document.querySelector('.modalBg');
 const buttonClose = document.getElementsByClassName('modalClose')[0];
 const body = document.getElementsByTagName('body')[0];
 // ボタンがクリックされた時
-buttonOpen.addEventListener('click', function(){
-  modal.style.display = 'block';
-  modalBg.style.display = 'block';
-  body.classList.add('--open');
-});
+if(buttonOpen) {
+  buttonOpen.addEventListener('click', function(){
+    modal.style.display = 'block';
+    modalBg.style.display = 'block';
+    body.classList.add('--open');
+  });
+}
+
+const searchParamBtnOpen = document.getElementsByClassName('searchParamOpen')[0];
+const searchParamsModal = document.getElementsByClassName('searchParams')[0];
+// const buttonClose = document.getElementsByClassName('modalClose')[0];
+// const body = document.getElementsByTagName('body')[0];
+// ボタンがクリックされた時
+if(searchParamBtnOpen) {
+  searchParamBtnOpen.addEventListener('click', function(){
+    searchParamsModal.style.display = 'block';
+    modalBg.style.display = 'block';
+    body.classList.add('--open');
+  });
+}
 
 
 // バツ印がクリックされた時
@@ -180,7 +198,12 @@ buttonOpen.addEventListener('click', function(){
 
 // モーダルコンテンツ以外がクリックされた時
 modalBg.addEventListener('click', function(){
+  if(modal) {
     modal.style.display = 'none';
+  }
+  if(searchParamsModal) {
+    searchParamsModal.style.display = 'none';
+  }
     modalBg.style.display = 'none';
     body.classList.remove('--open');
 });

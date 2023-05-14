@@ -6,15 +6,33 @@
 .footer {
   background-color: var(--color-FooterBg);
   color: var(--color-White);
-  padding-top: 50px;
   padding-bottom: 36px;
   @include sp {
-    padding-top: 24px;
+    // padding-top: 24px;
     padding-bottom: 24px;
   }
   a {
     color: var(--color-White);
   }
+
+  &__note {
+    background-color: var(--color-bgBlue02);
+    padding-block: 20px;
+    &__inner {
+    @include wrapper;
+    }
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--color-Black06);
+      text-align: center;
+      font-weight: $fw-medium;
+      @include sp {
+        font-size: 12px;
+      };
+    }
+  }
+
 
   &__logo {
     display: flex;
@@ -38,6 +56,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  &__bottom {
+    padding-top: 50px;
+  }
+
 
   &__left {
     width: 17%;

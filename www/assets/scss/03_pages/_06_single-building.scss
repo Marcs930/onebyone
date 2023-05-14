@@ -5,6 +5,7 @@
 //================================================================*/
 .buildingTitle {
   margin-bottom: 18px;
+  margin-top: 40px;
   position: relative;
   padding-left: 30px;
   display: flex;
@@ -67,6 +68,11 @@
     margin-bottom: 15px;
   }
 
+  &__comment {
+    @include font-clamp(14, 16, 0, 26);
+    font-weight: $fw-regular;
+  }
+
   &__table {
     width: 100%;
     font-weight: $fw-regular;
@@ -93,8 +99,14 @@
     }
     td {
       padding-left: 24px;
+      p + p {
+        margin-top: 0.3em;
+        // @include fontSize-clamp(19, 18);
+        // font-weight: $fw-regular;
+      }
       @include sp {
-        padding-left: initial;
+        // padding-left: initial;
+        padding-left: 14px;
       }
     }
   }

@@ -4,12 +4,24 @@
 // layout
 //================================================================*/
 
+.headerTransparent {
+  .container {
+
+    &.js-bgWhite {
+      padding-top: 0px;
+      @include tab-large {
+        padding-top: 0px;
+      };
+    }
+  }
+}
+
 .container {
   position: relative;
   width: 100%;
   z-index: $zi-container;
 
-  //display: none;
+  // display: none;
   &.js-bgWhite {
     padding-top: 80px;
     @include tab-large {
@@ -17,6 +29,15 @@
     };
   }
 }
+
+.search {
+  .container {
+    @include tab-large {
+      padding-top: 108px;
+    }
+  }
+}
+
 
 .contents {
   position: relative;
