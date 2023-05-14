@@ -1871,10 +1871,10 @@ img {
 
 .searchParamsAreaBtn {
   color: var(--color-Black03);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   font-size: clamp(14px, 1rem, 16px);
-  background-color: var(--color-Gray10);
+  background-color: var(--color-Gray02);
   padding-top: 10px;
   padding-bottom: 10px;
   display: -webkit-box;
@@ -3968,6 +3968,11 @@ img {
   background-color: var(--color-bgBlue02);
   padding-block: 20px;
 }
+@media (max-width: 1080px) {
+  .footer__note {
+    padding-block: 15px;
+  }
+}
 .footer__note__inner {
   width: 100%;
   max-width: 1200px;
@@ -3989,7 +3994,8 @@ img {
 }
 @media (max-width: 768px) {
   .footer__note p {
-    font-size: 12px;
+    font-size: 10px;
+    line-height: 18px;
   }
 }
 .footer__logo {
@@ -4037,6 +4043,11 @@ img {
 .footer__left {
   width: 17%;
   max-width: 177px;
+}
+@media (max-width: 768px) {
+  .footer__left {
+    margin-right: auto;
+  }
 }
 .footer__sns.is-sp {
   min-width: 125px;
@@ -4173,6 +4184,11 @@ img {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+}
+@media (max-width: 1080px) {
+  .footerNav {
+    margin-right: 30px;
+  }
 }
 @media (max-width: 768px) {
   .footerNav {
@@ -4380,6 +4396,8 @@ img {
 @media (max-width: 1080px) {
   .searchParams {
     display: none;
+    max-height: calc(100vh - 150px);
+    overflow-y: scroll;
   }
 }
 .searchParams__heading {
@@ -4560,6 +4578,7 @@ img {
     z-index: 400;
     width: 90%;
     margin-inline: 5%;
+    max-height: calc(100vh - 150px);
   }
 }
 .sidebar__sns {
@@ -5362,6 +5381,9 @@ img {
     display: -ms-flexbox;
     display: flex;
   }
+  .roomContactBtn span::before {
+    left: calc(50% - 100px);
+  }
 }
 
 .roomInfo {
@@ -5791,6 +5813,11 @@ img {
   position: absolute;
   top: 50%;
   right: 25px;
+}
+@media (max-width: 480px) {
+  .roomListSpItem__container::after {
+    right: 6px;
+  }
 }
 .roomListSpItem__info {
   display: -webkit-box;

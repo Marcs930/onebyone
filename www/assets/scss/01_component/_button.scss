@@ -466,9 +466,9 @@
 
 .searchParamsAreaBtn {
   color: var(--color-Black03);
-  font-weight: $fw-medium;
+  font-weight: $fw-regular;
   @include fontSize-clamp(16, 14);
-  background-color: var(--color-Gray10);
+  background-color: var(--color-Gray02);
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;

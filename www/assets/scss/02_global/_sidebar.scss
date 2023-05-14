@@ -72,11 +72,14 @@
       &::before {
         margin-right: 10px;
       }
-
     }
 
     &.--sort {
-      @include icon-before(25px, 20px, url(../img/common/icon_sort_arrow_blue.svg));
+      @include icon-before(
+        25px,
+        20px,
+        url(../img/common/icon_sort_arrow_blue.svg)
+      );
       &::before {
         margin-right: 5px;
       }
@@ -96,6 +99,8 @@
   color: var(--color-Black01);
   @include tab-large {
     display: none;
+    max-height: calc(100vh - 150px);
+    overflow-y: scroll;
   }
   &__heading {
     @include fontSize-clamp(16, 14);
@@ -204,9 +209,9 @@
     display: none;
     &.js-searchParamsMore {
       display: block;
-       @include tab-large {
-          display: flex;
-        }
+      @include tab-large {
+        display: flex;
+      }
     }
   }
 
@@ -240,6 +245,7 @@
     z-index: 400;
     width: 90%;
     margin-inline: 5%;
+    max-height: calc(100vh - 150px);
   }
   &__sns {
     width: 100%;

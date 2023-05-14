@@ -3,20 +3,20 @@
  *  =================================================== */
 
 //hamburgerBtn
-$('.js-hamburgerBtn').on('click', function() {
-  $(this).toggleClass('is-open');
-  $('.headNav').toggleClass('is-open');
-})
+// $('.js-hamburgerBtn').on('click', function() {
+//   $(this).toggleClass('is-open');
+//   $('.headNav').toggleClass('is-open');
+// })
 
-const hamburgerBtn = document.querySelector(".js-hamburgerBtn")
-const container = document.querySelector(".container");
+// const hamburgerBtn = document.querySelector(".js-hamburgerBtn")
+// const container = document.querySelector(".container");
 
-const clickHandler = () => {
-  hamburgerBtn.classList.toggle("is-open");
-  container.classList.toggle("is-open");
-  console.log("ok");
-}
-hamburgerBtn.addEventListener('click',clickHandler);
+// const clickHandler = () => {
+//   hamburgerBtn.classList.toggle("is-open");
+//   container.classList.toggle("is-open");
+//   console.log("ok");
+// }
+// hamburgerBtn.addEventListener('click',clickHandler);
 
 
 /**
