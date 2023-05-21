@@ -2944,7 +2944,7 @@ img {
   content: "";
   width: 6px;
   height: 29px;
-  background-color: var(--color-Primary);
+  background-color: var(--color-Blue03);
   display: inline-block;
   position: absolute;
   -webkit-transform: translateY(-50%);
