@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/*==================================================================
+// search
+//================================================================*/
+
+.search {
+  &TitleContainer {
+    @include tab-large {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  &Title {
+    @include fontSize-clamp(25, 21);
+    color: var(--color-Black01);
+    line-height: 1;
+    font-weight: $fw-medium;
+    padding-bottom: 9px;
+    position: relative;
+    border-bottom: 2px solid var(--color-Gray03);
+    margin-bottom: 30px;
+    margin-top: 40px;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 30%;
+      height: 2px;
+      background-color: var(--color-Blue03);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      min-width: 160px;
+    }
+    @include tab-large {
+      @include fontSize-clamp(25, 21);
+      display: inline-block;
+      padding-left: 24px;
+      border-bottom: none;
+      margin: 0;
+      &::after {
+        display: none;
+      }
+      &::before {
+        content: "";
+        width: 8px;
+        height: 28px;
+        background-color: var(--color-Primary);
+        display: inline-block;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0;
+      }
+    }
+  }
+  .propertyList__amount {
+    @include tab-large {
+      display: inline-block;
+      margin-left: auto;
+    }
+  }
+}

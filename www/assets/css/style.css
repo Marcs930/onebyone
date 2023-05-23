@@ -5325,6 +5325,11 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 768px) {
+  .buildingTitle {
+    padding-left: 20px;
+  }
+}
 .buildingTitle::before {
   content: "";
   width: 5px;
@@ -6593,6 +6598,84 @@ body.open {
 }
 .ctc-form__btnContainer .ctcBtn.--confirm {
   margin-inline: auto;
+}
+
+/*==================================================================
+// search
+//================================================================*/
+@media (max-width: 1080px) {
+  .searchTitleContainer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+.searchTitle {
+  font-size: 25px;
+  font-size: clamp(21px, 1.5625rem, 25px);
+  color: var(--color-Black01);
+  line-height: 1;
+  font-weight: 500;
+  padding-bottom: 9px;
+  position: relative;
+  border-bottom: 2px solid var(--color-Gray03);
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+.searchTitle::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 2px;
+  background-color: var(--color-Blue03);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  min-width: 160px;
+}
+@media (max-width: 1080px) {
+  .searchTitle {
+    font-size: 25px;
+    font-size: clamp(21px, 1.5625rem, 25px);
+    display: inline-block;
+    padding-left: 24px;
+    border-bottom: none;
+    margin: 0;
+  }
+  .searchTitle::after {
+    display: none;
+  }
+  .searchTitle::before {
+    content: "";
+    width: 8px;
+    height: 28px;
+    background-color: var(--color-Primary);
+    display: inline-block;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+  }
+}
+@media (max-width: 1080px) {
+  .search .propertyList__amount {
+    display: inline-block;
+    margin-left: auto;
+  }
 }
 
 /* ==========================================================================
